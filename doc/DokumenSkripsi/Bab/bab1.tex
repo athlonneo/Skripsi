@@ -5,40 +5,52 @@
 \section{Latar Belakang}
 \label{sec:label}
 
-Bagian ini akan diisi dengan apa yang melatarbelakangi pembuatan template skripsi ini.
-Termasuk juga masalah-masalah yang akan dihadapi untuk membuatnya, termasuk kurangnya kemampuan penguasaan \LaTeX{} sehingga template ini dibuat dengan mengandalkan berbagai contoh yang tersebar di dunia maya, yang digabung-gabung menjadi satu jua.
-Bagian lain juga akan dilengkapi, untuk sementara diisi dengan lorem ipsum versi bahasa inggris.
+SharIF Judge adalah modifikasi dari aplikasi Sharif Judge buatan Mohammad Javad Naderi yang berfungsi untuk menilai kode program yang diunggah secara otomatis berdasarkan kunci jawaban yang disediakan. SharIF Judge digunakan pada beberapa kuliah di Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program, terutama saat ujian.
 
-\dtext{5-10}
+Dengan adanya situasi pandemi, seluruh kegiatan kuliah wajib dilaksanakan secara daring. Hal ini menyebabkan berbagai kesulitan, terutama dalam pelaksanaan ujian. Saat ujian sedang berlangsung, umumnya terdapat pengawas yang mengawasi mahasiswa secara fisik untuk mencegah kecurangan. Namun, pengawasan saat ujian menjadi sangat sulit untuk dilakukan saat kuliah dilaksanakan secara daring. Diperlukan sebuah cara untuk merekam tindakan-tindakan mahasiswa selama ujian daring berlangsung. 
+
+Maka, pada skripsi ini akan diimplementasikan editor kode pada SharIF Judge, yang sudah memiliki kemampuan untuk mengompilasi dan menjalankan kode. Dengan demikian, SharIF Judge dapat menjadi sebuah {\it Integrated Development Environment} yang mampu memfasilitasi seluruh proses pembuatan kode serta merekamnya.
+
+{\it Integrated Development Environment} (IDE) adalah sebuah aplikasi yang menyediakan fasilitas untuk pembangunan perangkat lunak. Sebuah IDE memiliki kemampuan untuk mengedit, mengompilasi, dan menjalankan kode program. Pada umumnya, mahasiswa menggunakan aplikasi IDE seperti Netbeans untuk membuat kode program yang kemudian diunggah ke SharIF Judge untuk dinilai.
+
+Dengan mengimplementasikan IDE berbasis web pada SharIF Judge, pengawasan terhadap mahasiswa saat ujian dapat dipermudah dengan merekam ketikan pada editor kode dan mendeteksi bila mahasiswa sedang melihat aplikasi selain SharIF judge.
+
 
 \section{Rumusan Masalah}
 \label{sec:rumusan}
-Bagian ini akan diisi dengan penajaman dari masalah-masalah yang sudah diidentifikasi di bagian sebelumnya. 
+Rumusan masalah yang akan dibahas pada skripsi ini adalah sebagai berikut:
+\begin{itemize}
+	\item Bagaimana mengimplementasikan {\it Integrated Development Environment} sehingga mahasiswa dapat mengetik dan menjalankan kode dalam SharIF Judge?
+\end{itemize}
 
-\dtext{6}
 
 \section{Tujuan}
 \label{sec:tujuan}
-Akan dipaparkan secara lebih terperinci dan tersturkur apa yang menjadi tujuan pembuatan template skripsi ini
-
-\dtext{7}
+Tujuan yang ingin dicapai skripsi ini adalah sebagai berikut:
+\begin{itemize}
+	\item Mengimplementasikan {\it Integrated Development Environment} sehingga mahasiswa dapat mengetik dan menjalankan kode dalam SharIF Judge.
+\end{itemize}
 
 \section{Batasan Masalah}
 \label{sec:batasan}
-Untuk mempermudah pembuatan template ini, tentu ada hal-hal yang harus dibatasi, misalnya saja bahwa template ini bukan berupa style \LaTeX{} pada umumnya (dengan alasannya karena belum mampu jika diminta membuat seperti itu)
-
-\dtext{8}
+\dtext{6}
 
 \section{Metodologi}
 \label{sec:metlit}
-Tentunya akan diisi dengan metodologi yang serius sehingga templatenya terkesan lebih serius.
-
-\dtext{9}
+Metodologi pengerjaan skripsi ini adalah sebagai berikut :
+\begin{enumerate}
+	\item Melakukan studi mengenai komponen yang diperlukan untuk membuat IDE berbasis web.
+	\item Mempelajari struktur SharIF Judge.
+	\item Merancang IDE berbasis web untuk SharIF Judge.
+	\item Mengimplementasikan IDE pada SharIF Judge.
+	\item Melakukan pengujian dan eksperimen.
+	\item Menulis dokumen skripsi.
+\end{enumerate}
 
 \section{Sistematika Pembahasan}
 \label{sec:sispem}
-Rencananya Bab 2 akan berisi petunjuk penggunaan template dan dasar-dasar \LaTeX.
-Mungkin bab 3,4,5 dapt diisi oleh ketiga jurusan, misalnya peraturan dasar skripsi atau pedoman penulisan, tentu jika berkenan.
-Bab 6 akan diisi dengan kesimpulan, bahwa membuat template ini ternyata sungguh menghabiskan banyak waktu.
-
-\dtext{10}
+Sistematika pembahasan skripsi ini adalah sebagai berikut :
+\begin{itemize}
+	\item Bab 1 Pendahuluan membahas mengenai latar belakang, rumusan masalah, tujuan, batasan masalah, metodologi, dan sistematika pembahasan.
+	\item Bab 2 Landasan Teori
+\end{itemize}
