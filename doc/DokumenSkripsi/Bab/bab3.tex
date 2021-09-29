@@ -1,0 +1,66 @@
+\chapter{Analisis}
+\label{chap:analisis}
+
+\section{Analisis Sistem Kini}
+\label{sec:analisiskini} 
+
+SharIF Judge menggunakan \textit{framework} CodeIgniter. Seperti yang dibahas pada bagian \ref{subs:cimvc}, \textit{framework} CodeIgniter menerapkan pola arsitektur MVC, dengan komponen-komponen \textit{model}, \textit{view}, dan \textit{controller} yang terdapat pada \verb|\application|.
+
+\subsection{Model}
+\label{subs:sjmodel}
+
+Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \verb|\application\models|:
+
+\begin{itemize}
+	\item \verb|Assignment_model| \\ Model untuk menangani database \textit{assignments}.
+	Fungsi yang dimiliki:
+	\begin{itemize}
+		\item \verb|add_assignment($id, $edit = FALSE)|\\ Menambah atau mengubah sebuah \textit{assignment}.
+		\item \verb|delete_assignment($assignment_id)| \\ Menghapus sebuah \textit{assignment}.
+		\item \verb|all_assignments()| \\ Mengambil seluruh \textit{assignment}.
+		\item \verb|new_assignment_id()| \\ Menentukan \textit{integer} terkecil yang dapat digunakan sebagai id \textit{assignment} baru.
+		\item \verb|all_problems($assignment_id)| \\ Mengambil seluruh \textit{problem} dari \textit{assignment}.
+		\item \verb|problem_info($assignment_id, $problem_id)| \\ Mengambil sebuah \textit{problem}.
+		\item \verb|assignment_info($assignment_id)| \\ Mengambil sebuah \textit{assignment}.
+		\item \verb|is_participant($participants, $username)| \\ Mengembalikan \verb|TRUE| jika \verb|$username| terdapat dalam \verb|$participants|.
+		\item \verb|increase_total_submits($assignment_id)| \\ Meningkatkan jumlah total \textit{submit} sebuah \textit{assignment} sebanyak satu.
+		\item \verb|set_moss_time($assignment_id)| \\ Mengubah \textit{"Moss Update Time"} untuk sebuah assignment.
+		\item \verb|get_moss_time($assignment_id)| \\ Mengambil \textit{"Moss Update Time"} untuk sebuah assignment.
+		\item \verb|save_problem_description($assignment_id, $problem_id, $text, $type)| \\ Menambah atau mengubah deskripsi sebuah \textit{problem}.
+		\item \verb|_update_coefficients($assignment_id, $extra_time, $finish_time, $new_late_rule)| \\ Mengubah koefisien seluruh \textit{submission} pada sebuah \textit{assignment}. Fungsi ini dipanggil oleh \verb|add_assignment($id, TRUE)|.
+	\end{itemize}
+	
+	\item \verb|Hof_model| \\ Model untuk menangani informasi \textit{hall of fame}.
+	\item \verb|Logs_model| \\ Model untuk menangani database \textit{logins}.
+	\item \verb|Notifications_model| \\ Model untuk menangani database \textit{notifications}.
+	\item \verb|Queue_model| \\ Model untuk menangani database \textit{queue}.
+	\item \verb|Scoreboard_model| \\ Model untuk menangani database \textit{scoreboard}.
+	\item \verb|Settings_model| \\ Model untuk menangani database \textit{settings}.
+	\item \verb|Submit_model| \\ Model untuk menangani database \textit{submissions}.
+	\item \verb|User| \\ Model untuk menangani informasi preferensi setiap \textit{user}.
+	\item \verb|User_model| \\ Model untuk menangani database \textit{users}.
+\end{itemize}
+
+\subsection{View}
+\label{subs:sjview}
+
+\textit{View} pada SharIF Judge yang terletak pada \verb|\application\views| terbagi menjadi beberapa kategori:
+
+\begin{itemize}
+	\item \verb|errors| \\ Menyimpan tampilan halaman error.
+	\item \verb|pages| \\ Menyimpan tampilan utama halaman.
+	\item \verb|templates| \\ Menyimpan komponen-komponen dasar halaman.
+\end{itemize}
+
+\subsection{Controller}
+\label{subs:sjcontroller}
+
+Berikut ini adalah seluruh \textit{controller} pada SharIF Judge yang terletak pada \verb|\application\controllers|:
+
+\begin{itemize}
+	\item \verb|Assignments| \\Controller untuk menangani \textit{assignments}.
+	Fungsi yang dimiliki:
+	\begin{itemize}
+		\item \verb|select()|\\ Memilih \textit{assignment} yang sedang ditampilkan.
+	\end{itemize}
+\end{itemize}
