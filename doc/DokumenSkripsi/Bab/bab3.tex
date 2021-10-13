@@ -12,10 +12,9 @@ SharIF Judge menggunakan \textit{framework} CodeIgniter. Seperti yang dibahas pa
 Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \verb|\application\models|:
 
 \begin{itemize}
-	\item \verb|Assignment_model| \\ Model untuk menangani database \textit{assignments}.
-	Fungsi yang dimiliki:
+	\item \verb|Assignment_model| \\ Model untuk menangani \textit{database} \verb|assignments|. Fungsi yang dimiliki:
 	\begin{itemize}
-		\item \verb|add_assignment($id, $edit = FALSE)|\\ Menambah atau mengubah sebuah \textit{assignment}.
+		\item \verb|add_assignment($id, $edit = FALSE)|\\ Menambah atau memperbarui sebuah \textit{assignment}.
 		\item \verb|delete_assignment($assignment_id)| \\ Menghapus sebuah \textit{assignment}.
 		\item \verb|all_assignments()| \\ Mengambil seluruh \textit{assignment}.
 		\item \verb|new_assignment_id()| \\ Menentukan \textit{integer} terkecil yang dapat digunakan sebagai id \textit{assignment} baru.
@@ -24,21 +23,103 @@ Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \
 		\item \verb|assignment_info($assignment_id)| \\ Mengambil sebuah \textit{assignment}.
 		\item \verb|is_participant($participants, $username)| \\ Mengembalikan \verb|TRUE| jika \verb|$username| terdapat dalam \verb|$participants|.
 		\item \verb|increase_total_submits($assignment_id)| \\ Meningkatkan jumlah total \textit{submit} sebuah \textit{assignment} sebanyak satu.
-		\item \verb|set_moss_time($assignment_id)| \\ Mengubah \textit{"Moss Update Time"} untuk sebuah assignment.
+		\item \verb|set_moss_time($assignment_id)| \\ Memperbarui \textit{"Moss Update Time"} untuk sebuah assignment.
 		\item \verb|get_moss_time($assignment_id)| \\ Mengambil \textit{"Moss Update Time"} untuk sebuah assignment.
-		\item \verb|save_problem_description($assignment_id, $problem_id, $text, $type)| \\ Menambah atau mengubah deskripsi sebuah \textit{problem}.
-		\item \verb|_update_coefficients($assignment_id, $extra_time, $finish_time, $new_late_rule)| \\ Mengubah koefisien seluruh \textit{submission} pada sebuah \textit{assignment}. Fungsi ini dipanggil oleh \verb|add_assignment($id, TRUE)|.
+		\item \verb|save_problem_description($assignment_id, $problem_id, $text, $type)| \\ Menambah atau memperbarui deskripsi sebuah \textit{problem}.
+		\item \verb|_update_coefficients($assignment_id, $extra_time, $finish_time, $new_late_rule)| \\ Memperbarui koefisien seluruh \textit{submission} pada sebuah \textit{assignment}. Fungsi ini dipanggil oleh \verb|add_assignment($id, TRUE)|.
 	\end{itemize}
 	
-	\item \verb|Hof_model| \\ Model untuk menangani informasi \textit{hall of fame}.
-	\item \verb|Logs_model| \\ Model untuk menangani database \textit{logins}.
-	\item \verb|Notifications_model| \\ Model untuk menangani database \textit{notifications}.
-	\item \verb|Queue_model| \\ Model untuk menangani database \textit{queue}.
-	\item \verb|Scoreboard_model| \\ Model untuk menangani database \textit{scoreboard}.
-	\item \verb|Settings_model| \\ Model untuk menangani database \textit{settings}.
-	\item \verb|Submit_model| \\ Model untuk menangani database \textit{submissions}.
-	\item \verb|User| \\ Model untuk menangani informasi preferensi setiap \textit{user}.
-	\item \verb|User_model| \\ Model untuk menangani database \textit{users}.
+	\item \verb|Hof_model| \\ Model untuk menangani informasi \textit{hall of fame}. Fungsi yang dimiliki:
+	\begin{itemize}
+	    \item \verb|get_all_final_submission()| \\ Mengambil seluruh \textit{final submission}.
+	    \item \verb|get_all_user_assignments($username)| \\ Mengambil seluruh \textit{assignment} dan \textit{problem} untuk \textit{user} tertentu.
+	\end{itemize}
+	
+	\item \verb|Logs_model| \\ Model untuk menangani \textit{database} \verb|logins|. Fungsi yang dimiliki:
+	\begin{itemize}
+	    \item \verb|insert_to_logs($username, $ip_adrress)| \\ Menambah sebuah catatan \textit{login} dan menghapus catatan yang sudah melebihi 24 jam.
+	    \item \verb|get_all_logs()| \\ Mengambil seluruh catatan \textit{login}.
+	\end{itemize}
+	
+	\item \verb|Notifications_model| \\ Model untuk menangani \textit{database} \verb|notifications|. Fungsi yang dimiliki:
+	\begin{itemize}
+	    \item \verb|get_all_notifications()| \\ Mengambil seluruh notifikasi.
+	    \item \verb|get_latest_notifications()| \\ Mengambil 10 notifikasi terbaru.
+	    \item \verb|add_notification($title, $text)| \\ Menambah notifikasi baru.
+	    \item \verb|update_notification($id, $title, $text)| \\ Memperbarui sebuah notifikasi. 
+	    \item \verb|delete_notification($id)| \\ Menghapus sebuah notifikasi.
+	    \item \verb|get_notification($notif_id)| \\ Mengambil sebuah notifikasi.
+	    \item \verb|have_new_notification($time)| \\ Mengembalikan \verb|TRUE| jika terdapat notifikasi setelah \verb|$time|.
+	\end{itemize}
+	
+	\item \verb|Queue_model| \\ Model untuk menangani \textit{database} \verb|queue|. Fungsi yang dimiliki:
+	\begin{itemize}
+	    \item \verb|in_queue($username, $assignment, $problem)| \\ Mengembalikan \verb|TRUE| jika sebuah \textit{submission} sudah berada dalam antrian.
+	    \item \verb|get_queue()| \\ Mengambil seluruh antrian.
+	    \item \verb|empty_queue()| \\ Mengosongkan antrian.
+	    \item \verb|add_to_queue($submit_info)| \\ Menambahkan sebuah \textit{submission} ke dalam antrian.
+	    \item \verb|rejudge($assignment_id, $problem_id)| \\ Menambahkan seluruh \textit{submission} dari sebuah \textit{problem} ke dalam antrian untuk dinilai ulang.
+	    \item \verb|rejudge_single($submission)| \\  Menambahkan sebuah \textit{submission} ke dalam antrian untuk dinilai ulang.
+	    \item \verb|get_first_item()| \\ Mengambil \textit{entry} pertama dari antrian.
+	    \item \verb|remove_item($username, $assignment, $problem, $submit_id)| \\ Menghapus sebuah \textit{entry} dari antrian.
+	    \item \verb|save_judge_result_in_db ($submission, $type)| \\ Menyimpan hasil penilaian ke dalam \textit{database}. Fungsi ini dipanggil oleh \textit{controller} \verb|Queueprocess|.
+	\end{itemize}
+	
+	\item \verb|Scoreboard_model| \\ Model untuk menangani \textit{database} \verb|scoreboard|. Fungsi yang dimiliki:
+	\begin{itemize}
+	    \item \verb|_generate_scoreboard($assignment_id)| \\ Membuat \textit{scoreboard} untuk sebuah \textit{assignment}. Fungsi ini dipanggil oleh \verb|update_scoreboard($assignment_id)|.
+	    \item \verb|update_scoreboards()| \\ Memperbarui \textit{scoreboard} untuk seluruh \textit{assignment}.
+	    \item \verb|update_scoreboard($assignment_id)| \\ Memperbarui \textit{scoreboard} untuk sebuah \textit{assignment}.
+	    \item \verb|get_scoreboard($assignment_id)| \\ Mengambil \textit{scoreboard} untuk sebuah \textit{assignment}.
+	\end{itemize}
+	
+	\item \verb|Settings_model| \\ Model untuk menangani \textit{database} \verb|settings|. Fungsi yang dimiliki:
+	\begin{itemize}
+	    \item \verb|get_setting($key)| \\ Mengambil sebuah pengaturan.
+	    \item \verb|set_setting($key, $value)| \\ Memperbarui sebuah pengaturan.
+	    \item \verb|get_all_settings()| \\ Mengambil seluruh pengaturan.
+	    \item \verb|set_settings($settings)| \\ Memperbarui beberapa pengaturan.
+	\end{itemize}
+	
+	\item \verb|Submit_model| \\ Model untuk menangani \textit{database} \verb|submissions|. Fungsi yang dimiliki:
+	\begin{itemize}
+	    \item \verb|get_submission($username, $assignment, $problem, $submit_id)| \\ Mengambil sebuah \textit{submission}.
+	    \item \verb|get_final_submissions($assignment_id, $user_level, $username, $page_number = NULL, $filter_user = NULL, $filter_problem = NULL)| \\ Mengambil seluruh \textit{final submission} untuk sebuah \textit{assignment}.
+	    \item \verb|get_all_submissions($assignment_id, $user_level, $username, $page_number = NULL, $filter_user = NULL, $filter_problem = NULL)| \\ Mengambil seluruh \textit{submission} untuk sebuah \textit{assignment}.
+	    \item \verb|count_final_submissions($assignment_id, $user_level, $username, $filter_user = NULL, $filter_problem = NULL)| \\ Menghitung jumlah \textit{final submission} dari \textit{user} tertentu.
+	    \item \verb|count_all_submissions($assignment_id, $user_level, $username, $filter_user = NULL, $filter_problem = NULL)| \\ Menghitung jumlah \textit{submission} dari \textit{user} tertentu.
+	    \item \verb|set_final_submission($username, $assignment, $problem, $submit_id)| \\ Memperbarui sebuah \textit{submission} menjadi \textit{final}.
+	    \item \verb|add_upload_only($submit_info)| \\ Menambahkan hasil dari \textit{submission} \textit{upload only} ke dalam \textit{database}.
+	\end{itemize}
+	
+	\item \verb|User| \\ Model untuk menangani informasi preferensi setiap \textit{user}. Fungsi yang dimiliki:
+	\begin{itemize}
+	    \item \verb|select_assignment($assignment_id)| \\ Menetapkan \textit{assignment} yang dipilih.
+	    \item \verb|save_widget_positions($positions)| \\ Memperbarui posisi \textit{widget}.
+	    \item \verb|get_widget_positions()| \\ Mengambil posisi \textit{widget}.
+	\end{itemize}
+	
+	\item \verb|User_model| \\ Model untuk menangani \textit{database} \verb|users|. Fungsi yang dimiliki:
+	\begin{itemize}
+	    \item \verb|have_user($username)| \\ Mengembalikan \verb|TRUE| jika terdapat \textit{user} dengan nama \verb|$username|.
+	    \item \verb|user_id_to_username($user_id)| \\ Mengembalikan \verb|username| dari \textit{user} dengan \verb|id| tertentu.
+	    \item \verb|username_to_user_id($username)| \\ Mengembalikan \verb|id| dari \textit{user} dengan \verb|username| tertentu.
+	    \item \verb|have_email($email, $username = FALSE)| \\ Mengembalikan \verb|TRUE| jika terdapat \textit{user} selain \verb|$username| dengan email \verb|$email|.
+	    \item \verb|add_user($username, $email, $display_name, $password, $role)| \\ Menambahkan sebuah \textit{user} baru.
+	    \item \verb|add_users($text, $send_mail, $delay)| \\ Menambahkan beberapa \textit{user} baru.
+	    \item \verb|delete_user($user_id)| \\ Menghapus sebuah \textit{user}.
+	    \item \verb|delete_submissions($user_id)| \\ Menghapus seluruh \textit{submission} dari sebuah \textit{user}.
+	    \item \verb|validate_user($username, $password)| \\ Mengembalikan \verb|TRUE| jika \verb|$username| dan \verb|$password| valid untuk login.
+	    \item \verb|selected_assignment($username)| \\ Mengembalikan \textit{assignment} yang dipilih sebuah \textit{user}.
+	    \item \verb|get_names()| \\  Mengembalikan nama dari \textit{user}.
+	    \item \verb|update_profile($user_id)| \\ Memperbarui sebuah \textit{user}.
+	    \item \verb|send_password_reset_mail($email)| \\ Mengirim \textit{email} untuk \textit{reset password}.
+	    \item \verb|passchange_is_valid($passchange_key)| \\ Mengembalikan \verb|TRUE| jika kunci untuk \textit{reset password} valid.
+	    \item \verb|reset_password($passchange_key, $newpassword)| \\ Memperbarui \textit{password} menjadi kunci \textit{reset password}.
+	    \item \verb|get_all_users()| \\ Mengambil seluruh \textit{user}.
+	    \item \verb|get_user($user_id)| \\ Mengambil sebuah \textit{user}.
+	    \item \verb|update_login_time($username)| \\ Memperbarui catatan \textit{login} sebuah \textit{user}.
+	\end{itemize}
 \end{itemize}
 
 \subsection{View}
@@ -58,9 +139,122 @@ Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \
 Berikut ini adalah seluruh \textit{controller} pada SharIF Judge yang terletak pada \verb|\application\controllers|:
 
 \begin{itemize}
-	\item \verb|Assignments| \\Controller untuk menangani \textit{assignments}.
-	Fungsi yang dimiliki:
+	\item \verb|Assignments| \\ Controller untuk menangani \textit{assignments}. Fungsi yang dimiliki:
 	\begin{itemize}
-		\item \verb|select()|\\ Memilih \textit{assignment} yang sedang ditampilkan.
+		\item \verb|select()| \\ Memilih \textit{assignment} yang sedang ditampilkan.
+		\item \verb|pdf($assignment_id, $problem_id = NULL)| \\ Mengunduh \textit{file} PDF dari sebuah \textit{assignment}.
+		\item \verb|downloadtestsdesc($assignment_id = FALSE)| \\ Mengunduh \textit{file} \textit{test case} dari sebuah \textit{assignment}.
+		\item \verb|download_submissions($type = FALSE, $assignment_id = FALSE)| \\ Mengunduh seluruh \textit{file} \textit{final submission} dari sebuah \textit{assignment}.
+		\item \verb|delete($assignment_id = FALSE)| \\ Menghapus sebuah \textit{assignment}.
+		\item \verb|add()| \\ Menambah atau memperbarui \textit{assignment}.
+		\item \verb|edit($assignment_id)| \\ Memperbarui \textit{assignment}.
+	\end{itemize}
+	
+	\item \verb|Dashboard| \\Controller untuk menangani halaman \textit{Dashboard}. Fungsi yang dimiliki:
+	\begin{itemize}
+		\item \verb|widget_positions()| \\ Menyimpan posisi \textit{widget} dari \textit{user}.
+	\end{itemize}
+	
+	\item \verb|Halloffame| \\ Controller untuk menangani halaman \textit{Hall of Fame} . Fungsi yang dimiliki:
+	\begin{itemize}
+		\item \verb|hof_details()| \\ Mengambil data yang diperlukan untuk \textit{hall of fame}.
+	\end{itemize}
+	
+	\item \verb|Install| \\ Controller untuk menangani instalasi SharIF Judge.
+	
+	\item \verb|Login| \\ Controller untuk menangani halaman-halaman \textit{login}. Fungsi yang dimiliki:
+	\begin{itemize}
+		\item \verb|register()| \\ Registrasi \textit{user} baru dan menampilkan halaman \textit{register}.
+		\item \verb|logout()| \\ \textit{Log out} user saat ini dan mengalihkan ke halaman \textit{login}.
+		\item \verb|lost()| \\ Menangani email dan menampilkan halaman untuk meminta \textit{reset password}.
+		\item \verb|reset($passchange_key = FALSE)| \\ Memproses dan menampilkan halaman untuk ubah \textit{reset password}.
+	\end{itemize}
+	
+	\item \verb|Logs| \\ Controller untuk menangani halaman \textit{24-hour Log}.
+	\begin{itemize}
+        \item \verb|index()| Mengambil data yang diperlukan dan menampilkan halaman \textit{24-hour Log}.
+	\end{itemize}
+	
+	\item \verb|Moss| \\ Controller untuk menangani halaman \textit{Detect Similar Codes} . Fungsi yang dimiliki:
+	\begin{itemize}
+		\item \verb|update($assignment_id = FALSE)| \\ Memperbarui informasi pada halaman \textit{Detect Similar Codes}.
+		\item \verb|_detect($assignment_id = FALSE)| \\ Menjalankan Moss untuk mendeteksi kesamaan kode.
+	\end{itemize}
+	
+	\item \verb|Notifications| \\ Controller untuk menangani halaman \textit{Notifications}. Fungsi yang dimiliki:
+	\begin{itemize}
+		\item \verb|add()| \\ Menambahkan notifikasi baru dan menampilkan halaman \textit{New Notification}.
+		\item \verb|edit($notif_id = FALSE)| \\ Memperbarui sebuah notifikasi.
+		\item \verb|delete()| \\ Menghapus sebuah notifikasi.
+		\item \verb|check()| \\ Memeriksa adanya notifikasi baru.
+	\end{itemize}
+	
+	\item \verb|Problems| \\ Controller untuk menangani halaman \textit{Problems}. Fungsi yang dimiliki:
+	\begin{itemize}
+		\item \verb|index($assignment_id = NULL, $problem_id = 1)| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Problems}.
+		\item \verb|edit($type = 'md', $assignment_id = NULL, $problem_id = 1)| \\ Memperbarui deskripsi \textit{problem} dan menampilkan halaman \textit{Edit Problem Description}.
+	\end{itemize}
+	
+	\item \verb|Profile| \\ Controller untuk menangani halaman \textit{Profile}. Fungsi yang dimiliki:
+	\begin{itemize}
+		\item \verb|index($user_id = FALSE)| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Profile}.
+		\item \verb|_password_check($str)| \\ Memeriksa apakah \textit{password} sesuai dengan syarat.
+		\item \verb|_password_again_check($str)| \\ Memeriksa apakah \textit{password again} sama dengan \textit{password} yang dimasukkan.
+		\item \verb|_email_check($email)| \\ Memeriksa apakah terdapat user dengan alamat email tertentu.
+		\item \verb|_role_check($role)| \\ Memeriksa \textit{role} yang dimiliki \textit{user}.
+	\end{itemize}
+	
+	\item \verb|Queue| \\ Controller untuk menangani halaman \textit{Queue}. Fungsi yang dimiliki:
+	\begin{itemize}
+        \item \verb|index()| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Queue}.
+        \item \verb|pause()| \\ Memberhentikan antrian.
+        \item \verb|resume()| \\ Melanjutkan antrian.
+        \item \verb|empty_queue()| \\ Mengosongkan antrian.
+	\end{itemize}
+	
+	\item \verb|Queueprocess| \\Controller untuk menangani proses penilaian kode. Fungsi yang dimiliki:
+	\begin{itemize}
+        \item \verb|run()| \\ Menilai kode satu per satu dari antrian.
+	\end{itemize}
+	
+	\item \verb|Rejudge| \\ Controller untuk menangani halaman \textit{Rejudge}. Fungsi yang dimiliki:
+	\begin{itemize}
+        \item \verb|index()| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Rejudge}.
+        \item \verb|rejudge_single()| \\ Melakukan penilaian ulang untuk sebuah \textit{submission}.
+	\end{itemize}
+	
+	\item \verb|Server_time| \\ Controller untuk menangani sinkronisasi waktu server. Fungsi yang dimiliki:
+	\begin{itemize}
+        \item \verb|index()| \\ Mengembalikan waktu server.
+	\end{itemize}
+	
+	\item \verb|Submissions| \\ Controller untuk menangani unduh \textit{submissions} menjadi file Excel. Fungsi yang dimiliki:
+	\begin{itemize}
+        \item \verb|_download_excel($view)| \\ Menggunakan \textit{library} PHPExcel untuk membuat file excel.
+        \item \verb|final_excel()| \\ Mengunduh data \textit{final submissions} sebagai file excel.
+        \item \verb|all_excel()| \\ Mengunduh data \textit{final submissions} sebagai file excel.
+        \item \verb|the_final()| \\ Mengambil dan menampilkan data \textit{final submissions} yang akan diunduh.
+        \item \verb|all()| \\ Mengambil dan menampilkan data \textit{submissions} yang akan diunduh.
+        \item \verb|select()| \\ Memilih \textit{final submission}.
+        \item \verb|view_code()| \\ Menampilkan kode, \textit{result}, atau \textit{log} dari \textit{submission}.
+        \item \verb|download_file()| \\ Mengunduh file excel.
+	\end{itemize}
+	
+	\item \verb|Submit| \\ Controller untuk menangani \textit{submissions}. Fungsi yang dimiliki:
+	\begin{itemize}
+        \item \verb|_language_to_type($language)| \\ Mengembalikan kode singkatan dari bahasa pemrograman.
+        \item \verb|_match($type, $extension)| \\ Memeriksa apakah bahasa pemrograman dan tipe file sesuai.
+        \item \verb|_check_language($str)| \\ Memeriksa apakah bahasa pemrograman yang dipilih valid.
+        \item \verb|index()| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Submit}.
+        \item \verb|_upload()| \\ Menyimpan file yang diunggah dan menambahkannya ke dalam antrian.
+	\end{itemize}
+	
+	\item \verb|Users| \\ Controller untuk menangani halaman \textit{Users}. Fungsi yang dimiliki:
+	\begin{itemize}
+        \item \verb|index()| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Users}.
+        \item \verb|add()| \\ Menambah \textit{user} baru dan menampilkan halaman \textit{Add Users}.
+        \item \verb|delete()| \\ Menghapus \textit{user}.
+        \item \verb|delete_submissions()| \\ Menghapus seluruh \textit{submission} dari sebuah \textit{user}.
+         \item \verb|list_excel()| \\ Menggunakan \textit{library} PHPExcel untuk membuat file excel dari \textit{list user}.
 	\end{itemize}
 \end{itemize}

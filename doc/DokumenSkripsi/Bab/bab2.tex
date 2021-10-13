@@ -4,8 +4,7 @@
 \section{CodeIgniter}
 \label{sec:codeigniter} 
 
-CodeIgniter adalah sebuah \textit{framework} untuk membangun situs web menggunakan PHP. Tujuan utamanya adalah untuk mempercepat pembuatan proyek dengan menyediakan \textit{library} yang lengkap untuk fungsi-fungsi yang umum digunakan, serta antarmuka yang sederhana dan struktur yang logis untuk mengakses \textit{library} tersebut.
-
+CodeIgniter adalah sebuah \textit{framework} untuk membangun situs web menggunakan PHP. Tujuan utamanya adalah untuk mempercepat pembuatan proyek dengan menyediakan \textit{library} yang lengkap untuk fungsi-fungsi yang umum digunakan, serta antarmuka yang sederhana dan struktur yang logis untuk mengakses \textit{library} tersebut \cite{codeigniter}. Versi CodeIgniter yang digunakan pada SharIF Judge adalah CodeIgniter 3.
 
 \begin{figure}[H]
 	\centering  
@@ -139,7 +138,7 @@ URL pada CodeIgniter menggunakan \textit{segment-based approach} yang dirancang 
 \section{Twig}
 \label{sec:twig}
 
-Twig adalah sebuah \textit{template engine} untuk PHP. Sebuah \textit{template} Twig memuat \textit{variable} atau \textit{expression} yang nantinya akan diubah menjadi \textit{value} saat template dievaluasi, serta \textit{tag} yang mengontrol logika template.
+Twig adalah sebuah \textit{template engine} untuk PHP. Sebuah \textit{template} Twig memuat \textit{variable} atau \textit{expression} yang nantinya akan diubah menjadi \textit{value} saat template dievaluasi, serta \textit{tag} yang mengontrol logika template \cite{twig}.
 
 \begin{lstlisting}[language=php, caption=Contoh template Twig, label=kode:twig]
 <!DOCTYPE html>
@@ -164,15 +163,13 @@ Kode \ref{kode:twig} merupakan contoh sebuah template Twig. Terdapat dua jenis \
 
 \section{PDF.js}
 \label{sec:pdfjs} 
-PDF.js adalah sebuah library JavaScript yang berfungsi untuk menampilkan \textit{file} Portable Document Format (PDF) menggunakan HTML5 \textit{Canvas}. PDF.js terdiri dari 3 \textit{layer}:
+PDF.js adalah sebuah library JavaScript yang berfungsi untuk menampilkan \textit{file} Portable Document Format (PDF) menggunakan HTML5 \textit{Canvas} \cite{pdfjs}. PDF.js terdiri dari 3 \textit{layer}:
 
 \begin{itemize}
 	\item \textit{\textbf{Core}} merupakan bagian dimana proses \textit{parse} dan \textit{interpret} dilakukan terhadap \textit{binary} PDF.
 	\item \textit{\textbf{Display}} mengambil \textit{layer} \textit{core} sebagai API yang lebih mudah digunakan untuk menampilkan PDF dan mengambil informasi lainnya dari sebuah dokumen.
 	\item \textit{\textbf{Viewer}} membangun \textit{layer} \textit{display} sebagai halaman website dengan \textit{user interface} yang dapat ditampilkan di browser.
 \end{itemize}
-
-Salah satu cara untuk menampilkan \textit{file} PDF menggunakan PDF.js adalah dengan \textit{embed} layer \textit{viewer} yang sudah tersedia melalui \verb|web/viewer.js| pada sebuah \verb|iframe|. Contoh kode untuk \textit{embed} PDF.js untuk menampilkan file \verb|sample.pdf| dapat dilihat pada kode \ref{kode:pdfjs}.
 
 \begin{lstlisting}[language=php, caption=Contoh kode untuk menggunakan PDF.js, label=kode:pdfjs]
 <!DOCTYPE html>
@@ -181,10 +178,54 @@ Salah satu cara untuk menampilkan \textit{file} PDF menggunakan PDF.js adalah de
 </html>
 \end{lstlisting}
 
+Salah satu cara untuk menampilkan \textit{file} PDF menggunakan PDF.js adalah dengan \textit{embed} layer \textit{viewer} yang sudah tersedia melalui \verb|web/viewer.js| pada sebuah \verb|iframe|. Kode \ref{kode:pdfjs} merupakan contoh kode \textit{embed} PDF.js untuk menampilkan sebuah file PDF contoh \verb|sample.pdf|.
+
 \section{Ace}
 \label{sec:ace} 
 Ace adalah sebuah library JavaScript yang berfungsi sebagai \textit{code editor}.
-Ace memiliki fitur-fitur yang dapat ditemukan di \textit{code editor} pada umumnya. Kode \ref{kode:ace} merupakan contoh kode untuk menempatkan editor Ace pada \verb|div| dengan id \verb|editor|. Terdapat berbagai konfigurasi pada Ace editor, pada contoh ini digunakan tema \textit{monokai} dan mode \textit{syntax highlighting} untuk JavaScript.
+Ace memiliki fitur-fitur yang dapat ditemukan di \textit{code editor} pada umumnya \cite{ace}. Berikut ini merupakan beberapa fitur utama dari Ace: 
+
+\begin{itemize}
+    \item \textit{Syntax highlighting} untuk lebih dari 110 bahasa pemrograman.
+    \item \textit{Indent} dan \textit{outdent} otomatis.
+    \item Kemampuan \textit{cut}, \textit{copy}, dan \textit{paste}.
+    \item \textit{Drag and drop} teks menggunakan mouse.
+\end{itemize}
+
+Berikut ini adalah beberapa kelas yang terdapat pada Ace:
+
+\begin{itemize}
+    \item \verb|Ace| \\ Kelas utama yang digunakan mempersiapkan Ace pada browser. Salah satu fungsi yang dimiliki:
+        \begin{itemize}
+            \item \verb|edit(String | DOMElement el)| \\ \textit{Embed} Ace pada elemen yang disediakan.
+        \end{itemize}
+    \item \verb|Anchor| \\ Menangani posisi \textit{pointer} pada dokumen.
+    \item \verb|BackgroundTokenizer| \\ Bekerja di latar belakang untuk melakukan tokenisasi pada dokumen saat ini dan menyimpan baris yang sudah ditokenisasi sebagai \textit{cache}.
+    \item \verb|Document| \\ Menyimpan teks dari dokumen. 
+    \item \verb|EditSession| \\ Menyimpan seluruh \textit{state} untuk \verb|Editor| dan menyediakan cara untuk mengubahnya dengan mudah. Beberapa fungsi yang dimiliki:
+        \begin{itemize}
+            \item \verb|getMode()| \\ Mengembalikan mode \textit{syntax highlighting} editor yang sedang digunakan.
+            \item \verb|setMode()| \\ Mengubah mode \textit{syntax highlighting} editor.
+        \end{itemize}
+    \item \verb|Editor| \\ \textit{Entry point} utama untuk seluruh kegunaan Ace. Beberapa fungsi yang dimiliki:
+        \begin{itemize}
+            \item \verb|getReadOnly()| \\ Mengembalikan \verb|true| jika editor sedang menggunakan pengaturan \textit{read-only}.
+            \item \verb|getTheme()| \\ Mengembalikan alamat tema editor yang sedang digunakan.
+            \item \verb|getValue()| \\ Mengembalikan isi teks editor.
+            \item \verb|setReadOnly(Boolean readOnly)| \\ Mengubah pengaturan \textit{read-only}.
+            \item \verb|setTheme(String style)| \\ Mengubah tema editor.
+            \item \verb|setValue(String val, Number cursorPos)| \\ Mengubah isi teks editor.
+        \end{itemize}
+    \item \verb|Range| \\ Mengindikasi sebuah daerah pada editor.
+    \item \verb|Scrollbar| \\ Menangani \textit{scrollbar} editor.
+    \item \verb|Search| \\ Menangani seluruh operasi pencarian teks pada dokumen.
+    \item \verb|Selection| \\ Menyimpan posisi kursor dan seleksi teks pada editor.
+    \item \verb|TokenIterator| \\ Menyediakan fungsi untuk membaca dokumen sebagai aliran token.
+    \item \verb|Tokenizer| \\ Menerima sejumlah aturan dan membuat \verb|Tokenizer|.
+    \item \verb|UndoManager| \\ Menangani fungsi \textit{undo} pada editor.
+    \item \verb|VirtualRenderer| \\ Menggambar tampilan yang terlihat di layar.
+\end{itemize}
+
 
 \begin{lstlisting}[language=php, caption=Contoh kode untuk menggunakan Ace, label=kode:ace]
 <!DOCTYPE html>
@@ -211,14 +252,8 @@ function foo(items) {
 </html>
 \end{lstlisting} 
 
-Berikut ini beberapa fungsi Ace yang digunakan:
-\begin{itemize}
-    \item \verb|setTheme()| \\ Mengubah tema editor kode.
-    \item \verb|setMode()| \\ Mengubah mode \textit{syntax highlighting} untuk bahasa pemrograman.
-    \item \verb|setValue()| \\ Mengubah isi editor kode.
-    \item \verb|getValue()| \\ Mengambil isi editor kode.
-    \item \verb|setReadOnly()| \\ Mengatur editor kode menjadi \textit{read only}.
-\end{itemize}
+Kode \ref{kode:ace} merupakan contoh kode untuk menempatkan editor Ace pada sebuah elemen \verb|div| dengan id \verb|editor|. Terdapat berbagai konfigurasi pada Ace, pada contoh ini digunakan tema \textit{monokai} dan mode \textit{syntax highlighting} untuk JavaScript.
+
 
 
 
