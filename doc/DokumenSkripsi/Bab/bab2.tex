@@ -4,7 +4,7 @@
 \section{CodeIgniter}
 \label{sec:codeigniter} 
 
-CodeIgniter adalah sebuah \textit{framework} untuk membangun situs web menggunakan PHP. Tujuan utamanya adalah untuk mempercepat pembuatan proyek dengan menyediakan \textit{library} yang lengkap untuk fungsi-fungsi yang umum digunakan, serta antarmuka yang sederhana dan struktur yang logis untuk mengakses \textit{library} tersebut \cite{codeigniter}. Versi CodeIgniter yang digunakan pada SharIF Judge adalah CodeIgniter 3.
+CodeIgniter adalah sebuah \textit{framework} untuk membangun situs web menggunakan PHP. Tujuan utamanya adalah untuk mempercepat pembuatan proyek dengan menyediakan \textit{library} yang lengkap untuk fungsi-fungsi yang umum digunakan, serta antarmuka yang sederhana dan struktur yang logis untuk mengakses \textit{library} tersebut \cite{codeigniter}.
 
 \begin{figure}[H]
 	\centering  
@@ -161,6 +161,12 @@ Twig adalah sebuah \textit{template engine} untuk PHP. Sebuah \textit{template} 
 
 Kode \ref{kode:twig} merupakan contoh sebuah template Twig. Terdapat dua jenis \textit{delimiter}, yaitu \verb|{% ... %}| dan \verb|{{ ... }}|. \textit{Delimiter} \verb|{% ... %}| digunakan untuk menjalankan \textit{statement} seperti \verb|for| dan \verb|if|, sementara \textit{delimiter} \verb|{{ ... }}| digunakan untuk menampilkan nilai dari \textit{variable} atau \textit{expression}.
 
+\section{Shell Script}
+\label{sec:shell}
+\textit{Shell} adalah sebuah program pada sistem operasi Unix yang menerima perintah tertulis dan mengirimnya ke sistem operasi untuk dijalankan. Pada umumnya, perangkat Linux menggunakan program bernama Bourne Again SHell (Bash) sebagai \textit{shell}. Bash merupakan program yang disempurnakan dari \textit{shell} Unix pertama yang diciptakan oleh Steve Bourne \cite{linux}. 
+
+\textit{Shell script} adalah sebuah \textit{file} yang menyimpan rangkaian perintah. \textit{Shell} akan membaca \textit{file} tersebut dan menjalankan rangkaian perintah seperti jika perintah tersebut dimasukkan secara langsung pada \textit{command line}. Keunikan dari \textit{shell} adalah kemampuannya sebagai \textit{command line interface} dan sebagai  \textit{scripting language interpreter}. Artinya, hal yang dapat dilakukan melalui \textit{command line} dapat dilakukan sebagai \textit{script}, dan hal yang dapat dilakukan sebagai \textit{script} dapat dilakukan melalui \textit{command line}.
+
 \section{PDF.js}
 \label{sec:pdfjs} 
 PDF.js adalah sebuah library JavaScript yang berfungsi untuk menampilkan \textit{file} Portable Document Format (PDF) menggunakan HTML5 \textit{Canvas} \cite{pdfjs}. PDF.js terdiri dari 3 \textit{layer}:
@@ -197,7 +203,7 @@ Berikut ini adalah beberapa kelas yang terdapat pada Ace:
 \begin{itemize}
     \item \verb|Ace| \\ Kelas utama yang digunakan mempersiapkan Ace pada browser. Salah satu fungsi yang dimiliki:
         \begin{itemize}
-            \item \verb|edit(String | DOMElement el)| \\ \textit{Embed} Ace pada elemen yang disediakan.
+            \item \texttt{edit(String | DOMElement el)} \\ \textit{Embed} Ace pada elemen yang disediakan.
         \end{itemize}
     \item \verb|Anchor| \\ Menangani posisi \textit{pointer} pada dokumen.
     \item \verb|BackgroundTokenizer| \\ Bekerja di latar belakang untuk melakukan tokenisasi pada dokumen saat ini dan menyimpan baris yang sudah ditokenisasi sebagai \textit{cache}.

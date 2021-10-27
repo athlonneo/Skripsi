@@ -1,0 +1,48 @@
+\chapter{Perancangan}
+\label{chap:perancangan}
+
+Bab ini membahas perancangan untuk seluruh fitur yang diimplementasi pada  perangkat lunak SharIF Judge.
+
+\section{Menampilkan soal}
+\label{sec:4:soal}
+
+SharIF Judge sudah memiliki kemampuan untuk menyimpan soal dalam bentuk PDF, namun untuk melihat soal tersebut, soal harus diunduh terlebih dahulu. Agar pengguna dapat melihat soal secara langsung di halaman \textit{web}, digunakan \textit{library} PDF.js untuk menampilkan \textit{file} PDF soal di halaman Submit.
+
+\begin{lstlisting}[language=php, caption=Perubahan pada \texttt{Assignments.php}, label=kode:411]
+
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=php, caption=Perubahan pada \texttt{submit.twig}, label=kode:412]
+	<iframe id="pdf_viewer" src={{ base_url('assets/pdfjs/web/viewer.html?file=') ~ site_url('assignments/pdf/' ~ user.selected_assignment.id ~ '/null/true')}} ></iframe>
+\end{lstlisting}
+
+Fungsi \verb|pdf| pada \textit{controller} \verb|Assignments| berfungsi untuk mengembalikan \textit{file} PDF soal untuk \textit{assignment} tertentu. Agar \textit{file} PDF dapat dibaca dan ditampilkan oleh PDF.js, diperlukan perubahan yang ditunjukkan pada kode \ref{kode:411}. Ditambahkan sebuah parameter pada fungsi \verb|pdf| sebagai kondisi apakah \textit{file} PDF akan diunduh atau ditampilkan pada \textit{browser}. Alamat fungsi tersebut kemudian akan dipanggil pada \textit{embed} PDf.js untuk ditampilkan. Perubahan pada \verb|submit.twig| untuk \textit{embed} PDF.js ditampilkan pada kode \ref{kode:412}.
+
+\section{Editor Kode}
+\label{sec:4:editor}
+
+Untuk menambahkan editor kode pada halaman Submit, digunakan library Ace yang di \textit{embed} pada sebuah \verb|div| dengan \verb|id| \verb|code_editor|. Untuk \textit{embed} Ace, diperlukan kode Javascript yang disimpan pada \verb|assets\js\shj_submit.js|. Terdapat beberapa fungsi pada \verb|shj_submit.js|:
+
+\begin{itemize}
+    \item \verb|disableEditor(bool)| \\ Mengaktifkan atau nonaktifkan editor kode beserta dengan tombol Save, Execute, dan Submit.
+    \item \verb|$("select#problems").change(function(){})| \\ Mengubah mode \textit{syntax highlighting} editor kode sesuai dengan bahasa program yang dipilih.
+\end{itemize}
+
+\section{Menyimpan Kode}
+
+Seluruh \textit{submission} pada SharIF Judge disimpan pada folder \verb|Assignments| sesuai dengan \textit{assignment} dan \textit{problem} yang terkait. Kode pada editor kode juga disimpan pada folder yang sama sebagai \verb|editor.txt|. Untuk menyimpan kode yang sudah diketik, ditambahkan sebuah beberapa fungsi baru pada controller \verb|Submit|. Berikut ini adalah fungsi yang ditambahkan:
+
+\begin{itemize}
+    \item \verb|load($problem_id)| \\ Mengambil kode yang tersimpan pada \verb|editor.txt|.
+    \item \verb|save($type = FALSE)| \\ Menyimpan kode yang terdapat di editor kode. \verb|$type| menentukan apakah kode akan selanjutnya disubmit atau dijalankan bila diperlukan.
+\end{itemize}
+
+Fungsi tersebut dipanggil melalui \textit{Ajax request} dari halaman Submit. Berikut ini beberapa fungsi Javascript halaman submit yang tersimpan di \verb|assets\js\shj_submit.js|:
+
+\begin{itemize}
+    \item \verb|loadCode(problem_id)| \\ Mengirim \textit{request} Ajax untuk mengambil kode yang sudah tersimpan jika tersedia.
+    \item \verb|$("editor_save").change(function(){})| \\ Mengirim \textit{request} Ajax untuk menyimpan kode yang terdapat di editor kode.
+\end{itemize}
+
+

@@ -1,19 +1,24 @@
-%versi 2 (8-10-2016) 
 \chapter{Pendahuluan}
 \label{chap:intro}
    
 \section{Latar Belakang}
 \label{sec:label}
 
-SharIF Judge (dengan IF kapital) adalah modifikasi dari aplikasi Sharif Judge buatan Mohammad Javad Naderi yang berfungsi untuk menilai kode program yang diunggah secara otomatis berdasarkan kunci jawaban yang disediakan. SharIF Judge digunakan pada beberapa kuliah di Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program, terutama saat ujian.
+\textit{Online judge} adalah sebuah sistem \textit{online} yang berfungsi untuk mengevaluasi kode program yang dikumpulkan oleh pengguna. Kode program kemudian dikompilasi dan diuji pada lingkungan yang serupa. \textit{Online judge} sering kali digunakan dalam sistem pemrograman kompetitif dan edukasi pemrograman \cite{ide}.
 
-Dengan adanya situasi pandemi, seluruh kegiatan kuliah wajib dilaksanakan secara daring. Hal ini menyebabkan berbagai kesulitan, terutama dalam pelaksanaan ujian. Saat ujian sedang berlangsung, umumnya terdapat pengawas yang mengawasi mahasiswa secara fisik untuk mencegah kecurangan. Namun, pengawasan saat ujian menjadi sangat sulit untuk dilakukan saat kuliah dilaksanakan secara daring. Diperlukan sebuah cara untuk merekam tindakan-tindakan mahasiswa selama ujian daring berlangsung. 
+Sharif Judge adalah sebuah \textit{online judge} untuk bahasa pemrograman C, C++, Java dan Python. Antarmuka web Sharif Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter, disertai \textit{backend} menggunakan Bash \cite{sharif}.
 
-Maka, pada skripsi ini akan diimplementasikan editor kode pada SharIF Judge, yang sudah memiliki kemampuan untuk mengompilasi dan menjalankan kode. Dengan demikian, SharIF Judge dapat menjadi sebuah {\it Integrated Development Environment} yang mampu memfasilitasi seluruh proses pembuatan kode serta merekamnya.
+SharIF Judge (dengan IF kapital) adalah modifikasi dari Sharif Judge yang disesuaikan untuk kebutuhan spesifik Teknik Informatika Unpar. SharIF Judge digunakan pada beberapa mata kuliah pemrograman untuk mempermudah proses pengumpulan dan penilaian kode program \cite{stillmen:sharif}.
+
+Dengan adanya situasi pandemi Covid-19, seluruh kegiatan kuliah wajib dilaksanakan secara \textit{online}. Pada umumnya, kegiatan praktikum dan ujian pada mata kuliah pemrograman Teknik Informatika Unpar dapat diawasi secara langsung oleh dosen dan asisten dosen di lab komputer.  Namun, pengawasan menjadi lebih sulit untuk dilakukan saat kuliah dilaksanakan secara \textit{online}. Diperlukan sebuah cara untuk mengawasi mahasiswa selama kuliah \textit{online} berlangsung. 
 
 {\it Integrated Development Environment} (IDE) adalah sebuah aplikasi yang menyediakan fasilitas untuk pembangunan perangkat lunak. Sebuah IDE memiliki kemampuan untuk mengedit, mengompilasi, dan menjalankan kode program. Pada umumnya, mahasiswa menggunakan aplikasi IDE seperti Netbeans untuk membuat kode program yang kemudian diunggah ke SharIF Judge untuk dinilai.
 
-Dengan mengimplementasikan IDE berbasis web pada SharIF Judge, pengawasan terhadap mahasiswa saat ujian dapat dipermudah dengan merekam ketikan pada editor kode dan mendeteksi bila mahasiswa sedang melihat aplikasi selain SharIF judge.
+Pada skripsi ini akan diimplementasikan editor kode pada SharIF Judge. SharIF Judge sebelumnya sudah memiliki kemampuan untuk mengompilasi dan menjalankan kode. Dengan implementasi editor kode, SharIF Judge dapat menjadi sebuah IDE yang mampu memfasilitasi proses penulisan kode, lalu mengompilasi, menjalankan, dan mengujinya.
+
+Dengan implementasi IDE berbasis web pada SharIF Judge, selanjutnya dapat ditambahkan fitur yang dapat membantu pengawasan terhadap mahasiswa selama kegiatan kuliah seperti merekam ketikan dan mendeteksi ketika mahasiswa membuka \textit{tab} atau aplikasi lain.
+
+Perangkat lunak diuji pada kuliah Dasar-dasar Pemrograman semester 51 Informatika Unpar. Pada kuliah ini terdapat 2 alamat \textit{judge} yang digunakan, yaitu \verb|http://daspro.labftis.net| untuk latihan, dan \verb|http://daspro-quiz.labftis.net| untuk kuis. Perangkat lunak skripsi ini hanya akan diuji pada \textit{judge} latihan.
 
 
 \section{Rumusan Masalah}
@@ -33,7 +38,7 @@ Tujuan yang ingin dicapai skripsi ini adalah sebagai berikut:
 
 \section{Batasan Masalah}
 \label{sec:batasan}
-Perangkat lunak diuji pada kuliah Dasar-dasar Pemrograman semester 51 Informatika Unpar. Pada kuliah ini terdapat 2 alamat \textit{judge} yang digunakan, yaitu \verb|http://daspro.labftis.net| untuk latihan, dan \verb|http://daspro-quiz.labftis.net| untuk kuis. Perangkat lunak skripsi ini hanya akan diuji pada \textit{judge} latihan.
+Perangkat lunak diuji pada kuliah Dasar-dasar Pemrograman semester 51 Teknik Informatika Unpar. Pada kuliah ini terdapat 2 alamat \textit{judge} yang digunakan, yaitu \verb|http://daspro.labftis.net| untuk latihan, dan \verb|http://daspro-quiz.labftis.net| untuk kuis. Perangkat lunak skripsi ini hanya akan diuji pada \textit{judge} latihan.
 
 \section{Metodologi}
 \label{sec:metlit}
@@ -51,6 +56,8 @@ Metodologi pengerjaan skripsi ini adalah sebagai berikut:
 \label{sec:sispem}
 Sistematika pembahasan skripsi ini adalah sebagai berikut:
 \begin{itemize}
-	\item Bab 1 Pendahuluan membahas mengenai latar belakang, rumusan masalah, tujuan, batasan masalah, metodologi, dan sistematika pembahasan.
-	\item Bab 2 Landasan Teori
+	\item Bab 1 Pendahuluan \\ Membahas mengenai latar belakang, rumusan masalah, tujuan, batasan masalah, metodologi, dan sistematika pembahasan.
+	\item Bab 2 Landasan Teori \\ Membahas teori-teori yang digunakan dalam skripsi ini, yaitu CodeIgniter, Twig, Shell Script, PDF.js, dan Ace.
+	\item Bab 3 Analisis \\ Membahas analisis terhadap perangkat lunak SharIF Judge.
+	\item Bab 4 Perancanggan \\ Membahas perancangan fitur yang diimplementasikan pada SharIF Judge.
 \end{itemize}
