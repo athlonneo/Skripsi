@@ -1,19 +1,19 @@
 \chapter{Landasan Teori}
 \label{chap:teori}
 
-\section{CodeIgniter}
-\label{sec:codeigniter} 
+\section{CodeIgniter 3}
+\label{sec:2:codeigniter} 
 
 CodeIgniter adalah sebuah \textit{framework} untuk membangun situs web menggunakan PHP. Tujuan utamanya adalah untuk mempercepat pembuatan proyek dengan menyediakan \textit{library} yang lengkap untuk fungsi-fungsi yang umum digunakan, serta antarmuka yang sederhana dan struktur yang logis untuk mengakses \textit{library} tersebut \cite{codeigniter}.
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.3]{ci-flowchart}  
-	\caption[\textit{Flow Chart} CodeIgniter]{\textit{Flow Chart} CodeIgniter} 
-	\label{fig:ciflowchart} 
+	\caption{\textit{Flow Chart} CodeIgniter}
+	\label{fig:2:ciflowchart} 
 \end{figure} 
 
-Gambar~\ref{fig:ciflowchart} mengilustrasikan bagaimana data mengalir pada sistem CodeIgniter.
+Gambar~\ref{fig:2:ciflowchart} mengilustrasikan bagaimana data mengalir pada sistem CodeIgniter.
 
 \begin{enumerate}
 	\item \textit{File} index.php berfungsi sebagai \textit{front controller}, menginisialisasi \textit{resource} utama untuk menjalankan CodeIgniter.
@@ -25,13 +25,13 @@ Gambar~\ref{fig:ciflowchart} mengilustrasikan bagaimana data mengalir pada siste
 \end{enumerate}
 
 \subsection{Model-View-Controller}
-\label{subs:cimvc} 
+\label{subs:2:cimvc} 
 CodeIgniter menggunakan pola arsitektur MVC (\textit{Model-View-Controller}) sebagai dasarnya. MVC memisahkan proses logika aplikasi dari presentasi. Dengan demikian, halaman web dapat memuat sedikit \textit{script} karena presentasinya terpisah dari \textit{scripting} PHP.
 
 \subsubsection{Model}
 \textit{Model} merepresentasikan struktur data. Biasanya \textit{model} memiliki fungsi-fungsi yang membantu dalam mengambil, memasukkan, dan memperbarui informasi pada \textit{database}. Pada CodeIgniter, \textit{model} adalah sebuah kelas yang mengekstensi \verb|CI_Model| dan terletak di direktori \verb|application/models/|.
 
-\begin{lstlisting}[language=php, caption=Contoh \textit{model}, label=kode:cimodel]
+\begin{lstlisting}[language=php, caption=Contoh \textit{model}, label=kode:2:cimodel]
 class Blog_model extends CI_Model {
 
         public $title;
@@ -65,12 +65,12 @@ class Blog_model extends CI_Model {
 }
 \end{lstlisting}
 
-Kode \ref{kode:cimodel} merupakan contoh sebuah kelas \textit{model} pada CodeIgniter. Kelas tersebut mengekstensi \verb|CI_Model| dan memiliki fungsi untuk mengambil, memasukkan, dan memperbarui \textit{database}.
+Kode \ref{kode:2:cimodel} merupakan contoh sebuah kelas \textit{model} pada CodeIgniter. Kelas tersebut mengekstensi \verb|CI_Model| dan memiliki fungsi untuk mengambil, memasukkan, dan memperbarui \textit{database}.
 	
 \subsubsection{View}
 \textit{View} adalah informasi yang ditampilkan kepada pengguna. Pada CodeIgniter, \textit{view} merupakan sebuah halaman web atau sebagian dari halaman web yang terletak di direktori \verb|application/view/|.
 
-\begin{lstlisting}[language=php, caption=Contoh \textit{view}, label=kode:ciview]
+\begin{lstlisting}[language=php, caption=Contoh \textit{view}, label=kode:2:ciview]
 <html>
 <head>
         <title>My Blog</title>
@@ -81,12 +81,12 @@ Kode \ref{kode:cimodel} merupakan contoh sebuah kelas \textit{model} pada CodeIg
 </html>
 \end{lstlisting}
 
-Kode \ref{kode:ciview} merupakan contoh sebuah \textit{view}. \textit{View} pada CodeIgniter harus dipanggil melalui \textit{Controller} dan tidak pernah dipanggil secara langsung.
+Kode \ref{kode:2:ciview} merupakan contoh sebuah \textit{view}. \textit{View} pada CodeIgniter harus dipanggil melalui \textit{Controller} dan tidak pernah dipanggil secara langsung.
 	
 \subsubsection{Controller}
 \textit{Controller} adalah perantara dari \textit{model} dan \textit{view}, serta \textit{resource} lainnya yang diperlukan untuk memproses \textit{request} HTTP dan menghasilkan sebuah halaman web. Pada CodeIgniter, \textit{controller} adalah sebuah kelas yang mengekstensi \verb|CI_Controller| dan terletak di direktori \verb|application/controllers/|.
 
-\begin{lstlisting}[language=php, caption=Contoh \textit{controller}, label=kode:cicontroller]
+\begin{lstlisting}[language=php, caption=Contoh \textit{controller}, label=kode:2:cicontroller]
 <?php
 class Blog extends CI_Controller {
 
@@ -102,9 +102,9 @@ class Blog extends CI_Controller {
 }
 \end{lstlisting}
 
-Kode \ref{kode:cimodel} merupakan contoh sebuah kelas \textit{controller} pada CodeIgniter. Kelas tersebut mengekstensi \verb|CI_Controller| dan memiliki fungsi \verb|index()| dan \verb|comments()|. Fungsi \verb|index()| akan dipanggil secara otomatis jika tidak ada fungsi lain yang dipanggil. 
+Kode \ref{kode:2:cimodel} merupakan contoh sebuah kelas \textit{controller} pada CodeIgniter. Kelas tersebut mengekstensi \verb|CI_Controller| dan memiliki fungsi \verb|index()| dan \verb|comments()|. Fungsi \verb|index()| akan dipanggil secara otomatis jika tidak ada fungsi lain yang dipanggil. 
 
-\begin{lstlisting}[language=php, caption=Contoh memuat \textit{model} dan menampilkan \textit{view}, label=kode:cimodelview]
+\begin{lstlisting}[language=php, caption=Contoh memuat \textit{model} dan menampilkan \textit{view}, label=kode:2:cimodelview]
 <?php
 class Blog_controller extends CI_Controller {
 
@@ -120,10 +120,10 @@ class Blog_controller extends CI_Controller {
 }
 \end{lstlisting}
 
-Pada CodeIgniter, \textit{model} dan \textit{view} hanya dapat dimuat melalui controller. Pada contoh kode \ref{kode:cimodelview}, fungsi \verb|blog()| pada \textit{controller} memuat \textit{model} untuk mengambil data dari \textit{database}, lalu menampilkan \textit{view} yang memuat data tersebut. 
+Pada CodeIgniter, \textit{model} dan \textit{view} hanya dapat dimuat melalui controller. Pada contoh kode \ref{kode:2:cimodelview}, fungsi \verb|blog()| pada \textit{controller} memuat \textit{model} untuk mengambil data dari \textit{database}, lalu menampilkan \textit{view} yang memuat data tersebut. 
 
 \subsection{URL CodeIgniter}
-\label{subs:ciurl}
+\label{subs:2:ciurl}
 
 URL pada CodeIgniter menggunakan \textit{segment-based approach} yang dirancang untuk lebih mudah dibaca oleh \textit{search engine} dan manusia. Berikut ini adalah contoh sebuah URL pada CodeIgniter:
 \begin{center}
@@ -136,11 +136,11 @@ URL pada CodeIgniter menggunakan \textit{segment-based approach} yang dirancang 
 \end{itemize}
 
 \section{Twig}
-\label{sec:twig}
+\label{sec:2:twig}
 
 Twig adalah sebuah \textit{template engine} untuk PHP. Sebuah \textit{template} Twig memuat \textit{variable} atau \textit{expression} yang nantinya akan diubah menjadi \textit{value} saat template dievaluasi, serta \textit{tag} yang mengontrol logika template \cite{twig}.
 
-\begin{lstlisting}[language=php, caption=Contoh template Twig, label=kode:twig]
+\begin{lstlisting}[language=php, caption=Contoh template Twig, label=kode:2:twig]
 <!DOCTYPE html>
 <html>
     <head>
@@ -159,16 +159,16 @@ Twig adalah sebuah \textit{template engine} untuk PHP. Sebuah \textit{template} 
 </html>
 \end{lstlisting}
 
-Kode \ref{kode:twig} merupakan contoh sebuah template Twig. Terdapat dua jenis \textit{delimiter}, yaitu \verb|{% ... %}| dan \verb|{{ ... }}|. \textit{Delimiter} \verb|{% ... %}| digunakan untuk menjalankan \textit{statement} seperti \verb|for| dan \verb|if|, sementara \textit{delimiter} \verb|{{ ... }}| digunakan untuk menampilkan nilai dari \textit{variable} atau \textit{expression}.
+Kode \ref{kode:2:twig} merupakan contoh sebuah template Twig. Terdapat dua jenis \textit{delimiter}, yaitu \verb|{% ... %}| dan \verb|{{ ... }}|. \textit{Delimiter} \verb|{% ... %}| digunakan untuk menjalankan \textit{statement} seperti \verb|for| dan \verb|if|, sementara \textit{delimiter} \verb|{{ ... }}| digunakan untuk menampilkan nilai dari \textit{variable} atau \textit{expression}.
 
 \section{Shell Script}
-\label{sec:shell}
+\label{sec:2:shell}
 \textit{Shell} adalah sebuah program pada sistem operasi Unix yang menerima perintah tertulis dan mengirimnya ke sistem operasi untuk dijalankan. Pada umumnya, perangkat Linux menggunakan program bernama Bourne Again SHell (Bash) sebagai \textit{shell}. Bash merupakan program yang disempurnakan dari \textit{shell} Unix pertama yang diciptakan oleh Steve Bourne \cite{linux}. 
 
 \textit{Shell script} adalah sebuah \textit{file} yang menyimpan rangkaian perintah. \textit{Shell} akan membaca \textit{file} tersebut dan menjalankan rangkaian perintah seperti jika perintah tersebut dimasukkan secara langsung pada \textit{command line}. Keunikan dari \textit{shell} adalah kemampuannya sebagai \textit{command line interface} dan sebagai  \textit{scripting language interpreter}. Artinya, hal yang dapat dilakukan melalui \textit{command line} dapat dilakukan sebagai \textit{script}, dan hal yang dapat dilakukan sebagai \textit{script} dapat dilakukan melalui \textit{command line}.
 
 \section{PDF.js}
-\label{sec:pdfjs} 
+\label{sec:2:pdfjs} 
 PDF.js adalah sebuah library JavaScript yang berfungsi untuk menampilkan \textit{file} Portable Document Format (PDF) menggunakan HTML5 \textit{Canvas} \cite{pdfjs}. PDF.js terdiri dari 3 \textit{layer}:
 
 \begin{itemize}
@@ -177,17 +177,17 @@ PDF.js adalah sebuah library JavaScript yang berfungsi untuk menampilkan \textit
 	\item \textit{\textbf{Viewer}} membangun \textit{layer} \textit{display} sebagai halaman website dengan \textit{user interface} yang dapat ditampilkan di browser.
 \end{itemize}
 
-\begin{lstlisting}[language=php, caption=Contoh kode untuk menggunakan PDF.js, label=kode:pdfjs]
+\begin{lstlisting}[language=php, caption=Contoh kode untuk menggunakan PDF.js, label=kode:2:pdfjs]
 <!DOCTYPE html>
 <html>
     <iframe src="/web/viewer.html?file=sample.pdf"></iframe>
 </html>
 \end{lstlisting}
 
-Salah satu cara untuk menampilkan \textit{file} PDF menggunakan PDF.js adalah dengan \textit{embed} layer \textit{viewer} yang sudah tersedia melalui \verb|web/viewer.js| pada sebuah \verb|iframe|. Kode \ref{kode:pdfjs} merupakan contoh kode \textit{embed} PDF.js untuk menampilkan sebuah file PDF contoh \verb|sample.pdf|.
+Salah satu cara untuk menampilkan \textit{file} PDF menggunakan PDF.js adalah dengan \textit{embed} layer \textit{viewer} yang sudah tersedia melalui \verb|web/viewer.js| pada sebuah \verb|iframe|. Kode \ref{kode:2:pdfjs} merupakan contoh kode \textit{embed} PDF.js untuk menampilkan sebuah file PDF contoh \verb|sample.pdf|.
 
 \section{Ace}
-\label{sec:ace} 
+\label{sec:2:ace} 
 Ace adalah sebuah library JavaScript yang berfungsi sebagai \textit{code editor}.
 Ace memiliki fitur-fitur yang dapat ditemukan di \textit{code editor} pada umumnya \cite{ace}. Berikut ini merupakan beberapa fitur utama dari Ace: 
 
@@ -233,7 +233,7 @@ Berikut ini adalah beberapa kelas yang terdapat pada Ace:
 \end{itemize}
 
 
-\begin{lstlisting}[language=php, caption=Contoh kode untuk menggunakan Ace, label=kode:ace]
+\begin{lstlisting}[language=php, caption=Contoh kode untuk menggunakan Ace, label=kode:2:ace]
 <!DOCTYPE html>
 <html>
 <head>
@@ -258,7 +258,7 @@ function foo(items) {
 </html>
 \end{lstlisting} 
 
-Kode \ref{kode:ace} merupakan contoh kode untuk menempatkan editor Ace pada sebuah elemen \verb|div| dengan id \verb|editor|. Terdapat berbagai konfigurasi pada Ace, pada contoh ini digunakan tema \textit{monokai} dan mode \textit{syntax highlighting} untuk JavaScript.
+Kode \ref{kode:2:ace} merupakan contoh kode untuk menempatkan editor Ace pada sebuah elemen \verb|div| dengan id \verb|editor|. Terdapat berbagai konfigurasi pada Ace, pada contoh ini digunakan tema \textit{monokai} dan mode \textit{syntax highlighting} untuk JavaScript.
 
 
 

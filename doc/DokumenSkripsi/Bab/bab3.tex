@@ -2,19 +2,19 @@
 \label{chap:analisis}
 
 \section{Analisis Sistem Kini}
-\label{sec:analisiskini} 
+\label{sec:3:analisiskini} 
 
-SharIF Judge menggunakan \textit{framework} CodeIgniter.Seperti yang dibahas pada bagian \ref{subs:cimvc}, \textit{framework} CodeIgniter menerapkan pola arsitektur MVC, dengan komponen-komponen \textit{model}, \textit{view}, dan \textit{controller} yang terdapat pada \verb|\application|.
+SharIF Judge menggunakan \textit{framework} CodeIgniter 3. Seperti yang dibahas pada bagian \ref{subs:2:cimvc}, \textit{framework} CodeIgniter menerapkan pola arsitektur MVC, dengan komponen-komponen \textit{model}, \textit{view}, dan \textit{controller}.
 
 \subsection{Model}
-\label{subs:sjmodel}
+\label{subs:3:sjmodel}
 
-Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \verb|\application\models|:
+Berikut ini adalah seluruh \textit{model} pada SharIF Judge:
 
 \begin{itemize}
 	\item \verb|Assignment_model| \\ Model untuk menangani \textit{database} \verb|assignments|. Fungsi yang dimiliki:
 	\begin{itemize}
-		\item \verb|add_assignment($id, $edit = FALSE)|\\ Menambah atau memperbarui sebuah \textit{assignment}.
+		\item \verb|add_assignment($id, $edit)|\\ Menambah atau memperbarui sebuah \textit{assignment}.
 		\item \verb|delete_assignment($assignment_id)| \\ Menghapus sebuah \textit{assignment}.
 		\item \verb|all_assignments()| \\ Mengambil seluruh \textit{assignment}.
 		\item \verb|new_assignment_id()| \\ Menentukan \textit{integer} terkecil yang dapat digunakan sebagai id \textit{assignment} baru.
@@ -26,7 +26,7 @@ Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \
 		\item \verb|set_moss_time($assignment_id)| \\ Memperbarui \textit{"Moss Update Time"} untuk sebuah assignment.
 		\item \verb|get_moss_time($assignment_id)| \\ Mengambil \textit{"Moss Update Time"} untuk sebuah assignment.
 		\item \verb|save_problem_description($assignment_id, $problem_id, $text, $type)| \\ Menambah atau memperbarui deskripsi sebuah \textit{problem}.
-		\item \verb|_update_coefficients($assignment_id, $extra_time, $finish_time, $new_late_rule)| \\ Memperbarui koefisien seluruh \textit{submission} pada sebuah \textit{assignment}. Fungsi ini dipanggil oleh \verb|add_assignment($id, TRUE)|.
+		\item \verb|_update_coefficients($a_id, $extra_time, $finish_time, $new_late_rule)| \\ Memperbarui koefisien seluruh \textit{submission} pada sebuah \textit{assignment}.
 	\end{itemize}
 	
 	\item \verb|Hof_model| \\ Model untuk menangani informasi \textit{hall of fame}. Fungsi yang dimiliki:
@@ -62,12 +62,12 @@ Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \
 	    \item \verb|rejudge_single($submission)| \\  Menambahkan sebuah \textit{submission} ke dalam antrian untuk dinilai ulang.
 	    \item \verb|get_first_item()| \\ Mengambil \textit{entry} pertama dari antrian.
 	    \item \verb|remove_item($username, $assignment, $problem, $submit_id)| \\ Menghapus sebuah \textit{entry} dari antrian.
-	    \item \verb|save_judge_result_in_db ($submission, $type)| \\ Menyimpan hasil penilaian ke dalam \textit{database}. Fungsi ini dipanggil oleh \textit{controller} \verb|Queueprocess|.
+	    \item \verb|save_judge_result_in_db ($submission, $type)| \\ Menyimpan hasil penilaian ke dalam \textit{database}.
 	\end{itemize}
 	
 	\item \verb|Scoreboard_model| \\ Model untuk menangani \textit{database} \verb|scoreboard|. Fungsi yang dimiliki:
 	\begin{itemize}
-	    \item \verb|_generate_scoreboard($assignment_id)| \\ Membuat \textit{scoreboard} untuk sebuah \textit{assignment}. Fungsi ini dipanggil oleh \verb|update_scoreboard($assignment_id)|.
+	    \item \verb|_generate_scoreboard($assignment_id)| \\ Membuat \textit{scoreboard} untuk sebuah \textit{assignment}.
 	    \item \verb|update_scoreboards()| \\ Memperbarui \textit{scoreboard} untuk seluruh \textit{assignment}.
 	    \item \verb|update_scoreboard($assignment_id)| \\ Memperbarui \textit{scoreboard} untuk sebuah \textit{assignment}.
 	    \item \verb|get_scoreboard($assignment_id)| \\ Mengambil \textit{scoreboard} untuk sebuah \textit{assignment}.
@@ -83,12 +83,12 @@ Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \
 	
 	\item \verb|Submit_model| \\ Model untuk menangani \textit{database} \verb|submissions|. Fungsi yang dimiliki:
 	\begin{itemize}
-	    \item \verb|get_submission($username, $assignment, $problem, $submit_id)| \\ Mengambil sebuah \textit{submission}.
-	    \item \verb|get_final_submissions($assignment_id, $user_level, $username, $page_number = NULL, $filter_user = NULL, $filter_problem = NULL)| \\ Mengambil seluruh \textit{final submission} untuk sebuah \textit{assignment}.
-	    \item \verb|get_all_submissions($assignment_id, $user_level, $username, $page_number = NULL, $filter_user = NULL, $filter_problem = NULL)| \\ Mengambil seluruh \textit{submission} untuk sebuah \textit{assignment}.
-	    \item \verb|count_final_submissions($assignment_id, $user_level, $username, $filter_user = NULL, $filter_problem = NULL)| \\ Menghitung jumlah \textit{final submission} dari \textit{user} tertentu.
-	    \item \verb|count_all_submissions($assignment_id, $user_level, $username, $filter_user = NULL, $filter_problem = NULL)| \\ Menghitung jumlah \textit{submission} dari \textit{user} tertentu.
-	    \item \verb|set_final_submission($username, $assignment, $problem, $submit_id)| \\ Memperbarui sebuah \textit{submission} menjadi \textit{final}.
+	    \item \verb|get_submission($uname, $assignment, $problem, $submit_id)| \\ Mengambil sebuah \textit{submission}.
+	    \item \verb|get_final_submissions($a_id, $u_lv, $uname, $p_num, $f_user, $f_prblm)| \\ Mengambil seluruh \textit{final submission} untuk sebuah \textit{assignment}.
+	    \item \verb|get_all_submissions($a_id, $u_lv, $uname, $p_num, $f_user, $f_prblm)| \\ Mengambil seluruh \textit{submission} untuk sebuah \textit{assignment}.
+	    \item \verb|count_final_submissions($a_id, $u_lv, $uname, $f_user, $f_prblm)| \\ Menghitung jumlah \textit{final submission} dari \textit{user} tertentu.
+	    \item \verb|count_all_submissions($a_id, $u_lv, $uname, $f_user, $f_prblm)| \\ Menghitung jumlah \textit{submission} dari \textit{user} tertentu.
+	    \item \verb|set_final_submission($uname, $assignment, $problem, $submit_id)| \\ Memperbarui sebuah \textit{submission} menjadi \textit{final}.
 	    \item \verb|add_upload_only($submit_info)| \\ Menambahkan hasil dari \textit{submission} \textit{upload only} ke dalam \textit{database}.
 	\end{itemize}
 	
@@ -104,7 +104,7 @@ Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \
 	    \item \verb|have_user($username)| \\ Mengembalikan \verb|TRUE| jika terdapat \textit{user} dengan nama \verb|$username|.
 	    \item \verb|user_id_to_username($user_id)| \\ Mengembalikan \verb|username| dari \textit{user} dengan \verb|id| tertentu.
 	    \item \verb|username_to_user_id($username)| \\ Mengembalikan \verb|id| dari \textit{user} dengan \verb|username| tertentu.
-	    \item \verb|have_email($email, $username = FALSE)| \\ Mengembalikan \verb|TRUE| jika terdapat \textit{user} selain \verb|$username| dengan email \verb|$email|.
+	    \item \verb|have_email($email, $username)| \\ Mengembalikan \verb|TRUE| jika terdapat \textit{user} selain \verb|$username| dengan email \verb|$email|.
 	    \item \verb|add_user($username, $email, $display_name, $password, $role)| \\ Menambahkan sebuah \textit{user} baru.
 	    \item \verb|add_users($text, $send_mail, $delay)| \\ Menambahkan beberapa \textit{user} baru.
 	    \item \verb|delete_user($user_id)| \\ Menghapus sebuah \textit{user}.
@@ -123,9 +123,9 @@ Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \
 \end{itemize}
 
 \subsection{View}
-\label{subs:sjview}
+\label{subs:3:sjview}
 
-\textit{View} pada SharIF Judge yang terletak pada \verb|\application\views| terbagi menjadi beberapa kategori:
+\textit{View} pada SharIF Judge terbagi menjadi beberapa kategori:
 
 \begin{itemize}
 	\item \verb|errors| \\ Menyimpan tampilan halaman error.
@@ -134,18 +134,18 @@ Berikut ini adalah seluruh \textit{model} pada SharIF Judge yang terletak pada \
 \end{itemize}
 
 \subsection{Controller}
-\label{subs:sjcontroller}
+\label{subs:3:sjcontroller}
 
-Berikut ini adalah seluruh \textit{controller} pada SharIF Judge yang terletak pada \verb|\application\controllers|:
+Berikut ini adalah seluruh \textit{controller} pada SharIF Judge:
 
 \begin{itemize}
 	\item \verb|Assignments| \\ Controller untuk menangani \textit{assignments}. Fungsi yang dimiliki:
 	\begin{itemize}
 		\item \verb|select()| \\ Memilih \textit{assignment} yang sedang ditampilkan.
-		\item \verb|pdf($assignment_id, $problem_id = NULL)| \\ Mengunduh \textit{file} PDF dari sebuah \textit{assignment}.
-		\item \verb|downloadtestsdesc($assignment_id = FALSE)| \\ Mengunduh \textit{file} \textit{test case} dari sebuah \textit{assignment}.
-		\item \verb|download_submissions($type = FALSE, $assignment_id = FALSE)| \\ Mengunduh seluruh \textit{file} \textit{final submission} dari sebuah \textit{assignment}.
-		\item \verb|delete($assignment_id = FALSE)| \\ Menghapus sebuah \textit{assignment}.
+		\item \verb|pdf($assignment_id, $problem_id)| \\ Mengunduh \textit{file} PDF dari sebuah \textit{assignment}.
+		\item \verb|downloadtestsdesc($assignment_id)| \\ Mengunduh \textit{file} \textit{test case} dari sebuah \textit{assignment}.
+		\item \verb|download_submissions($type, $assignment_id)| \\ Mengunduh seluruh \textit{file} \textit{final submission} dari sebuah \textit{assignment}.
+		\item \verb|delete($assignment_id)| \\ Menghapus sebuah \textit{assignment}.
 		\item \verb|add()| \\ Menambah atau memperbarui \textit{assignment}.
 		\item \verb|edit($assignment_id)| \\ Memperbarui \textit{assignment}.
 	\end{itemize}
@@ -167,7 +167,7 @@ Berikut ini adalah seluruh \textit{controller} pada SharIF Judge yang terletak p
 		\item \verb|register()| \\ Registrasi \textit{user} baru dan menampilkan halaman \textit{register}.
 		\item \verb|logout()| \\ \textit{Log out} user saat ini dan mengalihkan ke halaman \textit{login}.
 		\item \verb|lost()| \\ Menangani email dan menampilkan halaman untuk meminta \textit{reset password}.
-		\item \verb|reset($passchange_key = FALSE)| \\ Memproses dan menampilkan halaman untuk ubah \textit{reset password}.
+		\item \verb|reset($passchange_key)| \\ Memproses dan menampilkan halaman untuk ubah \textit{reset password}.
 	\end{itemize}
 	
 	\item \verb|Logs| \\ Controller untuk menangani halaman \textit{24-hour Log}.
@@ -177,27 +177,27 @@ Berikut ini adalah seluruh \textit{controller} pada SharIF Judge yang terletak p
 	
 	\item \verb|Moss| \\ Controller untuk menangani halaman \textit{Detect Similar Codes} . Fungsi yang dimiliki:
 	\begin{itemize}
-		\item \verb|update($assignment_id = FALSE)| \\ Memperbarui informasi pada halaman \textit{Detect Similar Codes}.
-		\item \verb|_detect($assignment_id = FALSE)| \\ Menjalankan Moss untuk mendeteksi kesamaan kode.
+		\item \verb|update($assignment_id)| \\ Memperbarui informasi pada halaman \textit{Detect Similar Codes}.
+		\item \verb|_detect($assignment_id)| \\ Menjalankan Moss untuk mendeteksi kesamaan kode.
 	\end{itemize}
 	
 	\item \verb|Notifications| \\ Controller untuk menangani halaman \textit{Notifications}. Fungsi yang dimiliki:
 	\begin{itemize}
 		\item \verb|add()| \\ Menambahkan notifikasi baru dan menampilkan halaman \textit{New Notification}.
-		\item \verb|edit($notif_id = FALSE)| \\ Memperbarui sebuah notifikasi.
+		\item \verb|edit($notif_id)| \\ Memperbarui sebuah notifikasi.
 		\item \verb|delete()| \\ Menghapus sebuah notifikasi.
 		\item \verb|check()| \\ Memeriksa adanya notifikasi baru.
 	\end{itemize}
 	
 	\item \verb|Problems| \\ Controller untuk menangani halaman \textit{Problems}. Fungsi yang dimiliki:
 	\begin{itemize}
-		\item \verb|index($assignment_id = NULL, $problem_id = 1)| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Problems}.
-		\item \verb|edit($type = 'md', $assignment_id = NULL, $problem_id = 1)| \\ Memperbarui deskripsi \textit{problem} dan menampilkan halaman \textit{Edit Problem Description}.
+		\item \verb|index($assignment_id, $problem_id = 1)| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Problems}.
+		\item \verb|edit($type = 'md', $assignment_id, $problem_id = 1)| \\ Memperbarui deskripsi \textit{problem} dan menampilkan halaman \textit{Edit Problem Description}.
 	\end{itemize}
 	
 	\item \verb|Profile| \\ Controller untuk menangani halaman \textit{Profile}. Fungsi yang dimiliki:
 	\begin{itemize}
-		\item \verb|index($user_id = FALSE)| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Profile}.
+		\item \verb|index($user_id)| \\ Mengambil data yang diperlukan dan menampilkan halaman \textit{Profile}.
 		\item \verb|_password_check($str)| \\ Memeriksa apakah \textit{password} sesuai dengan syarat.
 		\item \verb|_password_again_check($str)| \\ Memeriksa apakah \textit{password again} sama dengan \textit{password} yang dimasukkan.
 		\item \verb|_email_check($email)| \\ Memeriksa apakah terdapat user dengan alamat email tertentu.
@@ -257,4 +257,16 @@ Berikut ini adalah seluruh \textit{controller} pada SharIF Judge yang terletak p
         \item \verb|delete_submissions()| \\ Menghapus seluruh \textit{submission} dari sebuah \textit{user}.
          \item \verb|list_excel()| \\ Menggunakan \textit{library} PHPExcel untuk membuat file excel dari \textit{list user}.
 	\end{itemize}
+\end{itemize}
+
+\section{Analisis Sistem Usulan}
+\label{sec:3:analisisusulan} 
+Fitur yang akan diimplementasikan pada SharIF Judge adalah sebagai berikut:
+
+\begin{itemize}
+    \item Melihat soal \\ Saat ini SharIF Judge memiliki kemampuan untuk menyimpan soal dalam bentuk PDF. Soal tersebut akan ditampilkan secara langsung pada \textit{browser}.
+    \item Mengetik kode \\ Editor teks yang memiliki kemampuan untuk membantu pembuatan kode, seperti \textit{syntax highlighting}.
+    \item Menyimpan kode \\ Kemampuan untuk menyimpan dan memuat kembali kode yang sudah dibuat pada server.
+    \item Menjalankan kode dengan tes kasus \\  Kode yang sudah dibuat dapat dijalankan dengan tes kasus yang disediakan oleh pengguna.
+    \item Kirim jawaban \\  Melakukan \textit{submit} kode yang sudah dibuat pada editor.
 \end{itemize}

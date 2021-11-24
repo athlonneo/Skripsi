@@ -13,7 +13,6 @@ Implementasi perangkat lunak dilakukan pada perangkat penulis dengan spesifikasi
     \begin{itemize}
         \item \textit{Processor}: Intel Core i5-7600
         \item \textit{Random Access Memory}: 16GB DDR4
-        \item \textit{Graphics Processing Unit}: Nvidia GeForce GTX 1070
         \item \textit{Storage}: 500GB SSD dan 2TB HDD
     \end{itemize}
         \item Perangkat Lunak:
@@ -26,6 +25,26 @@ Implementasi perangkat lunak dilakukan pada perangkat penulis dengan spesifikasi
 \section{Implementasi}
 \label{sec:5:implementasi}
 
+\subsection{Tampilan Antarmuka}
+\label{subsec:5:antarmuka}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.35]{submit}  
+	\caption{Antarmuka halaman Submit} 
+	\label{fig:5:antarmuka} 
+\end{figure}
+
+Gambar \ref{fig:5:antarmuka} merupakan antarmuka pada halaman Submit yang sudah diimplementasikan. Seluruh perubahan tampilan diimplementasikan pada \textit{view} \verb|submit.twig|, beserta dengan \textit{stylesheet} yang terdapat di \verb|application\views\pages\submit.twig| dan \textit{script} pada \verb|assets\js\shj_submit.js|.
+
+\subsection{Menampilkan soal}
+\label{subsec:5:soal}
+
+\begin{lstlisting}[language=php, caption=Penambahan \texttt{iframe} untuk PDF.js, label=kode:5:pdfjs]
+    <iframe id="pdf_viewer" src={{ base_url('assets/pdfjs/web/viewer.html?file=') ~ site_url('assignments/pdf/' ~ user.selected_assignment.id ~ '/null/true')}} ></iframe>
+\end{lstlisting}
+
+
 \section{Pengujian}
 \label{sec:5:pengujian}
 
@@ -34,21 +53,11 @@ Implementasi perangkat lunak dilakukan pada perangkat penulis dengan spesifikasi
 
 Pengujian fungsional dilakukan secara lokal pada perangkat penulis. Berikut ini pengujian yang dilakukan terhadap fitur-fitur yang sudah diimplementasi:
 
-\begin{itemize}
-    \item Menampilkan soal
-    \begin{itemize}
-        \item Hasil yang diharapkan: Soal pdf ditampilkan di halaman Submit
-        \item Hasil perangkat lunak: Sesuai
-    \end{itemize}
-\end{itemize}
 
 \subsection{Pengujian Eksperimental}
 \label{subsec:5:eksperimental}
 
 Pengujian eksperimental dilakukan pada mata kuliah Dasar-dasar Pemrograman semester 51 Teknik Informatika Unpar. Perangkat lunak diuji pada \textit{judge} dengan alamat \verb|http://daspro.labftis.net|. Seluruh persoalan dan masukan yang diterima selama mata kuliah Dasar-dasar Pemrograman dicatat pada \verb|https://github.com/athlonneo/SharIF-Judge/issues|.
 
-\begin{itemize}
-    \item Tampilan UI
-\end{itemize}
 
 
