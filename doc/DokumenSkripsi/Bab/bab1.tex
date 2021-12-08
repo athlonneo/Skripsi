@@ -4,7 +4,7 @@
 \section{Latar Belakang}
 \label{sec:label}
 
-\textit{Online judge} adalah sebuah sistem \textit{online} yang berfungsi untuk mengevaluasi kode program yang dikumpulkan oleh pengguna. Kode program kemudian dikompilasi dan diuji pada lingkungan yang serupa. \textit{Online judge} sering kali digunakan dalam sistem pemrograman kompetitif dan edukasi pemrograman \cite{ide}.
+\textit{Online judge} adalah sebuah sistem \textit{online} yang berfungsi untuk mengevaluasi kode program yang dikumpulkan oleh pengguna. Kode program kemudian dikompilasi dan diuji pada lingkungan yang serupa. \textit{Online judge} sering kali digunakan dalam sistem pemrograman kompetitif dan edukasi pemrograman \cite{judge}.
 
 Sharif Judge adalah sebuah \textit{online judge} untuk bahasa pemrograman C, C++, Java dan Python. Antarmuka web Sharif Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter, disertai \textit{backend} menggunakan Bash \cite{sharif}.
 
@@ -12,9 +12,9 @@ SharIF Judge (dengan IF kapital) adalah modifikasi dari Sharif Judge yang disesu
 
 Dengan adanya situasi pandemi Covid-19, seluruh kegiatan kuliah wajib dilaksanakan secara \textit{online}. Pada umumnya, kegiatan praktikum dan ujian pada mata kuliah pemrograman Teknik Informatika Unpar dapat diawasi secara langsung oleh dosen dan asisten dosen di lab komputer.  Namun, pengawasan menjadi lebih sulit untuk dilakukan saat kuliah dilaksanakan secara \textit{online}. Diperlukan sebuah cara untuk mengawasi mahasiswa selama kuliah \textit{online} berlangsung. 
 
-{\it Integrated Development Environment} (IDE) adalah sebuah aplikasi yang menyediakan fasilitas untuk pembangunan perangkat lunak. Sebuah IDE memiliki kemampuan untuk mengedit, mengompilasi, dan menjalankan kode program. Pada umumnya, mahasiswa menggunakan aplikasi IDE seperti Netbeans untuk membuat kode program yang kemudian diunggah ke SharIF Judge untuk dinilai.
+{\it Integrated Development Environment} (IDE) adalah sebuah aplikasi editor teks dengan fitur yang membantu penggunanya untuk menulis kode dengan lebih cepat dan efisien. Sebuah IDE pada umumnya memiliki kemampuan untuk mengedit, mengompilasi, menjalankan, dan menguji kode program \cite{ide}.  Pada umumnya, mahasiswa menggunakan aplikasi IDE seperti Netbeans untuk membuat kode program yang kemudian diunggah ke SharIF Judge untuk dinilai.
 
-Pada skripsi ini akan diimplementasikan editor kode pada SharIF Judge. SharIF Judge sebelumnya sudah memiliki kemampuan untuk mengompilasi dan menjalankan kode. Dengan implementasi editor kode, SharIF Judge dapat menjadi sebuah IDE yang mampu memfasilitasi proses penulisan kode, lalu mengompilasi, menjalankan, dan mengujinya.
+Pada skripsi ini akan diimplementasikan editor kode pada SharIF Judge. SharIF Judge sebelumnya sudah memiliki kemampuan untuk mengompilasi, menjalankan, dan menguji kode. Dengan implementasi editor kode, SharIF Judge dapat menjadi sebuah IDE yang mampu memfasilitasi proses penulisan kode, lalu mengompilasi, menjalankan, dan mengujinya.
 
 Dengan implementasi IDE berbasis web pada SharIF Judge, selanjutnya dapat ditambahkan fitur yang dapat membantu pengawasan terhadap mahasiswa selama kegiatan kuliah seperti merekam ketikan dan mendeteksi ketika mahasiswa membuka \textit{tab} atau aplikasi lain.
 
@@ -34,7 +34,7 @@ Rumusan masalah yang akan dibahas pada skripsi ini adalah sebagai berikut:
 Tujuan yang ingin dicapai skripsi ini adalah sebagai berikut:
 \begin{itemize}
 	\item Mengimplementasikan {\it Integrated Development Environment} sehingga mahasiswa dapat mengetik dan menjalankan kode dalam SharIF Judge.
-	\item Mendapatkan umpan balik dari tanggapan pengguna terhadap implementasi {\it Integrated Development Environment} pada SharIF Judge? 
+	\item Mendapatkan umpan balik dari tanggapan pengguna terhadap implementasi {\it Integrated Development Environment} pada SharIF Judge.
 \end{itemize}
 
 \section{Batasan Masalah}
@@ -51,7 +51,7 @@ Metodologi pengerjaan skripsi ini adalah sebagai berikut:
 	\item Melakukan studi mengenai komponen yang diperlukan untuk membuat IDE berbasis web.
 	\item Mempelajari struktur SharIF Judge.
 	\item Merancang IDE berbasis web untuk SharIF Judge.
-	\item Mengimplementasikan IDE pada SharIF Judge.
+	\item Mengimplementasikan IDE berbasis web pada SharIF Judge.
 	\item Melakukan pengujian dan eksperimen.
 	\item Menulis dokumen skripsi.
 \end{enumerate}
@@ -60,8 +60,9 @@ Metodologi pengerjaan skripsi ini adalah sebagai berikut:
 \label{sec:sispem}
 Sistematika pembahasan skripsi ini adalah sebagai berikut:
 \begin{itemize}
-	\item Bab 1 Pendahuluan \\ Membahas mengenai latar belakang, rumusan masalah, tujuan, batasan masalah, metodologi, dan sistematika pembahasan.
-	\item Bab 2 Landasan Teori \\ Membahas teori-teori yang digunakan dalam skripsi ini, yaitu CodeIgniter, Twig, Shell Script, PDF.js, dan Ace.
+	\item Bab 1 Pendahuluan \\ Membahas latar belakang, rumusan masalah, tujuan, batasan masalah, metodologi, dan sistematika pembahasan.
+	\item Bab 2 Landasan Teori \\ Membahas teori-teori yang digunakan dalam skripsi ini, yaitu CodeIgniter 3, Twig, Shell Script, PDF.js, dan Ace.
 	\item Bab 3 Analisis \\ Membahas analisis terhadap perangkat lunak SharIF Judge.
 	\item Bab 4 Perancangan \\ Membahas perancangan fitur yang diimplementasikan pada SharIF Judge.
+	\item Bab 5 Implementasi dan Pengujian \\ Membahas implementasi fitur pada SharIF Judge dan pengujian yang dilakukan.
 \end{itemize}

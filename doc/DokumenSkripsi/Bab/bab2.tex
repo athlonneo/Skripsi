@@ -87,7 +87,6 @@ Kode \ref{kode:2:ciview} merupakan contoh sebuah \textit{view}. \textit{View} pa
 \textit{Controller} adalah perantara dari \textit{model} dan \textit{view}, serta \textit{resource} lainnya yang diperlukan untuk memproses \textit{request} HTTP dan menghasilkan sebuah halaman web. Pada CodeIgniter, \textit{controller} adalah sebuah kelas yang mengekstensi \verb|CI_Controller| dan terletak di direktori \verb|application/controllers/|.
 
 \begin{lstlisting}[language=php, caption=Contoh \textit{controller}, label=kode:2:cicontroller]
-<?php
 class Blog extends CI_Controller {
 
         public function index()
@@ -105,7 +104,6 @@ class Blog extends CI_Controller {
 Kode \ref{kode:2:cimodel} merupakan contoh sebuah kelas \textit{controller} pada CodeIgniter. Kelas tersebut mengekstensi \verb|CI_Controller| dan memiliki fungsi \verb|index()| dan \verb|comments()|. Fungsi \verb|index()| akan dipanggil secara otomatis jika tidak ada fungsi lain yang dipanggil. 
 
 \begin{lstlisting}[language=php, caption=Contoh memuat \textit{model} dan menampilkan \textit{view}, label=kode:2:cimodelview]
-<?php
 class Blog_controller extends CI_Controller {
 
         public function blog()
@@ -161,7 +159,7 @@ Twig adalah sebuah \textit{template engine} untuk PHP. Sebuah \textit{template} 
 
 Kode \ref{kode:2:twig} merupakan contoh sebuah template Twig. Terdapat dua jenis \textit{delimiter}, yaitu \verb|{% ... %}| dan \verb|{{ ... }}|. \textit{Delimiter} \verb|{% ... %}| digunakan untuk menjalankan \textit{statement} seperti \verb|for| dan \verb|if|, sementara \textit{delimiter} \verb|{{ ... }}| digunakan untuk menampilkan nilai dari \textit{variable} atau \textit{expression}.
 
-\section{Shell Script}
+\section{Bash}
 \label{sec:2:shell}
 \textit{Shell} adalah sebuah program pada sistem operasi Unix yang menerima perintah tertulis dan mengirimnya ke sistem operasi untuk dijalankan. Pada umumnya, perangkat Linux menggunakan program bernama Bourne Again SHell (Bash) sebagai \textit{shell}. Bash merupakan program yang disempurnakan dari \textit{shell} Unix pertama yang diciptakan oleh Steve Bourne \cite{linux}. 
 
