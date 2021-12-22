@@ -4,7 +4,7 @@
 \section{Analisis Sistem Kini}
 \label{sec:3:analisiskini} 
 
-SharIF Judge adalah sebuah \textit{online judge} dengan fungsi utama untuk mengevaluasi kode program yang dikumpulkan oleh pengguna secara otomatis. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program. Antarmuka web Sharif Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter, disertai \textit{backend} menggunakan Bash \cite{stillmen:sharif}.
+SharIF Judge adalah sebuah \textit{online judge} dengan fungsi utama untuk mengevaluasi kode program yang dikumpulkan oleh pengguna secara otomatis. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program. Antarmuka web Sharif Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter, disertai \textit{backend} menggunakan Bash.
 
 \subsection{Fitur SharIF Judge}
 \label{subs:3:fitur}
@@ -416,10 +416,6 @@ Pada SharIF Judge, seluruh kode yang dikumpulkan pengguna akan dijalankan satu p
     \item \verb|tester.sh| mengompilasi kode, menjalankan kode dengan tes kasus, menilai hasilnya dengan kunci jawaban, lalu mengembalikan hasil penilaian.
     \item \textit{Controller} \verb|Queueprocess| menyimpan nilai kembalian pada database \verb|submissions| dan menghapus \textit{entry} dari tabel \verb|queue|.
 \end{itemize}
-
-\subsection{Penyimpanan \textit{File} Jawaban}
-\label{subsec:3:penyimpanan} 
-
 
 \section{Analisis Sistem Usulan}
 \label{sec:3:analisisusulan} 

@@ -161,9 +161,19 @@ Kode \ref{kode:2:twig} merupakan contoh sebuah template Twig. Terdapat dua jenis
 
 \section{Bash}
 \label{sec:2:shell}
-\textit{Shell} adalah sebuah program pada sistem operasi Unix yang menerima perintah tertulis dan mengirimnya ke sistem operasi untuk dijalankan. Pada umumnya, perangkat Linux menggunakan program bernama Bourne Again SHell (Bash) sebagai \textit{shell}. Bash merupakan program yang disempurnakan dari \textit{shell} Unix pertama yang diciptakan oleh Steve Bourne \cite{linux}. 
+Bourne Again SHell (Bash) program yang disempurnakan dari \textit{shell} Unix pertama yang diciptakan oleh Steve Bourne \cite{linux}. \textit{Shell} adalah sebuah program pada sistem operasi Unix yang menerima perintah tertulis dan mengirimnya ke sistem operasi untuk dijalankan. 
 
 \textit{Shell script} adalah sebuah \textit{file} yang menyimpan rangkaian perintah. \textit{Shell} akan membaca \textit{file} tersebut dan menjalankan rangkaian perintah seperti jika perintah tersebut dimasukkan secara langsung pada \textit{command line}. Keunikan dari \textit{shell} adalah kemampuannya sebagai \textit{command line interface} dan sebagai  \textit{scripting language interpreter}. Artinya, hal yang dapat dilakukan melalui \textit{command line} dapat dilakukan sebagai \textit{script}, dan hal yang dapat dilakukan sebagai \textit{script} dapat dilakukan melalui \textit{command line}.
+
+Berikut ini merupakan beberapa \textit{command} yang tersedia pada Bash:
+
+\begin{itemize}
+    \item \verb|grep| \\ Mencari sebuah pola pada \textit{file}, kemudian mencetak seluruh baris yang sesuai dengan pola tersebut.
+    \item \verb|sed| \\ Melakukan perubahan teks mendasar untuk menyaring teks pada \textit{file}.
+    \begin{itemize}
+        \item \verb|s/regexp/replacement/| Mencari pola yang sesuai dengan \verb|regexp| dan menggantinya dengan \verb|replacement|.
+    \end{itemize}
+\end{itemize}
 
 \section{PDF.js}
 \label{sec:2:pdfjs} 

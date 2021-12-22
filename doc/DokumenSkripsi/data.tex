@@ -54,10 +54,11 @@
 \definecolor{diffstart}{RGB}{169,169,169}
 \definecolor{diffincl}{RGB}{0,128,0}
 \definecolor{diffrem}{RGB}{255,0,0}
+
 \lstdefinelanguage{diff}{
-    morecomment=[f][\color{diffstart}]{@@},
-    morecomment=[f][\color{diffincl}]{+},
-    morecomment=[f][\color{diffrem}]{-},
+	morecomment=[f][\color{diffstart}]{@@},
+	morecomment=[f][\color{diffrem}]{- },
+	morecomment=[f][\color{diffincl}]{+ },
 }
 
 \lstdefinelanguage{JavaScript}{
@@ -314,8 +315,19 @@
 % - hilangkan tanda << & >>, dan isi sesuai dengan data anda
 % - langsung mulai setelah '{' awal, jangan mulai menulis di baris bawahnya
 %=============================================================================
-\abstrakINA{<<Tuliskan abstrak anda di sini, dalam bahasa Indonesia>>}
-\abstrakENG{<<Tuliskan abstrak anda di sini, dalam bahasa Inggris>>} 
+\abstrakINA{
+SharIF Judge adalah sebuah \textit{online judge} untuk bahasa pemrograman C, C++, Java dan Python. Antarmuka web SharIF Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter, disertai \textit{backend} menggunakan Bash. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program.
+Situasi pandemi Covid-19 menyebabkan seluruh kegiatan kuliah dilaksanakan secara \textit{online}. Pada umumnya, kegiatan praktikum dan ujian pada mata kuliah pemrograman Teknik Informatika Unpar dapat diawasi secara langsung oleh dosen dan asisten dosen di lab komputer.  Namun, pengawasan menjadi lebih sulit untuk dilakukan saat kuliah dilaksanakan secara \textit{online}.
+Dengan implementasi editor kode, SharIF Judge dapat menjadi sebuah {\it Integrated Development Environment} (IDE) yang mampu memfasilitasi proses penulisan kode, lalu mengompilasi, menjalankan, dan mengujinya. Sebagai sebuah IDE, selnajutnya dapat ditambahkan fitur yang dapat membantu pengawasan terhadap mahasiswa selama kegiatan kuliah, seperti merekam ketikan dan mendeteksi ketika mahasiswa membuka \textit{tab} atau aplikasi lain.
+Fitur melihat soal, mengetik, menyimpan, menjalankan, dan mengumpulkan kode melalui IDE diimplementasikan dan diuji pada sebuah kelas pemrograman Teknik Informatika Unpar. Berdasarkan hasil pengujian, seluruh masalah yang ditemukan berhasil diperbaiki, dan seluruh fitur yang diimplementasikan sudah berfungsi dengan baik.
+}
+\abstrakENG{
+SharIF Judge is an online judge for C, C++, Java and Python programming courses. The web interface is written in PHP using CodeIgniter framework, and the main backend is written in BASH. SharIF Judge is used on several programming courses in Unpar Informatics Engineering Study Program to help with code submission and scoring.
+The Covid-19 Pandemic caused every learning activities to be done online. Usually, practical lectures and exams in Unpar Informatics Engineering can be supervised directly by lecturers and assistants in the computer lab. However, supervision becomes more difficult to do when lectures are carried out online.
+With the implementation of a code editor, SharIF Judge can become an Integrated Development Environment (IDE) that is able to facilitate the process of code writing, then compile, run, and test it. As an IDE, further features can be added to help supervise students during learning activities, such as recording type activities and detecting application inactivity.
+Features to show problems, type, save, run, and submit code from IDE is implemented and tested on a programming course in Unpar Informatics Engineering. Based on the results, every problem encountered has been fixed successfully and all implemented features have performed adequately.
+
+} 
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -327,8 +339,8 @@
 % - kunciENG: keywords in english
 % Petunjuk: hilangkan tanda << & >>, dan isi sesuai dengan data anda.
 %=============================================================================
-\kunciINA{<<Tuliskan di sini kata-kata kunci yang anda gunakan, dalam bahasa Indonesia>>}
-\kunciENG{<<Tuliskan di sini kata-kata kunci yang anda gunakan, dalam bahasa Inggris>>}
+\kunciINA{\textit{Online judge}, \textit{Integrated Development Environment}, implementasi}
+\kunciENG{Online judge, Integrated Development Environment, implementation}
 %=============================================================================
 
 %_____________________________________________________________________________

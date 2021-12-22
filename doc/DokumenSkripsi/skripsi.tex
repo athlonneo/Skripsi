@@ -235,18 +235,21 @@
 \def\chapter{\addtocontents{lol}{\protect\addvspace{10pt}}\Chapter}
 
 %listing khusus untuk penulisan kode program, menggunakan font Bera Mono
+
 \lstset{numbers=left,stepnumber=1, numbersep=5pt, frame=single,frameround={tttt},
 	tabsize=4, breaklines=true, basicstyle=\fontfamily{fvm}\selectfont\tiny, 
 	commentstyle=\itshape\color{gray}, keywordstyle=\bfseries\color{blue}, 
 	identifierstyle=\color{black}, stringstyle=\color{orange},
-	literate={-}{-}1{-\,-}{--}1
+	literate=*{-}{-}1,
+	literate=*{-\,-}{--}1,
 } 
+
 %\toggletrue{develop} % aktifkan untuk mode develop
 %apakah dalam develop mode ?
 \iftoggle{develop}{ 
 	\usepackage{booktabs,pgfplots}\usepackage[table]{xcolor}
 	\daftarIsiError{0} 
-	\mode{sidang} 
+	\mode{final} 
 	\linenumber{yes}\linespacing{double} 
 	\gambar{yes}\tabel{no}\kode{yes} 
 	\bab{1,2}\lampiran{A} 
