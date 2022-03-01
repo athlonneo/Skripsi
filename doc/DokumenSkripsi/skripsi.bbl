@@ -1,0 +1,50 @@
+\begin{thebibliography}{99}
+
+\bibitem{judge}
+Wasik, S., Antczak, M., Badura, J., Laskowski, A., dan Sternal, T. (2017) {A
+  Survey on Online Judge Systems and Their Applications}.
+\newblock {\em ACM Computing Surveys}, {\bf  51}, 3:1--3:34.
+
+\bibitem{sharif}
+Version 1.4 (2014) {\em Sharif Judge Documentation}.
+\newblock Mohammad Javad Naderi.
+\newblock Tehran, Iran.
+
+\bibitem{stillmen:sharif}
+Vallian, S. (2018) {Kustomisasi Sharif Judge Untuk Kebutuhan Program Studi
+  Teknik Informatika}.
+\newblock Skripsi.
+\newblock Universitas Katolik Parahyangan,  Indonesia.
+
+\bibitem{ide}
+Satav, S., Satao, K., dan Satpathy, S.~K. (2011) {A Comparative Study and
+  Critical Analysis of Various Integrated Development Environments of C, C++,
+  and Java Languages for Optimum Development}.
+\newblock {\em Universal Journal of Applied computer Science and Technology},
+  {\bf  1}, 9--15.
+
+\bibitem{codeigniter}
+Version 3.1.11 (2019) {\em CodeIgniter User Guide}.
+\newblock British Columbia Institute of Technology.
+\newblock Burnaby, Canada.
+
+\bibitem{twig}
+Version 1.44.5 (2021) {\em Twig Documentation}.
+\newblock Symfony SAS.
+\newblock Clichy, France.
+
+\bibitem{linux}
+Shotts, W. (2019) {\em The Linux Command Line},  5th edition. No Starch Press,
+  San Francisco, USA.
+
+\bibitem{pdfjs}
+Version 2.7.570 (2021) {\em PDF.js}.
+\newblock Mozilla Corporation.
+\newblock Mountain View, United States.
+
+\bibitem{ace}
+Version 1.4.13 (2021) {\em Ace API Reference}.
+\newblock Ajax.org B.V.
+\newblock Amsterdam, The Netherlands.
+
+\end{thebibliography}

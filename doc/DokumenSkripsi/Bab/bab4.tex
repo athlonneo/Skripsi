@@ -18,7 +18,7 @@ Seluruh fitur akan diimplementasikan pada halaman Submit. Gambar \ref{fig:4:anta
 \section{Menampilkan soal}
 \label{sec:4:soal}
 
-SharIF Judge sudah memiliki fitur untuk menyimpan soal dalam bentuk PDF, namun untuk melihat soal tersebut, soal harus diunduh terlebih dahulu. Agar pengguna dapat melihat soal secara langsung di halaman \textit{web}, digunakan \textit{library} PDF.js untuk menampilkan \textit{file} PDF soal di halaman Submit.
+SharIF Judge sudah memiliki fitur untuk menyimpan soal dalam bentuk PDF. Untuk melihat soal tersebut, soal harus diunduh terlebih dahulu. Agar pengguna dapat melihat soal secara langsung di halaman Submit, digunakan \textit{library} PDF.js untuk menampilkan \textit{file} PDF soal di halaman Submit.
 
 Untuk menampilkan soal PDF, dilakukan perubahan sebagai berikut:
 \begin{itemize}
@@ -32,7 +32,7 @@ Untuk menampilkan soal PDF, dilakukan perubahan sebagai berikut:
     \end{itemize}
 \end{itemize}
 
-\section{Editor Kode}
+\section{Mengedit Kode}
 \label{sec:4:editor}
 
 Digunakan \textit{library} Ace untuk menambahkan editor kode pada halaman Submit.
@@ -70,7 +70,8 @@ Untuk menyimpan dan mengambil kode, perlu dilakukan perubahan sebagai berikut:
 \section{Menjalankan Kode dengan Tes Kasus}
 \label{sec:4:jalan}
 
-Fitur ini memanfaatkan sistem antrean eksekusi kode yang sudah tersedia pada SharIF Judge. Diperlukan beberapa perubahan agar kode yang sudah tersimpan pada editor dapat dimasukkan ke dalam antrean, dan \textit{output} dari kode dapat ditampilkan.
+Fitur ini memanfaatkan sistem antrean eksekusi kode yang sudah tersedia pada SharIF Judge.
+Diperlukan beberapa perubahan agar kode pada editor dapat dimasukkan ke dalam antrean, dijalankan \textit{input} tes kasus, dan \textit{output} dari kode dapat ditampilkan.
 
 Untuk menjalankan kode dengan tes kasus, dilakukan perubahan sebagai berikut:
 \begin{itemize}
@@ -97,7 +98,7 @@ Untuk menjalankan kode dengan tes kasus, dilakukan perubahan sebagai berikut:
     \end{itemize}
 \end{itemize}
 
-\section{Mengumpulkan Kode dari IDE}
+\section{Mengumpulkan Kode Melalui IDE}
 \label{sec:4:kumpul}
 
 Fitur ini memanfaatkan fitur \textit{submit} yang sudah tersedia pada SharIF Judge, namun kode yang digunakan adalah kode yang sudah tersimpan pada editor, sebagai ganti dari unggah \textit{file}. 

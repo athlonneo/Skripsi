@@ -62,7 +62,7 @@ Implementasi perangkat lunak dilakukan pada beberapa lingkungan yang berbeda:
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.3]{submit}  
-	\caption{Antarmuka halaman Submit} 
+	\caption{Tampilan antarmuka halaman Submit} 
 	\label{fig:5:antarmuka} 
 \end{figure}
 
@@ -71,14 +71,14 @@ Gambar \ref{fig:5:antarmuka} merupakan tampilan antarmuka pada halaman Submit ya
 \subsection{Menampilkan Soal}
 \label{subsec:5:soal}
 
-Soal PDF ditampilkan pada \verb|iframe| yang berisi \verb|viewer.html| milik PDF.js. URL dari \textit{file} PDF yang akan ditampilkan adalah URL yang mengarah ke fungsi \verb|pdf| pada controller \verb|Assignments|. URL ini dikirim ke \verb|viewer.html| PDF.js sebagai parameter GET bernama \verb|site_url|.
+Soal PDF ditampilkan pada \verb|iframe| yang berisi \verb|viewer.html| milik PDF.js. URL dari \textit{file} PDF yang akan ditampilkan adalah URL yang mengarah ke fungsi \verb|pdf| pada controller \verb|Assignments|. URL ini dikirim ke \verb|viewer.html| milik PDF.js sebagai parameter GET bernama \verb|site_url|.
 
-Fungsi \verb|pdf| pada controller \verb|Assignments| menggunakan fungsi \verb|force_download| yang menyebabkan munculnya dialog unduh pada \textit{browser}. Agar \textit{file} PDF dapat dibaca oleh \textit{browser} dan tidak memunculkan dialog unduh, \textit{file} PDF akan dikembalikan dengan fungsi \verb|die| dengan header \verb|Content-Type: application/pdf|. Ditambahkan parameter \verb|$no_download| pada fungsi \verb|pdf| untuk menentukan apakah \textit{file} PDF soal akan diunduh atau ditampilkan oleh PDF.js. Jika \verb|$no_download| bernilai \verb|FALSE|, maka PDF akan diunduh melalui fungsi \verb|force_download| seperti semula. Jika \verb|$no_download| bernilai \verb|TRUE|, maka PDF akan dikembalikan melalui fungsi \verb|die|. Kode untuk perubahan ini terdapat pada lampiran \ref{lampA:Assignments.php}
+Fungsi \verb|pdf| pada controller \verb|Assignments| menggunakan fungsi \verb|force_download| yang menyebabkan munculnya dialog unduh pada \textit{browser}. Agar \textit{file} PDF dapat dibaca oleh \textit{browser} dan tidak memunculkan dialog unduh, \textit{file} PDF akan dikembalikan dengan fungsi \verb|die| dengan header \verb|Content-Type: application/pdf|. Ditambahkan parameter \verb|$no_download| pada fungsi \verb|pdf| untuk menentukan apakah \textit{file} PDF soal akan diunduh atau ditampilkan oleh PDF.js. Jika \verb|$no_download| bernilai \verb|FALSE|, maka PDF akan diunduh melalui fungsi \verb|force_download| seperti semula. Jika \verb|$no_download| bernilai \verb|TRUE|, maka isi PDF akan dikembalikan melalui fungsi \verb|die| dengan \textit{header} \verb|Content-Type: application/pdf|. Kode untuk perubahan ini terdapat pada lampiran \ref{lampA:Assignments.php}
 
 \subsection{Editor Kode}
 \label{subsec:5:editor}
 
-Ace menggunakan sebuah elemen \verb|div| sebagai tempat untuk menampilkan editor kodenya. Editor ace dimuat dan dikonfigurasi melalui JavaScript yang terdapat di \verb|shj_submit.js|. Ditambahkan juga beberapa fungsi untuk mengubah konfigurasi \textit{syntax highlighting} sesuai dengan bahasa yang dipilih, dan untuk mengaktifkan atau menonaktifkan editor kode jika \textit{problem} dan bahasa belum dipilih. Kode JavaScript untuk konfigurasi editor Ace terdapat pada lampiran \ref{lampA:shj_submit.js}.
+Ace menggunakan sebuah elemen \verb|div| sebagai tempat untuk menampilkan editor kodenya. Editor Ace dimuat dan dikonfigurasi melalui JavaScript yang terdapat di \verb|shj_submit.js|. Ditambahkan juga beberapa fungsi untuk mengubah konfigurasi \textit{syntax highlighting} sesuai dengan bahasa yang dipilih, dan untuk mengaktifkan atau menonaktifkan editor kode jika \textit{problem} dan bahasa belum dipilih. Kode JavaScript untuk konfigurasi editor Ace terdapat pada lampiran \ref{lampA:shj_submit.js}.
 
 \subsection{Menyimpan dan Memuat Kode}
 \label{subsec:5:simpan}
@@ -100,8 +100,8 @@ Agar kode dari editor dapat dijalankan melalui antrean yang sama, perlu dilakuka
 \begin{enumerate}
     \item Kode yang sudah disimpan sebagai \textit{file} txt disimpan kembali dengan ekstensi yang tepat.
     \item \textit{Input} tes kasus disimpan sebagai \textit{file} txt.
-    \item Membuat \textit{entry} pada tabel \verb|shj_submission| yang bersifat sementara untuk menyimpan alamat dan ekstensi \textit{file} kode. Dikarenakan \verb|submit_id| untuk setiap \textit{submission} selalu dimulai dari 1, \textit{submission} dapat digunakan \verb|submit_id| = 0.
-    \item Membuat \textit{entry} pada tabel \verb|Queue| dengan \verb|submit_id| = 0 dan \verb|type = "exec"| untuk menandakan bahwa kode ini bukan \textit{submission} yang akan dinilai.
+    \item Membuat baris baru pada tabel \verb|shj_submission| yang bersifat sementara untuk menyimpan alamat dan ekstensi \textit{file} kode. Dikarenakan \verb|submit_id| untuk setiap \textit{submission} selalu dimulai dari 1, dapat digunakan \verb|submit_id| = 0.
+    \item Membuat baris baru pada tabel \verb|shj_queue| dengan \verb|submit_id| = 0 dan \verb|type = "exec"| untuk menandakan bahwa kode ini bukan \textit{submission} yang akan dinilai.
     \item Ditambahkan parameter dan fungsi pada \verb|tester.sh| yang menjalankan kode dengan tes kasus yang sudah disimpan tanpa melakukan penilaian, lalu menyimpan hasil \textit{output} kode sebagai \textit{file} txt.
     \item \textit{File} txt \textit{output} dimuat dan ditampilkan pada halaman submit.
 \end{enumerate}
@@ -110,7 +110,7 @@ Agar kode dari editor dapat dijalankan melalui antrean yang sama, perlu dilakuka
 
 Fungsi \verb|_execute| ditambahkan pada \textit{controller} \verb|Submit|. Fungsi ini dijalankan oleh fungsi \verb|save("execute")| setelah \textit{file} berhasil disimpan. Kode disimpan kembali dengan ekstensi yang sesuai, lalu informasinya disimpan melalui \textit{model} \verb|Queue_model|. Perubahan kode ini terdapat pada lampiran \ref{lampA:Submit.php} baris 193--235.
 
-Fungsi \verb|add_to_queue_exec| dan \verb|delete_exec_submission| juga ditambahkan pada \textit{model} \verb|Queue_model| untuk menambah dan menghapus kode dengan \verb|submit_id| = 0 pada tabel \verb|Queue|. Perubahan kode ini terdapat pada lampiran \ref{lampA:Queue_model.php}.
+Fungsi \verb|add_to_queue_exec| dan \verb|delete_exec_submission| juga ditambahkan pada \textit{model} \linebreak \verb|Queue_model| untuk menambah dan menghapus kode dengan \verb|submit_id| = 0 pada tabel \verb|shj_queue|. Perubahan kode ini terdapat pada lampiran \ref{lampA:Queue_model.php}.
 
 Beberapa fungsi pada \textit{model} \verb|Submit_model| perlu diubah agar antrean dengan \verb|submit_id| = 0 tidak dihitung dan diambil pada fungsi-fungsi tersebut. Perubahan kode ini terdapat pada lampiran \ref{lampA:Submit_model.php}.
 
@@ -180,7 +180,7 @@ Dengan cara tersebut, nama kelas bisa didapatkan, namun setiap kode harus dikomp
 \end{enumerate}
 
 
-\subsection{Mengumpulkan Kode melalui IDE}
+\subsection{Mengumpulkan Kode Melalui IDE}
 \label{subsec:5:kumpul}
 
 Untuk mengumpulkan kode melalui IDE, fungsi \verb|_submit| ditambahkan pada \textit{controller} \verb|Submit|. Fungsi ini dijalankan oleh fungsi \verb|save("submit")| setelah \textit{file} berhasil disimpan. Kode disimpan kembali dengan ekstensi yang sesuai, lalu informasi kode dimasukkan ke dalam antrean melalui \textit{model} \verb|Queue_model| untuk dinilai. Perubahan kode ini terdapat pada lampiran \ref{lampA:Submit.php} baris 140--188.
@@ -197,8 +197,8 @@ Pengujian fungsional dilakukan secara lokal pada perangkat penulis. Berikut ini 
 	\centering
 	\caption{Tabel Pengujian Fungsional}
 	\begin{tabular}{|p{0.5cm}| p{5.5cm}| p{6cm}| p{2.5cm}|} \hline
-	No.	&	Aksi Pengguna	&	Reaksi yang diharapkan	&	Reaksi Perangkat Lunak \\ \hline
-	1 	&  Membuka halaman Submit, dengan \textit{assignment} yang dipilih memiliki PDF soal & PDF Soal ditampilkan &	sesuai	\\ \hline
+	No.	&	Aksi Pengguna	&	Reaksi yang diharapkan	&	Reaksi \\ \hline
+	1 	&  Membuka halaman Submit & PDF Soal ditampilkan &	sesuai	\\ \hline
 	2 	&  Memilih \textit{problem} dan \textit{language} pada dropdown & Editor kode dan tombol Save, Submit, Execute diaktifkan &	sesuai	\\ \hline
 	3 	&  Mengetik kode pada editor kode & Kode yang diketik memiliki \textit{syntax highlighting} sesuai dengan bahasa yang dipilih &	sesuai	\\ \hline
 	4 	&  Menekan tombol save & Kode disimpan ditandai dengan \textit{status} "Saved" &	sesuai	\\ \hline
@@ -235,14 +235,14 @@ Tercatat pada \textit{issue} \#2 \footnote{https://github.com/athlonneo/SharIF-J
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.4]{Pengujian/submit_final1.PNG}  
-	\caption{Tampilan unggah \textit{file}}
+	\caption{Tampilan antarmuka unggah \textit{file}}
 	\label{fig:5:submit1} 
 \end{figure} 
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.115]{Pengujian/submit_final.PNG}  
-	\caption{Tampilan IDE}
+	\caption{Tampilan antarmuka IDE}
 	\label{fig:5:submit2} 
 \end{figure} 
 
@@ -421,13 +421,31 @@ Pada survei ini, didapatkan respon dari 12 orang mahasiswa Dasar-dasar Pemrogram
 \begin{enumerate}
     \item Menampilkan soal
     \begin{enumerate}
-        \item Apakah Anda sudah mencoba fitur ini? \\ 100\% dari partisipan menjawab ya, hal ini menunjukkan bahwa seluruh partisipan sudah mencoba fitur ini.
-        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 83\% dari partisipan menjawab ya, hal ini menunjukkan bahwa mayoritas partisipan tidak menemukan kendala pada fitur ini.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/11.PNG}  
+        	\caption{Hasil survei bagian 1 pertanyaan 1}
+        	\label{fig:5:survei11} 
+        \end{figure} 
+        \item Apakah Anda sudah mencoba fitur ini? \\ 100\% dari partisipan menjawab ya, hal ini menunjukkan bahwa seluruh partisipan sudah mencoba fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei11}.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/12.PNG}  
+        	\caption{Hasil survei bagian 1 pertanyaan 2}
+        	\label{fig:5:survei12} 
+        \end{figure} 
+        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 83\% dari partisipan menjawab ya, hal ini menunjukkan bahwa mayoritas partisipan tidak menemukan kendala pada fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei12}.
         \item Jika ya, apa kendala yang dialami? \\ Berikut ini kendala yang dialami:
         \begin{itemize}
             \item Pdf tidak muncul
         \end{itemize}
-        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 3.84, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/14.PNG}  
+        	\caption{Hasil survei bagian 1 pertanyaan 4}
+        	\label{fig:5:survei14} 
+        \end{figure}
+        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 3.84, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei14}.
         \item Apakah ada pendapat/saran/masukan untuk fitur ini? \\ Berikut ini adalah masukan yang didapatkan:
         \begin{itemize}
             \item Pastikan pdf bisa muncul di berbagai \textit{device}
@@ -437,15 +455,33 @@ Pada survei ini, didapatkan respon dari 12 orang mahasiswa Dasar-dasar Pemrogram
     \end{enumerate}
     \item Editor kode
     \begin{enumerate}
-        \item Apakah Anda sudah mencoba fitur ini? \\ 83\% dari partisipan menjawab ya, hal ini menunjukkan bahwa mayoritas partisipan sudah mencoba fitur ini.
-        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 75\% dari partisipan menjawab tidak, hal ini menunjukkan bahwa mayoritas partisipan tidak menemukan kendala pada fitur ini.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/21.PNG}  
+        	\caption{Hasil survei bagian 2 pertanyaan 1}
+        	\label{fig:5:survei21} 
+        \end{figure}
+        \item Apakah Anda sudah mencoba fitur ini? \\ 83\% dari partisipan menjawab ya, hal ini menunjukkan bahwa mayoritas partisipan sudah mencoba fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei21}.
+            \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/22.PNG}  
+        	\caption{Hasil survei bagian 2 pertanyaan 2}
+        	\label{fig:5:survei22} 
+        \end{figure}
+        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 75\% dari partisipan menjawab tidak, hal ini menunjukkan bahwa mayoritas partisipan tidak menemukan kendala pada fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei22}.
         \item Jika ya, apa kendala yang dialami? \\ Berikut ini kendala yang dialami:
         \begin{itemize}
             \item Terkadang jenis file tidak muncul
             \item Ukuran editor kurang besar
             \item Sulit untuk \textit{scrolling} pada text editor
         \end{itemize}
-        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 4.25, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan.
+            \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/14.PNG}  
+        	\caption{Hasil survei bagian 2 pertanyaan 4}
+        	\label{fig:5:survei24} 
+        \end{figure}
+        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 4.25, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei24}.
         \item Apakah ada pendapat/saran/masukan untuk fitur ini? \\ Berikut ini adalah masukan yang didapatkan:
         \begin{itemize}
             \item Mengubah tampilan agar editor lebih mudah digunakan
@@ -453,10 +489,28 @@ Pada survei ini, didapatkan respon dari 12 orang mahasiswa Dasar-dasar Pemrogram
     \end{enumerate}
     \item Menyimpan dan memuat kode
     \begin{enumerate}
-        \item Apakah Anda sudah mencoba fitur ini? \\ 50\% dari partisipan menjawab ya, hal ini menunjukkan bahwa hanya sebagian partisipan sudah mencoba fitur ini.
-        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 100\% dari partisipan menjawab tidak, hal ini menunjukkan bahwa seluruh partisipan tidak menemukan kendala pada fitur ini.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/31.PNG}  
+        	\caption{Hasil survei bagian 3 pertanyaan 1}
+        	\label{fig:5:survei31} 
+        \end{figure}
+        \item Apakah Anda sudah mencoba fitur ini? \\ 50\% dari partisipan menjawab ya, hal ini menunjukkan bahwa hanya sebagian partisipan sudah mencoba fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei31}.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/32.PNG}  
+        	\caption{Hasil survei bagian 3 pertanyaan 2}
+        	\label{fig:5:survei32} 
+        \end{figure}
+        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 100\% dari partisipan menjawab tidak, hal ini menunjukkan bahwa seluruh partisipan tidak menemukan kendala pada fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei32}.
         \item Jika ya, apa kendala yang dialami? \\ Tidak ada partisipan yang menemukan kendala pada fitur ini.
-        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 3.67, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/34.PNG}  
+        	\caption{Hasil survei bagian 3 pertanyaan 4}
+        	\label{fig:5:survei34} 
+        \end{figure}
+        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 3.67, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei34}.
         \item Apakah ada pendapat/saran/masukan untuk fitur ini? \\ Berikut ini adalah masukan yang didapatkan:
         \begin{itemize}
             \item Tidak perlu ada keterangan Save, cukup Execute dan Submit saja
@@ -464,21 +518,57 @@ Pada survei ini, didapatkan respon dari 12 orang mahasiswa Dasar-dasar Pemrogram
     \end{enumerate}
     \item Menjalankan kode dengan tes kasus
     \begin{enumerate}
-        \item Apakah Anda sudah mencoba fitur ini? \\ 67\% dari partisipan menjawab ya, hal ini menunjukkan bahwa hanya sebagian partisipan sudah mencoba fitur ini.
-        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 100\% dari partisipan menjawab tidak, hal ini menunjukkan bahwa seluruh partisipan tidak menemukan kendala pada fitur ini.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/41.PNG}  
+        	\caption{Hasil survei bagian 4 pertanyaan 1}
+        	\label{fig:5:survei41} 
+        \end{figure}
+        \item Apakah Anda sudah mencoba fitur ini? \\ 67\% dari partisipan menjawab ya, hal ini menunjukkan bahwa hanya sebagian partisipan sudah mencoba fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei41}.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/42.PNG}  
+        	\caption{Hasil survei bagian 4 pertanyaan 2}
+        	\label{fig:5:survei42} 
+        \end{figure}
+        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 100\% dari partisipan menjawab tidak, hal ini menunjukkan bahwa seluruh partisipan tidak menemukan kendala pada fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei42}.
         \item Jika ya, apa kendala yang dialami? \\ Tidak ada partisipan yang menemukan kendala pada fitur ini.
-        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 4.5, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/44.PNG}  
+        	\caption{Hasil survei bagian 4 pertanyaan 4}
+        	\label{fig:5:survei44} 
+        \end{figure}
+        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 4.17, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei44}.
         \item Apakah ada pendapat/saran/masukan untuk fitur ini? \\ Tidak ada partisipan yang memberi masukan pada fitur ini.
     \end{enumerate}
     \item Mengumpulkan kode melalui IDE
         \begin{enumerate}
-        \item Apakah Anda sudah mencoba fitur ini? \\ 67\% dari partisipan menjawab ya, hal ini menunjukkan bahwa hanya sebagian partisipan sudah mencoba fitur ini.
-        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 83\% dari partisipan menjawab tidak, hal ini menunjukkan bahwa seluruh partisipan tidak menemukan kendala pada fitur ini.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/51.PNG}  
+        	\caption{Hasil survei bagian 5 pertanyaan 1}
+        	\label{fig:5:survei51} 
+        \end{figure}
+        \item Apakah Anda sudah mencoba fitur ini? \\ 67\% dari partisipan menjawab ya, hal ini menunjukkan bahwa hanya sebagian partisipan sudah mencoba fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei51}.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/52.PNG}  
+        	\caption{Hasil survei bagian 5 pertanyaan 2}
+        	\label{fig:5:survei52} 
+        \end{figure}
+        \item Apakah terdapat kendala saat menggunakan fitur ini? \\ 83\% dari partisipan menjawab tidak, hal ini menunjukkan bahwa seluruh partisipan tidak menemukan kendala pada fitur ini. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei52}.
         \item Jika ya, apa kendala yang dialami? \\ Berikut ini kendala yang dialami:
         \begin{itemize}
             \item Terkadang kode tidak terbaca di judge
         \end{itemize}
-        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 4, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan.
+        \begin{figure}[H]
+        	\centering  
+        	\includegraphics[scale=0.8]{Survei/54.PNG}  
+        	\caption{Hasil survei bagian 5 pertanyaan 4}
+        	\label{fig:5:survei54} 
+        \end{figure}
+        \item Apakah fitur ini sudah cukup nyaman untuk digunakan? \\ Rata-rata skor untuk pertanyaan ini adalah 4.33, dapat disimpulkan bahwa fitur ini sudah cukup nyaman untuk digunakan. Hasil untuk pertanyaan ini dapat dilihat pada gambar \ref{fig:5:survei54}.
         \item Apakah ada pendapat/saran/masukan untuk fitur ini? \\ Berikut ini adalah masukan yang didapatkan:
         \begin{itemize}
             \item Tidak perlu ada keterangan Save, cukup Submit saja
