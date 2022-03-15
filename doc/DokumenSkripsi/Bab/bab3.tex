@@ -4,9 +4,9 @@
 \section{Analisis Sistem Kini}
 \label{sec:3:analisiskini} 
 
-SharIF Judge adalah sebuah \textit{online judge} dengan fungsi utama untuk mengevaluasi kode program yang dikumpulkan oleh pengguna secara otomatis. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program. Antarmuka web Sharif Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter, disertai \textit{backend} menggunakan Bash.
+SharIF Judge adalah sebuah \textit{online judge} dengan fungsi utama untuk mengevaluasi kode program yang dikumpulkan oleh pengguna secara otomatis. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program. Sharif Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter dan Bash.
 
-\subsection{\textit{Assignment}, \textit{Problem}, dan \textit{Submission}}
+\subsection{Istilah-istilah Umum}
 \label{subs:3:assignment}
 
 Pada SharIF Judge, digunakan istilah-istilah berikut ini:
@@ -18,7 +18,7 @@ Pada SharIF Judge, digunakan istilah-istilah berikut ini:
     \item \textit{Final Submission} \\ Merepresentasikan sebuah jawaban akhir dari seorang pengguna. Seorang pengguna dapat mengunggah \textit{submission} berkali-kali untuk menguji dan memperbarui jawaban, namun harus memilih satu buah \textit{submission} sebagai jawaban final.
 \end{itemize}
 
-\subsection{Fitur SharIF Judge}
+\subsection{Fitur-fitur SharIF Judge}
 \label{subs:3:fitur}
 
 Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \textit{role} akun yang digunakan pengguna tersebut. Pada bagian ini, \textit{role} akun yang digunakan adalah \textit{admin}. Berikut ini adalah halaman yang terdapat pada SharIF Judge dengan fitur dan kegunaannya:
@@ -51,7 +51,7 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
     	\label{fig:3:users} 
     \end{figure} 
     
-    Gambar \ref{fig:3:users} menunjukkan halaman Users. Pada halaman ini terdapat \textit{list} seluruh pengguna yang terdaftar pada SharIF Judge. Pengguna juga dapat membuat, mengubah, dan menghapus pengguna.
+    Gambar \ref{fig:3:users} menunjukkan halaman Users. Pada halaman ini terdapat daftar seluruh pengguna yang terdaftar pada SharIF Judge. Pengguna juga dapat membuat, mengubah, dan menghapus pengguna.
     
 \subsubsection{Notifications}
     \begin{figure}[H]
@@ -61,7 +61,7 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
     	\label{fig:3:notifications} 
     \end{figure} 
     
-    Gambar \ref{fig:3:notifications} menunjukkan halaman Notifications. Pada halaman ini terdapat \textit{list} seluruh notifikasi. Pengguna juga dapat membuat, mengubah, dan menghapus notifikas.
+    Gambar \ref{fig:3:notifications} menunjukkan halaman Notifications. Pada halaman ini terdapat daftar seluruh notifikasi. Pengguna juga dapat membuat, mengubah, dan menghapus notifikas.
 
 \subsubsection{Assignments}
     \begin{figure}[H]
@@ -71,7 +71,7 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
     	\label{fig:3:assignments} 
     \end{figure} 
     
-    Gambar \ref{fig:3:assignments} menunjukkan halaman Assignments. Pada halaman ini terdapat \textit{list} seluruh \textit{assignment}. Pengguna juga dapat membuat, mengubah, dan menghapus \textit{assignment}. Salah satu \textit{assignment} pada halaman ini harus dipilih untuk dapat menggunakan beberapa fitur lainnya pada SharIF Judge. Soal dalam bentuk PDF juga dapat diunduh melalui halaman ini. 
+    Gambar \ref{fig:3:assignments} menunjukkan halaman Assignments. Pada halaman ini terdapat daftar seluruh \textit{assignment}. Pengguna juga dapat membuat, mengubah, dan menghapus \textit{assignment}. Salah satu \textit{assignment} pada halaman ini harus dipilih untuk dapat menggunakan beberapa fitur lainnya pada SharIF Judge. Soal dalam bentuk PDF juga dapat diunduh melalui halaman ini. 
     
 \subsubsection{Problems}
     \begin{figure}[H]
@@ -101,7 +101,7 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
     	\label{fig:3:final_submissions} 
     \end{figure} 
     
-    Gambar \ref{fig:3:final_submissions} menunjukkan halaman Final Submissions. Pada halaman ini, terdapat \textit{list} seluruh \textit{final submission} untuk \textit{assignment} yang dipilih. Pengguna juga dapat melihat \textit{file} atau kode yang diunggah, dan nilai yang didapatkannya.
+    Gambar \ref{fig:3:final_submissions} menunjukkan halaman Final Submissions. Pada halaman ini, terdapat daftar seluruh \textit{final submission} untuk \textit{assignment} yang dipilih. Pengguna juga dapat melihat \textit{file} atau kode yang diunggah, dan nilai yang didapatkannya.
     
 \subsubsection{All Submissions}
     \begin{figure}[H]
@@ -111,7 +111,7 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
     	\label{fig:3:all_submissions} 
     \end{figure} 
     
-    Gambar \ref{fig:3:all_submissions} menunjukkan halaman All Submissions. Pada halaman ini, terdapat \textit{list} seluruh \textit{submission} untuk \textit{assignment} yang dipilih. Pengguna juga dapat melihat \textit{file} atau kode yang diunggah, dan nilai yang didapatkannya. Untuk setiap \textit{problem}, sebuah \textit{submission} dapat dipilih sebagai \textit{final submission} melalui halaman ini.
+    Gambar \ref{fig:3:all_submissions} menunjukkan halaman All Submissions. Pada halaman ini, terdapat daftar seluruh \textit{submission} untuk \textit{assignment} yang dipilih. Pengguna juga dapat melihat \textit{file} atau kode yang diunggah, dan nilai yang didapatkannya. Untuk setiap \textit{problem}, sebuah \textit{submission} dapat dipilih sebagai \textit{final submission} melalui halaman ini.
     
 \subsubsection{Scoreboard}
     \begin{figure}[H]
@@ -121,7 +121,7 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
     	\label{fig:3:scoreboard} 
     \end{figure} 
     
-    Gambar \ref{fig:3:scoreboard} menunjukkan halaman Scoreboard. Pada halaman ini, terdapat \textit{list} nilai pengguna untuk setiap \textit{problem} pada \textit{assignment} yang dipilih.
+    Gambar \ref{fig:3:scoreboard} menunjukkan halaman Scoreboard. Pada halaman ini, terdapat daftar nilai pengguna untuk setiap \textit{problem} pada \textit{assignment} yang dipilih.
     
 \subsubsection{Hall of Fame}
     \begin{figure}[H]
@@ -131,7 +131,7 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
     	\label{fig:3:hall_of_fame} 
     \end{figure} 
     
-    Gambar \ref{fig:3:hall_of_fame} menunjukkan halaman Hall of Fame. Pada halaman ini, terdapat \textit{list} pengguna secara berurutan berdasarkan total nilai yang didapatkannya dari seluruh \textit{assignment}.
+    Gambar \ref{fig:3:hall_of_fame} menunjukkan halaman Hall of Fame. Pada halaman ini, terdapat daftar pengguna secara berurutan berdasarkan total nilai yang didapatkannya dari seluruh \textit{assignment}.
 
 \subsubsection{24-Hour Log}
     \begin{figure}[H]
@@ -141,7 +141,7 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
     	\label{fig:3:log} 
     \end{figure} 
     
-    Gambar \ref{fig:3:log} menunjukkan halaman 24-Hour Log. Pada halaman ini, terdapat \textit{list} yang mencatat bila akun yang sama melakukan \textit{login} dengan \textit{IP address} yang berbeda dalam jangka waktu 24 jam. Fitur ini digunakan untuk mendeteksi adanya peminjaman akun.
+    Gambar \ref{fig:3:log} menunjukkan halaman 24-Hour Log. Pada halaman ini, terdapat daftar yang mencatat bila akun yang sama melakukan \textit{login} dengan \textit{IP address} yang berbeda dalam jangka waktu 24 jam. Fitur ini digunakan untuk mendeteksi adanya peminjaman akun.
 
 \subsection{Model, View, Controller}
 \label{subs:3:mvc}

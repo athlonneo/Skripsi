@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.15)  1 MAR 2022 07:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.15)  15 MAR 2022 07:50
 entering extended mode
 **./skripsi.tex
 (skripsi.tex
@@ -1253,7 +1253,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-5.
+6.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -5815,14 +5815,14 @@ LaTeX Info: Symbol \textminus not provided by
 (Bab/bab4.aux) (Bab/bab5.aux) (Bab/bab6.aux) (Bab/bab9.aux) (Lampiran/lampA.aux
 ) (Lampiran/lampB.aux))
 Package rerunfilecheck Info: File `skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 8A46FB4C85FF071D5EF6D6E5CDE83395;7006.
+(rerunfilecheck)             Checksum: A7A2A997E90144536E35623913881DA5;6955.
  ) 
 Here is how much of TeX's memory you used:
- 42580 strings out of 479321
- 901443 string characters out of 2864581
- 2891692 words of memory out of 3000000
- 56946 multiletter control sequences out of 15000+600000
- 500959 words of font info for 219 fonts, out of 8000000 for 9000
+ 42584 strings out of 479321
+ 901464 string characters out of 2864581
+ 2891530 words of memory out of 3000000
+ 56944 multiletter control sequences out of 15000+600000
+ 496907 words of font info for 221 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  113i,12n,116p,1013b,3277s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
@@ -5860,9 +5860,9 @@ ic/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmtt10.pfb>
-Output written on skripsi.pdf (86 pages, 2875974 bytes).
+Output written on skripsi.pdf (86 pages, 2875496 bytes).
 PDF statistics:
  3125 PDF objects out of 3580 (max. 8388607)
  1947 named destinations out of 2073 (max. 500000)
- 54862 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 52814 words of extra memory for PDF output out of 61914 (max. 10000000)
 
