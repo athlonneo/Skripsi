@@ -4,7 +4,7 @@
 \section{Analisis Sistem Kini}
 \label{sec:3:analisiskini} 
 
-SharIF Judge adalah sebuah \textit{online judge} dengan fungsi utama untuk mengevaluasi kode program yang dikumpulkan oleh pengguna secara otomatis. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program. Sharif Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter dan Bash.
+SharIF Judge adalah sebuah \textit{online judge} dengan fungsi utama untuk mengevaluasi kode program yang dikumpulkan oleh pengguna secara otomatis. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program. SharIF Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter dan Bash. 
 
 \subsection{Istilah-istilah Umum}
 \label{subs:3:assignment}
@@ -20,6 +20,13 @@ Pada SharIF Judge, digunakan istilah-istilah berikut ini:
 
 \subsection{Fitur-fitur SharIF Judge}
 \label{subs:3:fitur}
+
+    \begin{figure}[H]
+    	\centering  
+    	\includegraphics[scale=0.5]{Diagram/Use Case.png}  
+    	\caption{\textit{Use Case Diagram} SharIF Judge}
+    	\label{fig:3:usecased} 
+    \end{figure} 
 
 Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \textit{role} akun yang digunakan pengguna tersebut. Pada bagian ini, \textit{role} akun yang digunakan adalah \textit{admin}. Berikut ini adalah halaman yang terdapat pada SharIF Judge dengan fitur dan kegunaannya:
 
@@ -145,7 +152,15 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
 
 \subsection{Model, View, Controller}
 \label{subs:3:mvc}
-SharIF Judge menggunakan \textit{framework} CodeIgniter 3. Seperti yang dibahas pada bagian \ref{subs:2:cimvc}, \textit{framework} CodeIgniter menerapkan pola arsitektur MVC, dengan komponen-komponen \textit{model}, \textit{view}, dan \textit{controller}.
+SharIF Judge menggunakan \textit{framework} CodeIgniter 3. Seperti yang dibahas pada bagian \ref{subs:2:cimvc}, \textit{framework} CodeIgniter menerapkan pola arsitektur MVC, dengan komponen-komponen \textit{model}, \textit{view}, dan \textit{controller}. Diagram kelas SharIF Judge dapat dilihat pada gambar \ref{fig:3:classdiagram}.
+
+    \begin{figure}[H]
+    	\centering  
+    	\includegraphics[scale=0.5]{Diagram/Class Diagram.PNG}  
+    	\caption{Diagram kelas SharIF Judge}
+    	\label{fig:3:classdiagram} 
+    \end{figure} 
+
 
 \subsubsection{Model}
 
@@ -420,7 +435,15 @@ Berikut ini adalah \textit{controller} pada SharIF Judge:
 \subsection{Penyimpanan Kode}
 \label{subsec:3:simpan}
 
-Pada SharIF Judge, seluruh kode yang diunggah pengguna disimpan dalam \textit{folder} \verb|assignments|. Lokasi \textit{folder} \verb|assignments| dapat diubah pada halaman Settings. Kode yang diunggah disimpan pada \textit{folder} \verb|assignments| dengan alamat \verb|assignment_<id>/p_<id>/<nama_pengguna>/|. Nama \textit{file} kode yang diunggah diberi akhiran \verb|-<submit_id>| untuk membedakan pengumpulan dengan nama \textit{file} yang sama. 
+Pada SharIF Judge, seluruh kode yang diunggah pengguna disimpan dalam \textit{folder} \verb|assignments|. Lokasi \textit{folder} \verb|assignments| dapat diubah pada halaman Settings. Kode yang diunggah disimpan pada \textit{folder} \verb|assignments| dengan format alamat \lstinline{assignment_<assignment_id>/p_<problem_id>/<nama_pengguna>/<nama_file_yang_diupload>-<submit_id>.<ekstensi_file>}, dengan penjelasan sebagai berikut:
+\begin{itemize}
+    \item \verb|<assignment_id>| \\ \verb|id| dari \textit{assignment} yang dipilih.
+    \item \verb|<problem_id>| \\ \verb|id| dari \textit{problem} yang dipilih.
+    \item \verb|<nama_pengguna>| \\ Nama pengguna yang mengunggah \textit{file}.
+    \item \verb|<nama_file_yang_diupload>| \\ Nama \textit{file} yang diunggah.
+    \item \verb|<submit_id>| \\ \verb|id| dari \textit{submission} yang diunggah.
+    \item \verb|<ekstensi_file>| \\ Ekstensi \textit{file} yang diunggah.
+\end{itemize}
 
 Sebagai contoh, seorang pengguna bernama \verb|user| mengunggah sebuah \textit{file} bernama \verb|mycode.java| untuk \textit{problem} ke-3 pada \textit{assignment} dengan id 5. \textit{Submission} pengguna ini adalah \textit{submission} ke-20 untuk \textit{problem} tersebut, sehingga \verb|submit_id| adalah 20. Maka alamat penyimpanan untuk contoh ini adalah \verb|assignment_5/p_3/user/mycode-20.java|.
 
@@ -429,13 +452,14 @@ Sebagai contoh, seorang pengguna bernama \verb|user| mengunggah sebuah \textit{f
 \label{subsec:3:antrean} 
 Pada SharIF Judge, seluruh kode yang dikumpulkan pengguna akan dijalankan satu per satu dalam antrean untuk dinilai. Tahap-tahap yang dilalui sebuah kode hingga penilaian selesai adalah sebagai berikut:
 
-\begin{itemize}
-    \item \textit{Controller} \verb|Submit| menyimpan \textit{file} kode pada folder sesuai dengan \textit{assignment} dan \textit{problem} yang dipilih.
-    \item \textit{Model} \verb|Queue_model| menyimpan \textit{submission} sebagai sebuah baris di tabel \verb|shj_submissions|, lalu kode dimasukkan dalam antrean sebagai sebuah baris baru di tabel \verb|shj_queue|.
-    \item \textit{Controller} \verb|Queueprocess| membaca setiap baris tabel \verb|shj_queue| satu per satu untuk dinilai dengan menjalankan \verb|tester.sh|.
+\begin{enumerate}
+    \item \textit{Controller} \verb|Submit| menyimpan \textit{file} kode pada folder sesuai dengan penjelasan pada bab \ref{subsec:3:simpan}.
+    \item \textit{Model} \verb|Queue_model| menyimpan \textit{submission} pada basis data \verb|shj_submissions|, lalu dimasukkan dalam antrean pada basis data \verb|shj_queue|.
+    \item \textit{Controller} \verb|Submit| memanggil fungsi \verb|process_the_queue()| yang menjalankan fungsi \verb|run()| pada \textit{controller} \verb|Queueprocess|.
+    \item \textit{Controller} \verb|Queueprocess| membaca setiap baris basis data \verb|shj_queue| satu per satu untuk dinilai dengan menjalankan \verb|tester.sh|.
     \item \verb|tester.sh| mengompilasi kode, menjalankan kode dengan tes kasus, menilai hasilnya dengan kunci jawaban, lalu mengembalikan hasil penilaian.
-    \item \textit{Controller} \verb|Queueprocess| menyimpan nilai kembalian pada tabel \verb|shj_submissions| dan menghapus baris dari tabel \verb|shj_queue|.
-\end{itemize}
+    \item \textit{Controller} \verb|Queueprocess| menyimpan nilai kembalian pada basis data \verb|shj_submissions| dan menghapus baris dari basis data \verb|shj_queue|.
+\end{enumerate}
 
 \section{Analisis Sistem Usulan}
 \label{sec:3:analisisusulan} 
@@ -443,35 +467,101 @@ Agar SharIF Judge dapat menjadi sebuah IDE, SharIF Judge harus mampu untuk memfa
    
     \begin{figure}[H]
     	\centering  
-    	\includegraphics[scale=0.6]{Diagram/usecase.PNG}  
-    	\caption{\textit{Use Case Diagram} Fitur Tambahan}
+    	\includegraphics[scale=0.6]{Diagram/Use Case Usulan.PNG}  
+    	\caption{\textit{Use Case Diagram} Fitur Usulan}
     	\label{fig:3:usecase} 
     \end{figure} 
 
+Berikut ini merupakan skenario untuk masing-masing fitur yang akan ditambahkan pada SharIF Judge:
+
 \begin{itemize}
-    \item Melihat soal \\ Soal PDF untuk \textit{assignment} yang dipilih akan ditampilkan secara langsung pada halaman yang sama.
-    \begin{itemize}
+
+    \item Melihat soal \\ Akan ditambahkan fitur untuk menampilkan soal PDF di halaman submit untuk \textit{assignment} yang dipilih, sehingga pengguna dapat melihat soal secara langsung pada SharIF Judge tanpa perlu mengunduhnya terlebih dahulu.
+        \begin{itemize}
             \item Aktor: Pengguna
             \item Kondisi Awal: PDF soal sudah tersedia
             \item Kondisi Akhir: PDF soal ditampilkan
-            \item Skenario Utama:
+            \item Skenario Normal:
                 \begin{enumerate}
                     \item Pengguna memilih menu Submit
                     \item Sistem menampilkan halaman Submit
-                    \item Sistem mengecek ketersediaan PDF soal
                     \item Sistem menampilkan PDF soal
                 \end{enumerate}
-            \item Skenario Alternatif (?):
+            \item Pengecualian: PDF soal tidak tersedia
+        \end{itemize}
+        
+    \item Mengedit kode \\ Akan ditambahkan editor teks yang memiliki kemampuan untuk membantu pembuatan kode, seperti \textit{syntax highlighting}, sehingga pengguna dapat mengedit kode secara langsung pada SharIF Judge.
+        \begin{itemize}
+            \item Aktor: Pengguna
+            \item Kondisi Awal: Pengguna sudah memilih \textit{assignment} dan \textit{problem} yang akan dikerjakan
+            \item Kondisi Akhir: Editor kode ditampilkan dan berfungsi
+            \item Skenario Normal:
                 \begin{enumerate}
                     \item Pengguna memilih menu Submit
                     \item Sistem menampilkan halaman Submit
-                    \item Sistem mengecek ketersediaan PDF soal
-                    \item Sistem menyembunyikan PDF Viewer
+                    \item Sistem menampilkan editor kode
+                    \item Pengguna mengedit kode pada editor kode
                 \end{enumerate}
-            \item Pengecualian (?): PDF soal tidak tersedia
-    \end{itemize}
-    \item Mengedit kode \\ Editor teks yang memiliki kemampuan untuk membantu pembuatan kode, seperti \textit{syntax highlighting}.
-    \item Menyimpan dan memuat kode \\ Kemampuan untuk menyimpan dan memuat kembali kode yang terdapat pada editor kode.
-    \item Menjalankan kode dengan tes kasus \\  Kode pada editor kode dapat dijalankan dengan tes kasus yang disediakan oleh pengguna, kemudian hasilnya, termasuk \textit{error message} akan ditampilkan pada halaman yang sama.
-    \item Mengumpulkan kode melalui IDE \\  Mengumpulkan kode yang sudah dibuat pada editor, seperti jika mengumpulkannya melalui unggah \textit{file}.
+            \item Pengecualian: Pengguna belum memilih \textit{assignment} atau \textit{problem}
+        \end{itemize}
+        
+    \item Menyimpan kode \\ Akan ditambahkan fitur untuk menyimpan kode yang sudah dibuat pada editor kode, sehingga pengguna dapat menyimpan kode yang sudah dibuat secara daring.
+            \begin{itemize}
+            \item Aktor: Pengguna
+            \item Kondisi Awal: Pengguna sudah memilih \textit{assignment} dan \textit{problem} yang akan dikerjakan
+            \item Kondisi Akhir: Kode tersimpan pada sistem
+            \item Skenario Normal:
+                \begin{enumerate}
+                    \item Pengguna mengedit kode pada editor kode
+                    \item Pengguna menekan menu Save
+                    \item Sistem menyimpan kode
+                \end{enumerate}
+            \item Pengecualian: Pengguna belum memilih \textit{assignment} atau \textit{problem}
+        \end{itemize}
+        
+    \item Menyimpan kode \\ Akan ditambahkan fitur untuk menyimpan kode yang sudah dibuat pada editor kode, sehingga pengguna dapat memuat kembali kode yang sudah disimpan ketika \textit{problem} yang sama dipilih.
+        \begin{itemize}
+            \item Aktor: Pengguna
+            \item Kondisi Awal: Pengguna sudah menyimpan kode untuk \textit{problem} yang dipilih
+            \item Kondisi Akhir: Kode dimuat pada editor kode
+            \item Skenario Normal:
+                \begin{enumerate}
+                    \item Pengguna memilih \textit{problem} yang akan dikerjakan
+                    \item Sistem memuat kode pada editor kode
+                \end{enumerate}
+            \item Pengecualian: Pengguna belum menyimpan kode untuk \textit{problem} yang dipilih
+        \end{itemize}
+    
+    
+    \item Menjalankan kode dengan tes kasus \\  Akan ditambahkan fitur untuk menjalankan kode pada editor kode dengan tes kasus yang disediakan pengguna, sehingga pengguna dapat menguji kode yang sudah dibuat secara langsung pada SharIF Judge.
+        \begin{itemize}
+            \item Aktor: Pengguna
+            \item Kondisi Awal: Pengguna sudah mengedit kode pada editor kode
+            \item Kondisi Akhir: Hasil dari kode dengan tes kasus ditampilkan pada area Output
+            \item Skenario Normal:
+                \begin{enumerate}
+                    \item Pengguna mengedit kode pada editor kode
+                    \item Pengguna memasukkan tes kasus pada area Input
+                    \item Pengguna menekan menu Execute
+                    \item Sistem menjalankan kode dengan tes kasus
+                    \item Sistem menampilkan hasil dari kode pada area Output
+                \end{enumerate}
+            \item Pengecualian:  Pengguna belum mengedit kode pada editor kode
+        \end{itemize}
+    
+    
+    \item Mengumpulkan kode melalui IDE \\  Akan ditambahkan fitur untuk mengumpulkan kode yang sudah dibuat pada editor, sehingga pengguna dapat mengumpulkan kode yang sudah dibuat sebagai \textit{submission} tanpa perlu mengunggah \textit{file}.
+        \begin{itemize}
+            \item Aktor: Pengguna
+            \item Kondisi Awal: Pengguna sudah mengedit kode pada editor kode
+            \item Kondisi Akhir: Sistem menampilkan halaman All Submissions
+            \item Skenario Normal:
+                \begin{enumerate}
+                    \item Pengguna mengedit kode pada editor kode
+                    \item Pengguna menekan menu Submit
+                    \item Sistem menjalankan dan menilai kode
+                    \item Sistem menampilkan hasil penilaian pada halaman All Submissions 
+                \end{enumerate}
+            \item Pengecualian:  Pengguna belum mengedit kode pada editor kode
+        \end{itemize}
 \end{itemize}
