@@ -185,11 +185,9 @@ Dengan cara tersebut, nama kelas bisa didapatkan, namun setiap kode harus dikomp
 
 Untuk mengumpulkan kode melalui IDE, fungsi \verb|_submit| ditambahkan pada \textit{controller} \verb|Submit|. Fungsi ini dijalankan oleh fungsi \verb|save("submit")| setelah \textit{file} berhasil disimpan. Kode disimpan kembali dengan ekstensi yang sesuai, lalu informasi kode dimasukkan ke dalam antrean melalui \textit{model} \verb|Queue_model| untuk dinilai. Perubahan kode ini terdapat pada lampiran \ref{lampA:Submit.php} baris 140--188.
 
-\section{Pengujian}
-\label{subsec:5:pengujian}
 
-\subsection{Pengujian Fungsional}
-\label{subsec:5:fungsional}
+\section{Pengujian Fungsional}
+\label{sec:5:fungsional}
 
 Pengujian fungsional dilakukan secara lokal pada perangkat penulis. Berikut ini pengujian yang dilakukan terhadap fitur-fitur yang sudah diimplementasi:
 
@@ -210,10 +208,13 @@ Pengujian fungsional dilakukan secara lokal pada perangkat penulis. Berikut ini 
 \end{table}
 
 
-\subsection{Pengujian Eksperimental}
-\label{subsec:5:eksperimental}
+\section{Pengujian Eksperimental}
+\label{sec:5:eksperimental}
 
 Pengujian eksperimental dilakukan pada mata kuliah Dasar-dasar Pemrograman semester 51 Teknik Informatika Unpar. Perangkat lunak diuji pada \textit{judge} dengan alamat \verb|http://daspro.labftis.net|. Seluruh persoalan dan masukan yang diterima selama mata kuliah Dasar-dasar Pemrograman dicatat pada \verb|https://github.com/athlonneo/SharIF-Judge/issues|.
+
+\subsection{Perubahan melalui GitHub}
+\label{subsec:github}
 
 \subsubsection{Perubahan Tampilan Antarmuka}
 Tercatat pada \textit{issue} \#2 \footnote{https://github.com/athlonneo/SharIF-Judge/issues/2}, masukan dari salah satu dosen Dasar-dasar pemrograman adalah perubahan tampilan antarmuka untuk memperjelas fungsi dan meningkatkan kenyamanan pengguna. Perubahan yang disarankan adalah sebagai berikut:
@@ -241,7 +242,7 @@ Tercatat pada \textit{issue} \#2 \footnote{https://github.com/athlonneo/SharIF-J
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.115]{Pengujian/submit_final.PNG}  
+	\includegraphics[scale=0.4]{Pengujian/submit_final.PNG}  
 	\caption{Tampilan antarmuka IDE}
 	\label{fig:5:submit2} 
 \end{figure} 
@@ -415,8 +416,10 @@ Untuk setiap fitur pada survei, terdapat 5 pertanyaan. Pertanyaan yang diberikan
     \item Apakah ada pendapat/saran/masukan untuk fitur ini? (Partisipan menjawab dengan kalimat sendiri)
 \end{enumerate}
 
-\subsubsection{Hasil Survei}
-Pada survei ini, didapatkan respon dari 12 orang mahasiswa Dasar-dasar Pemrograman. Berikut ini adalah hasil dar survei untuk setiap fitur:
+\subsection{Survei}
+\label{subsec:survei}
+
+Pada survei ini, didapatkan respon dari 12 orang mahasiswa Dasar-dasar Pemrograman. Berikut ini adalah hasil dari survei untuk setiap fitur:
 
 \begin{enumerate}
     \item Menampilkan soal

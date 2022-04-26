@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.15)  15 MAR 2022 07:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.15)  26 APR 2022 05:43
 entering extended mode
 **./skripsi.tex
 (skripsi.tex
@@ -1132,7 +1132,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-<./Gambar//Logo-UNPAR.png, id=202, 180.31364pt x 177.42285pt>
+<./Gambar//Logo-UNPAR.png, id=214, 180.31364pt x 177.42285pt>
 File: ./Gambar//Logo-UNPAR.png Graphic file (type png)
 <use ./Gambar//Logo-UNPAR.png>
 Package pdftex.def Info: ./Gambar//Logo-UNPAR.png  used on input line 463.
@@ -1216,8 +1216,8 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
  [10]
 (skripsi.lof
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-8.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+2.
  (C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1225,16 +1225,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-)
+ [11
+
+])
 \tf@lof=\write7
 \openout7 = `skripsi.lof'.
 
- [11
 
-]
-[12
-
-]
+[12]
 \openout2 = `Bab/bab1.aux'.
 
  (Bab/bab1.tex
@@ -1248,12 +1246,18 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+<./Gambar//Diagram/step.png, id=414, 483.8075pt x 302.12875pt>
+File: ./Gambar//Diagram/step.png Graphic file (type png)
+<use ./Gambar//Diagram/step.png>
+Package pdftex.def Info: ./Gambar//Diagram/step.png  used on input line 22.
+(pdftex.def)             Requested size: 290.28674pt x 181.27864pt.
  [1
 
 
+
 ]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-6.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
+1.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1261,18 +1265,17 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [2]) [3]
+ [2 <./Gambar//Diagram/step.png>]) [3]
 \openout2 = `Bab/bab2.aux'.
 
- (Bab/bab2.tex
-[4
+ (Bab/bab2.tex [4
 
 
 
 
 ]
 Bab 2.
-<./Gambar//ci-flowchart.png, id=419, 1120.9378pt x 327.47343pt>
+<./Gambar//ci-flowchart.png, id=447, 1120.9378pt x 327.47343pt>
 File: ./Gambar//ci-flowchart.png Graphic file (type png)
 <use ./Gambar//ci-flowchart.png>
 Package pdftex.def Info: ./Gambar//ci-flowchart.png  used on input line 11.
@@ -1372,432 +1375,468 @@ LaTeX Info: Symbol \textminus not provided by
 
 (Bab/bab3.tex
 Bab 3.
+<./Gambar//Diagram/assignment.png, id=620, 550.055pt x 462.72874pt>
+File: ./Gambar//Diagram/assignment.png Graphic file (type png)
+<use ./Gambar//Diagram/assignment.png>
+Package pdftex.def Info: ./Gambar//Diagram/assignment.png  used on input line 2
+3.
+(pdftex.def)             Requested size: 220.0181pt x 185.08821pt.
 [11
 
 
 
 
 ]
-<./Gambar//Page/dashboard.PNG, id=595, 1044.90375pt x 539.01375pt>
+<./Gambar//Diagram/Use Case.png, id=626, 680.5425pt x 864.22874pt>
+File: ./Gambar//Diagram/Use Case.png Graphic file (type png)
+<use ./Gambar//Diagram/Use Case.png>
+Package pdftex.def Info: ./Gambar//Diagram/Use Case.png  used on input line 35.
+
+(pdftex.def)             Requested size: 272.21217pt x 345.68536pt.
+ [12 <./Gambar//Diagram/assignment.png> <./Gambar//Diagram/Use Case.png>]
+<./Gambar//Page/dashboard.PNG, id=634, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/dashboard.PNG Graphic file (type png)
 <use ./Gambar//Page/dashboard.PNG>
-Package pdftex.def Info: ./Gambar//Page/dashboard.PNG  used on input line 29.
-(pdftex.def)             Requested size: 417.9541pt x 215.60167pt.
-<./Gambar//Page/settings.PNG, id=597, 1044.90375pt x 539.01375pt>
+Package pdftex.def Info: ./Gambar//Page/dashboard.PNG  used on input line 45.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+<./Gambar//Page/settings.PNG, id=636, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/settings.PNG Graphic file (type png)
 <use ./Gambar//Page/settings.PNG>
-Package pdftex.def Info: ./Gambar//Page/settings.PNG  used on input line 39.
-(pdftex.def)             Requested size: 417.9541pt x 215.60167pt.
-<./Gambar//Page/users.PNG, id=599, 1045.65656pt x 539.01375pt>
+Package pdftex.def Info: ./Gambar//Page/settings.PNG  used on input line 55.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+
+[13 <./Gambar//Page/dashboard.PNG>]
+<./Gambar//Page/users.PNG, id=645, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/users.PNG Graphic file (type png)
 <use ./Gambar//Page/users.PNG>
-Package pdftex.def Info: ./Gambar//Page/users.PNG  used on input line 49.
-(pdftex.def)             Requested size: 418.25522pt x 215.60167pt.
- [12 <./Gambar//Page/dashboard.PNG> <./Gambar//Page/settings.PNG>]
-<./Gambar//Page/notifications.PNG, id=609, 1045.65656pt x 539.76656pt>
+Package pdftex.def Info: ./Gambar//Page/users.PNG  used on input line 65.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [14 <./Gambar//Page/settings.PNG> <./Gambar//Page/users.PNG>]
+<./Gambar//Page/notifications.PNG, id=655, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/notifications.PNG Graphic file (type png)
 <use ./Gambar//Page/notifications.PNG>
-Package pdftex.def Info: ./Gambar//Page/notifications.PNG  used on input line 5
-9.
-(pdftex.def)             Requested size: 418.25522pt x 215.9028pt.
-<./Gambar//Page/assignments.PNG, id=611, 1046.40938pt x 539.76656pt>
+Package pdftex.def Info: ./Gambar//Page/notifications.PNG  used on input line 7
+5.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+<./Gambar//Page/assignments.PNG, id=657, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/assignments.PNG Graphic file (type png)
 <use ./Gambar//Page/assignments.PNG>
-Package pdftex.def Info: ./Gambar//Page/assignments.PNG  used on input line 69.
+Package pdftex.def Info: ./Gambar//Page/assignments.PNG  used on input line 85.
 
-(pdftex.def)             Requested size: 418.55634pt x 215.9028pt.
- [13 <./Gambar//Page/users.PNG> <./Gambar//Page/notifications.PNG>]
-<./Gambar//Page/problems.PNG, id=622, 1046.40938pt x 541.27219pt>
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [15 <./Gambar//Page/notifications.PNG>]
+<./Gambar//Page/problems.PNG, id=665, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/problems.PNG Graphic file (type png)
 <use ./Gambar//Page/problems.PNG>
-Package pdftex.def Info: ./Gambar//Page/problems.PNG  used on input line 79.
-(pdftex.def)             Requested size: 418.55634pt x 216.50504pt.
- [14 <./Gambar//Page/assignments.PNG> <./Gambar//Page/problems.PNG>]
-<./Gambar//Page/submit.PNG, id=632, 1047.915pt x 540.51938pt>
+Package pdftex.def Info: ./Gambar//Page/problems.PNG  used on input line 95.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [16 <./Gambar//Page/assignments.PNG> <./Gambar//Page/problems.PNG>]
+<./Gambar//Page/submit.PNG, id=675, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/submit.PNG Graphic file (type png)
 <use ./Gambar//Page/submit.PNG>
-Package pdftex.def Info: ./Gambar//Page/submit.PNG  used on input line 89.
-(pdftex.def)             Requested size: 419.15857pt x 216.20392pt.
-<./Gambar//Page/final_submissions.PNG, id=634, 1044.15094pt x 539.01375pt>
+Package pdftex.def Info: ./Gambar//Page/submit.PNG  used on input line 105.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+<./Gambar//Page/final_submissions.PNG, id=677, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/final_submissions.PNG Graphic file (type png)
 <use ./Gambar//Page/final_submissions.PNG>
 Package pdftex.def Info: ./Gambar//Page/final_submissions.PNG  used on input li
-ne 99.
-(pdftex.def)             Requested size: 417.65298pt x 215.60167pt.
- [15 <./Gambar//Page/submit.PNG> <./Gambar//Page/final_submissions.PNG>]
-<./Gambar//Page/all_submissions.PNG, id=644, 1048.66782pt x 540.51938pt>
+ne 115.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [17 <./Gambar//Page/submit.PNG>]
+<./Gambar//Page/all_submissions.PNG, id=685, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/all_submissions.PNG Graphic file (type png)
 <use ./Gambar//Page/all_submissions.PNG>
 Package pdftex.def Info: ./Gambar//Page/all_submissions.PNG  used on input line
- 109.
-(pdftex.def)             Requested size: 419.4597pt x 216.20392pt.
-<./Gambar//Page/scoreboard.PNG, id=646, 1044.15094pt x 539.01375pt>
+ 125.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [18 <./Gambar//Page/final_submissions.PNG> <./Gambar//Page/all_submissions.PNG
+>]
+<./Gambar//Page/scoreboard.PNG, id=695, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/scoreboard.PNG Graphic file (type png)
 <use ./Gambar//Page/scoreboard.PNG>
-Package pdftex.def Info: ./Gambar//Page/scoreboard.PNG  used on input line 119.
+Package pdftex.def Info: ./Gambar//Page/scoreboard.PNG  used on input line 135.
 
-(pdftex.def)             Requested size: 417.65298pt x 215.60167pt.
- [16 <./Gambar//Page/all_submissions.PNG> <./Gambar//Page/scoreboard.PNG>]
-<./Gambar//Page/hall_of_fame.PNG, id=656, 1045.65656pt x 539.01375pt>
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+<./Gambar//Page/hall_of_fame.PNG, id=697, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/hall_of_fame.PNG Graphic file (type png)
 <use ./Gambar//Page/hall_of_fame.PNG>
-Package pdftex.def Info: ./Gambar//Page/hall_of_fame.PNG  used on input line 12
-9.
-(pdftex.def)             Requested size: 418.25522pt x 215.60167pt.
-<./Gambar//Page/log.PNG, id=658, 1044.90375pt x 539.76656pt>
+Package pdftex.def Info: ./Gambar//Page/hall_of_fame.PNG  used on input line 14
+5.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [19 <./Gambar//Page/scoreboard.PNG>]
+<./Gambar//Page/log.PNG, id=706, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Page/log.PNG Graphic file (type png)
 <use ./Gambar//Page/log.PNG>
-Package pdftex.def Info: ./Gambar//Page/log.PNG  used on input line 139.
-(pdftex.def)             Requested size: 417.9541pt x 215.9028pt.
- [17 <./Gambar//Page/hall_of_fame.PNG> <./Gambar//Page/log.PNG>] [18] [19] [20]
- [21]
-<./Gambar//View/sidebar.png, id=687, 130.98938pt x 499.11469pt>
+Package pdftex.def Info: ./Gambar//Page/log.PNG  used on input line 155.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [20 <./Gambar//Page/hall_of_fame.PNG> <./Gambar//Page/log.PNG>]
+<./Gambar//Diagram/Class Diagram.PNG, id=718, 844.15375pt x 633.36626pt>
+File: ./Gambar//Diagram/Class Diagram.PNG Graphic file (type png)
+<use ./Gambar//Diagram/Class Diagram.PNG>
+Package pdftex.def Info: ./Gambar//Diagram/Class Diagram.PNG  used on input lin
+e 168.
+(pdftex.def)             Requested size: 422.07584pt x 316.68236pt.
+ [21 <./Gambar//Diagram/Class Diagram.PNG>] [22]
+[23] [24]
+<./Gambar//View/sidebar.png, id=737, 1046.40938pt x 609.77812pt>
 File: ./Gambar//View/sidebar.png Graphic file (type png)
 <use ./Gambar//View/sidebar.png>
-Package pdftex.def Info: ./Gambar//View/sidebar.png  used on input line 272.
-(pdftex.def)             Requested size: 52.3948pt x 199.64232pt.
-<./Gambar//View/submit.png, id=689, 913.16156pt x 496.85625pt>
-File: ./Gambar//View/submit.png Graphic file (type png)
-<use ./Gambar//View/submit.png>
-Package pdftex.def Info: ./Gambar//View/submit.png  used on input line 280.
-(pdftex.def)             Requested size: 365.25815pt x 198.73897pt.
-<./Gambar//View/404.png, id=691, 1044.15094pt x 538.26094pt>
+Package pdftex.def Info: ./Gambar//View/sidebar.png  used on input line 296.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [25]
+<./Gambar//View/dashboard.png, id=745, 1046.40938pt x 609.77812pt>
+File: ./Gambar//View/dashboard.png Graphic file (type png)
+<use ./Gambar//View/dashboard.png>
+Package pdftex.def Info: ./Gambar//View/dashboard.png  used on input line 304.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+<./Gambar//View/404.png, id=747, 1046.40938pt x 609.77812pt>
 File: ./Gambar//View/404.png Graphic file (type png)
 <use ./Gambar//View/404.png>
-Package pdftex.def Info: ./Gambar//View/404.png  used on input line 288.
-(pdftex.def)             Requested size: 417.65298pt x 215.30055pt.
- [22 <./Gambar//View/sidebar.png> <./Gambar//View/submit.png>] [23 <./Gambar//V
-iew/404.png>] [24] [25] [26]
-<./Gambar//Diagram/usecase.PNG, id=720, 385.44pt x 482.80376pt>
-File: ./Gambar//Diagram/usecase.PNG Graphic file (type png)
-<use ./Gambar//Diagram/usecase.PNG>
-Package pdftex.def Info: ./Gambar//Diagram/usecase.PNG  used on input line 446.
-
-(pdftex.def)             Requested size: 231.26578pt x 289.6845pt.
- [27]
-[28 <./Gambar//Diagram/usecase.PNG>]) [29]
+Package pdftex.def Info: ./Gambar//View/404.png  used on input line 312.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [26 <./Gambar//View/sidebar.png> <./Gambar//View/dashboard.png>] [27 <./Gambar
+//View/404.png>] [28] [29]
+LaTeX Info: Symbol \textminus not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 447.
+ [30]
+<./Gambar//Diagram/Use Case Usulan.PNG, id=776, 473.77pt x 563.10374pt>
+File: ./Gambar//Diagram/Use Case Usulan.PNG Graphic file (type png)
+<use ./Gambar//Diagram/Use Case Usulan.PNG>
+Package pdftex.def Info: ./Gambar//Diagram/Use Case Usulan.PNG  used on input l
+ine 479.
+(pdftex.def)             Requested size: 284.26419pt x 337.86485pt.
+ [31] [32 <./Gambar//Diagram/Use Case Usulan.PNG>] [33]) [34]
 \openout2 = `Bab/bab4.aux'.
 
- (Bab/bab4.tex [30
-
-
-
-
-]
+ (Bab/bab4.tex
 Bab 4.
-<./Gambar//submit_mockup.png, id=746, 963.6pt x 617.30624pt>
+<./Gambar//submit_mockup.png, id=822, 963.6pt x 617.30624pt>
 File: ./Gambar//submit_mockup.png Graphic file (type png)
 <use ./Gambar//submit_mockup.png>
 Package pdftex.def Info: ./Gambar//submit_mockup.png  used on input line 11.
 (pdftex.def)             Requested size: 433.616pt x 277.78523pt.
-[31 <./Gambar//submit_mockup.png>] [32]) [33]
+[35
+
+
+
+
+ <./Gambar//submit_mockup.png>]
+<./Gambar//Diagram/Class Diagram Usulan.png, id=829, 352.31625pt x 462.72874pt>
+
+File: ./Gambar//Diagram/Class Diagram Usulan.png Graphic file (type png)
+<use ./Gambar//Diagram/Class Diagram Usulan.png>
+Package pdftex.def Info: ./Gambar//Diagram/Class Diagram Usulan.png  used on in
+put line 23.
+(pdftex.def)             Requested size: 176.15768pt x 231.3638pt.
+ [36 <./Gambar//Diagram/Class Diagram Usulan.png>] [37]) [38]
 \openout2 = `Bab/bab5.aux'.
 
- (Bab/bab5.tex [34
+ (Bab/bab5.tex
+Bab 5.
+[39
 
 
 
 
 ]
-Bab 5.
-[35]
-<./Gambar//submit.png, id=770, 1445.4pt x 813.0375pt>
+<./Gambar//submit.png, id=849, 1445.4pt x 813.0375pt>
 File: ./Gambar//submit.png Graphic file (type png)
 <use ./Gambar//submit.png>
 Package pdftex.def Info: ./Gambar//submit.png  used on input line 64.
 (pdftex.def)             Requested size: 433.62335pt x 243.91313pt.
- [36 <./Gambar//submit.png>] [37] [38] [39]
-Overfull \hbox (2.16818pt too wide) in paragraph at lines 200--200
+ [40 <./Gambar//submit.png>] [41] [42] [43]
+Overfull \hbox (2.16818pt too wide) in paragraph at lines 198--198
 []|\T1/lmr/m/n/10.95 (-20) No.| 
  []
 
-[40]
+[44]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 219.
+(Font)              <9> on input line 220.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 219.
-<./Gambar//Pengujian/submit_final0.PNG, id=838, 1045.65656pt x 538.26094pt>
+(Font)              <5> on input line 220.
+<./Gambar//Pengujian/submit_final0.PNG, id=917, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Pengujian/submit_final0.PNG Graphic file (type png)
 <use ./Gambar//Pengujian/submit_final0.PNG>
 Package pdftex.def Info: ./Gambar//Pengujian/submit_final0.PNG  used on input l
-ine 230.
-(pdftex.def)             Requested size: 418.25522pt x 215.30055pt.
-<./Gambar//Pengujian/submit_final1.PNG, id=839, 1044.90375pt x 539.76656pt>
+ine 231.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+<./Gambar//Pengujian/submit_final1.PNG, id=918, 1046.40938pt x 609.77812pt>
 File: ./Gambar//Pengujian/submit_final1.PNG Graphic file (type png)
 <use ./Gambar//Pengujian/submit_final1.PNG>
 Package pdftex.def Info: ./Gambar//Pengujian/submit_final1.PNG  used on input l
-ine 237.
-(pdftex.def)             Requested size: 417.9541pt x 215.9028pt.
- [41 <./Gambar//Pengujian/submit_final0.PNG>]
-<./Gambar//Pengujian/submit_final.PNG, id=849, 3854.4pt x 2569.6pt>
+ine 238.
+(pdftex.def)             Requested size: 418.55634pt x 243.90692pt.
+ [45 <./Gambar//Pengujian/submit_final0.PNG>]
+<./Gambar//Pengujian/submit_final.PNG, id=928, 1046.40938pt x 748.29562pt>
 File: ./Gambar//Pengujian/submit_final.PNG Graphic file (type png)
 <use ./Gambar//Pengujian/submit_final.PNG>
 Package pdftex.def Info: ./Gambar//Pengujian/submit_final.PNG  used on input li
-ne 244.
-(pdftex.def)             Requested size: 443.2761pt x 295.5174pt.
- [42 <./Gambar//Pengujian/submit_final1.PNG> <./Gambar//Pengujian/submit_final.
+ne 245.
+(pdftex.def)             Requested size: 418.55634pt x 299.31294pt.
+ [46 <./Gambar//Pengujian/submit_final1.PNG> <./Gambar//Pengujian/submit_final.
 PNG>]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 259.
-LaTeX Info: Symbol \textminus not provided by
-            font family fvm in TS1 encoding.
             Default family used instead on input line 260.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 260.
+            Default family used instead on input line 261.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 260.
+            Default family used instead on input line 261.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 263.
+            Default family used instead on input line 261.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 266.
+            Default family used instead on input line 264.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 285.
+            Default family used instead on input line 267.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 289.
+            Default family used instead on input line 286.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 290.
- [43]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 295.
+            Default family used instead on input line 291.
+ [47]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 295.
+            Default family used instead on input line 296.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 304.
+            Default family used instead on input line 296.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 325.
+            Default family used instead on input line 305.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 327.
+            Default family used instead on input line 326.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 328.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 332.
+            Default family used instead on input line 333.
+LaTeX Info: Symbol \textminus not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 333.
 LaTeX Font Info:    Trying to load font information for TS1+fvm on input line 3
-36.
+37.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/bera\ts1fvm.fd
 File: ts1fvm.fd 2004/09/07 scalable font definitions for TS1/fvm.
@@ -1806,13 +1845,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [44]
-LaTeX Info: Symbol \textminus not provided by
-            font family fvm in TS1 encoding.
-            Default family used instead on input line 341.
-LaTeX Info: Symbol \textminus not provided by
-            font family fvm in TS1 encoding.
-            Default family used instead on input line 341.
+ [48]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 342.
@@ -1827,135 +1860,141 @@ LaTeX Info: Symbol \textminus not provided by
             Default family used instead on input line 343.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 347.
+            Default family used instead on input line 344.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 347.
+            Default family used instead on input line 344.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 349.
+            Default family used instead on input line 348.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 349.
+            Default family used instead on input line 348.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 354.
+            Default family used instead on input line 350.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 354.
+            Default family used instead on input line 350.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 356.
+            Default family used instead on input line 355.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 356.
+            Default family used instead on input line 355.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 356.
+            Default family used instead on input line 357.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 356.
+            Default family used instead on input line 357.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 356.
+            Default family used instead on input line 357.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 356.
+            Default family used instead on input line 357.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 372.
+            Default family used instead on input line 357.
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
-            Default family used instead on input line 376.
- [45]
-<./Gambar//Survei/11.PNG, id=1004, 551.05875pt x 210.03468pt>
+            Default family used instead on input line 357.
+LaTeX Info: Symbol \textminus not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 373.
+LaTeX Info: Symbol \textminus not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 377.
+ [49]
+<./Gambar//Survei/11.PNG, id=1083, 551.05875pt x 210.03468pt>
 File: ./Gambar//Survei/11.PNG Graphic file (type png)
 <use ./Gambar//Survei/11.PNG>
-Package pdftex.def Info: ./Gambar//Survei/11.PNG  used on input line 426.
+Package pdftex.def Info: ./Gambar//Survei/11.PNG  used on input line 429.
 (pdftex.def)             Requested size: 440.84758pt x 168.02797pt.
-<./Gambar//Survei/12.PNG, id=1006, 561.59813pt x 217.5628pt>
+<./Gambar//Survei/12.PNG, id=1085, 561.59813pt x 217.5628pt>
 File: ./Gambar//Survei/12.PNG Graphic file (type png)
 <use ./Gambar//Survei/12.PNG>
-Package pdftex.def Info: ./Gambar//Survei/12.PNG  used on input line 433.
+Package pdftex.def Info: ./Gambar//Survei/12.PNG  used on input line 436.
 (pdftex.def)             Requested size: 449.27911pt x 174.05048pt.
- [46 <./Gambar//Survei/11.PNG>]
-<./Gambar//Survei/14.PNG, id=1023, 568.37344pt x 256.70906pt>
+ [50 <./Gambar//Survei/11.PNG>]
+<./Gambar//Survei/14.PNG, id=1101, 568.37344pt x 256.70906pt>
 File: ./Gambar//Survei/14.PNG Graphic file (type png)
 <use ./Gambar//Survei/14.PNG>
-Package pdftex.def Info: ./Gambar//Survei/14.PNG  used on input line 444.
+Package pdftex.def Info: ./Gambar//Survei/14.PNG  used on input line 447.
 (pdftex.def)             Requested size: 454.69937pt x 205.36751pt.
- [47 <./Gambar//Survei/12.PNG> <./Gambar//Survei/14.PNG>]
-<./Gambar//Survei/21.PNG, id=1035, 560.0925pt x 224.33812pt>
+ [51 <./Gambar//Survei/12.PNG> <./Gambar//Survei/14.PNG>]
+<./Gambar//Survei/21.PNG, id=1113, 560.0925pt x 224.33812pt>
 File: ./Gambar//Survei/21.PNG Graphic file (type png)
 <use ./Gambar//Survei/21.PNG>
-Package pdftex.def Info: ./Gambar//Survei/21.PNG  used on input line 460.
+Package pdftex.def Info: ./Gambar//Survei/21.PNG  used on input line 463.
 (pdftex.def)             Requested size: 448.0746pt x 179.47073pt.
-<./Gambar//Survei/22.PNG, id=1037, 561.59813pt x 222.07968pt>
+<./Gambar//Survei/22.PNG, id=1115, 561.59813pt x 222.07968pt>
 File: ./Gambar//Survei/22.PNG Graphic file (type png)
 <use ./Gambar//Survei/22.PNG>
-Package pdftex.def Info: ./Gambar//Survei/22.PNG  used on input line 467.
+Package pdftex.def Info: ./Gambar//Survei/22.PNG  used on input line 470.
 (pdftex.def)             Requested size: 449.27911pt x 177.66397pt.
 File: ./Gambar//Survei/14.PNG Graphic file (type png)
 <use ./Gambar//Survei/14.PNG>
-Package pdftex.def Info: ./Gambar//Survei/14.PNG  used on input line 480.
+Package pdftex.def Info: ./Gambar//Survei/14.PNG  used on input line 483.
 (pdftex.def)             Requested size: 454.69937pt x 205.36751pt.
 
-[48 <./Gambar//Survei/21.PNG> <./Gambar//Survei/22.PNG>]
-<./Gambar//Survei/31.PNG, id=1050, 557.08125pt x 220.57407pt>
+[52 <./Gambar//Survei/21.PNG> <./Gambar//Survei/22.PNG>]
+<./Gambar//Survei/31.PNG, id=1128, 557.08125pt x 220.57407pt>
 File: ./Gambar//Survei/31.PNG Graphic file (type png)
 <use ./Gambar//Survei/31.PNG>
-Package pdftex.def Info: ./Gambar//Survei/31.PNG  used on input line 494.
+Package pdftex.def Info: ./Gambar//Survei/31.PNG  used on input line 497.
 (pdftex.def)             Requested size: 445.6656pt x 176.45947pt.
-<./Gambar//Survei/32.PNG, id=1052, 560.8453pt x 220.57407pt>
+<./Gambar//Survei/32.PNG, id=1130, 560.8453pt x 220.57407pt>
 File: ./Gambar//Survei/32.PNG Graphic file (type png)
 <use ./Gambar//Survei/32.PNG>
-Package pdftex.def Info: ./Gambar//Survei/32.PNG  used on input line 501.
+Package pdftex.def Info: ./Gambar//Survei/32.PNG  used on input line 504.
 (pdftex.def)             Requested size: 448.67685pt x 176.45947pt.
- [49 <./Gambar//Survei/31.PNG>]
-<./Gambar//Survei/34.PNG, id=1064, 563.10374pt x 251.43938pt>
+ [53 <./Gambar//Survei/31.PNG>]
+<./Gambar//Survei/34.PNG, id=1141, 563.10374pt x 251.43938pt>
 File: ./Gambar//Survei/34.PNG Graphic file (type png)
 <use ./Gambar//Survei/34.PNG>
-Package pdftex.def Info: ./Gambar//Survei/34.PNG  used on input line 509.
+Package pdftex.def Info: ./Gambar//Survei/34.PNG  used on input line 512.
 (pdftex.def)             Requested size: 450.48361pt x 201.15176pt.
-<./Gambar//Survei/41.PNG, id=1066, 555.57562pt x 222.07968pt>
+<./Gambar//Survei/41.PNG, id=1143, 555.57562pt x 222.07968pt>
 File: ./Gambar//Survei/41.PNG Graphic file (type png)
 <use ./Gambar//Survei/41.PNG>
-Package pdftex.def Info: ./Gambar//Survei/41.PNG  used on input line 523.
+Package pdftex.def Info: ./Gambar//Survei/41.PNG  used on input line 526.
 (pdftex.def)             Requested size: 444.46109pt x 177.66397pt.
- [50 <./Gambar//Survei/32.PNG> <./Gambar//Survei/34.PNG>]
-<./Gambar//Survei/42.PNG, id=1079, 557.83406pt x 213.04594pt>
+ [54 <./Gambar//Survei/32.PNG> <./Gambar//Survei/34.PNG>]
+<./Gambar//Survei/42.PNG, id=1156, 557.83406pt x 213.04594pt>
 File: ./Gambar//Survei/42.PNG Graphic file (type png)
 <use ./Gambar//Survei/42.PNG>
-Package pdftex.def Info: ./Gambar//Survei/42.PNG  used on input line 530.
+Package pdftex.def Info: ./Gambar//Survei/42.PNG  used on input line 533.
 (pdftex.def)             Requested size: 446.26784pt x 170.43697pt.
-<./Gambar//Survei/44.PNG, id=1081, 561.59813pt x 240.14719pt>
+<./Gambar//Survei/44.PNG, id=1158, 561.59813pt x 240.14719pt>
 File: ./Gambar//Survei/44.PNG Graphic file (type png)
 <use ./Gambar//Survei/44.PNG>
-Package pdftex.def Info: ./Gambar//Survei/44.PNG  used on input line 538.
+Package pdftex.def Info: ./Gambar//Survei/44.PNG  used on input line 541.
 (pdftex.def)             Requested size: 449.27911pt x 192.11798pt.
- [51 <./Gambar//Survei/41.PNG> <./Gambar//Survei/42.PNG>]
-<./Gambar//Survei/51.PNG, id=1092, 560.0925pt x 222.07968pt>
+ [55 <./Gambar//Survei/41.PNG> <./Gambar//Survei/42.PNG>]
+<./Gambar//Survei/51.PNG, id=1170, 560.0925pt x 222.07968pt>
 File: ./Gambar//Survei/51.PNG Graphic file (type png)
 <use ./Gambar//Survei/51.PNG>
-Package pdftex.def Info: ./Gambar//Survei/51.PNG  used on input line 549.
+Package pdftex.def Info: ./Gambar//Survei/51.PNG  used on input line 552.
 (pdftex.def)             Requested size: 448.0746pt x 177.66397pt.
-<./Gambar//Survei/52.PNG, id=1094, 559.33969pt x 221.32687pt>
+<./Gambar//Survei/52.PNG, id=1172, 559.33969pt x 221.32687pt>
 File: ./Gambar//Survei/52.PNG Graphic file (type png)
 <use ./Gambar//Survei/52.PNG>
-Package pdftex.def Info: ./Gambar//Survei/52.PNG  used on input line 556.
+Package pdftex.def Info: ./Gambar//Survei/52.PNG  used on input line 559.
 (pdftex.def)             Requested size: 447.47235pt x 177.06172pt.
- [52 <./Gambar//Survei/44.PNG> <./Gambar//Survei/51.PNG>]
-<./Gambar//Survei/54.PNG, id=1106, 564.60938pt x 247.67531pt>
+ [56 <./Gambar//Survei/44.PNG> <./Gambar//Survei/51.PNG>]
+<./Gambar//Survei/54.PNG, id=1184, 564.60938pt x 247.67531pt>
 File: ./Gambar//Survei/54.PNG Graphic file (type png)
 <use ./Gambar//Survei/54.PNG>
-Package pdftex.def Info: ./Gambar//Survei/54.PNG  used on input line 567.
+Package pdftex.def Info: ./Gambar//Survei/54.PNG  used on input line 570.
 (pdftex.def)             Requested size: 451.68811pt x 198.1405pt.
-) [53 <./Gambar//Survei/52.PNG> <./Gambar//Survei/54.PNG>] [54]
+) [57 <./Gambar//Survei/52.PNG> <./Gambar//Survei/54.PNG>] [58]
 \openout2 = `Bab/bab6.aux'.
 
  (Bab/bab6.tex
 Bab 6.
-) [55
+) [59
 
 
 
@@ -1963,17 +2002,17 @@ Bab 6.
 ]
 \openout2 = `Bab/bab9.aux'.
 
- (Bab/bab9.tex) (skripsi.bbl [56
+ (Bab/bab9.tex) (skripsi.bbl [60
 
 
 
 
 
 
-]) [57]
+]) [61]
 \openout2 = `Lampiran/lampA.aux'.
 
- (Lampiran/lampA.tex [58
+ (Lampiran/lampA.tex [62
 
 
 ]
@@ -2111,7 +2150,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 5.
- [59]
+ [63]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 9.
@@ -3054,7 +3093,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 100.
- [60]
+ [64]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 104.
@@ -3601,7 +3640,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 197.
- [61]
+ [65]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 198.
@@ -3925,7 +3964,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 18.
- [62]
+ [66]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 30.
@@ -4224,7 +4263,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 58.
-) (Lampiran/Diff/Submit_model.php.diff [63]
+) (Lampiran/Diff/Submit_model.php.diff [67]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 1.
@@ -4368,7 +4407,7 @@ LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 49.
 
-[64]
+[68]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 70.
@@ -4390,7 +4429,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 53.
- [65] [66]) (Lampiran/Diff/submit.css
+ [69] [70]) (Lampiran/Diff/submit.css
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 2.
@@ -4429,7 +4468,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 15.
- [67]
+ [71]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 31.
@@ -4535,7 +4574,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 110.
- [68]
+ [72]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 117.
@@ -4686,7 +4725,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 207.
- [69]
+ [73]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 210.
@@ -4996,7 +5035,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 300.
- [70]
+ [74]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 306.
@@ -5288,7 +5327,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 393.
- [71]
+ [75]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 394.
@@ -5529,7 +5568,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 486.
- [72]
+ [76]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 493.
@@ -5746,7 +5785,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 583.
- [73]
+ [77]
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 586.
@@ -5807,7 +5846,7 @@ LaTeX Info: Symbol \textminus not provided by
 LaTeX Info: Symbol \textminus not provided by
             font family fvm in TS1 encoding.
             Default family used instead on input line 623.
-)) [74]
+)) [78]
 \openout2 = `Lampiran/lampB.aux'.
 
 
@@ -5815,14 +5854,14 @@ LaTeX Info: Symbol \textminus not provided by
 (Bab/bab4.aux) (Bab/bab5.aux) (Bab/bab6.aux) (Bab/bab9.aux) (Lampiran/lampA.aux
 ) (Lampiran/lampB.aux))
 Package rerunfilecheck Info: File `skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: A7A2A997E90144536E35623913881DA5;6955.
+(rerunfilecheck)             Checksum: 8EC95B128EE50FEA909A46974FF056EB;7396.
  ) 
 Here is how much of TeX's memory you used:
- 42584 strings out of 479321
- 901464 string characters out of 2864581
- 2891530 words of memory out of 3000000
- 56944 multiletter control sequences out of 15000+600000
- 496907 words of font info for 221 fonts, out of 8000000 for 9000
+ 42677 strings out of 479321
+ 903224 string characters out of 2864581
+ 2892353 words of memory out of 3000000
+ 56998 multiletter control sequences out of 15000+600000
+ 497073 words of font info for 223 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  113i,12n,116p,1013b,3277s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
@@ -5860,9 +5899,9 @@ ic/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmtt10.pfb>
-Output written on skripsi.pdf (86 pages, 2875496 bytes).
+Output written on skripsi.pdf (90 pages, 2776414 bytes).
 PDF statistics:
- 3125 PDF objects out of 3580 (max. 8388607)
- 1947 named destinations out of 2073 (max. 500000)
- 52814 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 3207 PDF objects out of 3580 (max. 8388607)
+ 1977 named destinations out of 2073 (max. 500000)
+ 52863 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -4,7 +4,7 @@
 \section{Analisis Sistem Kini}
 \label{sec:3:analisiskini} 
 
-SharIF Judge adalah sebuah \textit{online judge} dengan fungsi utama untuk mengevaluasi kode program yang dikumpulkan oleh pengguna secara otomatis. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program. SharIF Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter dan Bash. 
+Seperti dibahas pada bab \ref{chap:intro}, SharIF Judge adalah sebuah \textit{online judge} dengan fungsi utama untuk mengevaluasi kode program yang dikumpulkan oleh pengguna secara otomatis. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program. SharIF Judge dibangun menggunakan PHP dengan \textit{framework} CodeIgniter dan Bash. 
 
 \subsection{Istilah-istilah Umum}
 \label{subs:3:assignment}
@@ -18,17 +18,26 @@ Pada SharIF Judge, digunakan istilah-istilah berikut ini:
     \item \textit{Final Submission} \\ Merepresentasikan sebuah jawaban akhir dari seorang pengguna. Seorang pengguna dapat mengunggah \textit{submission} berkali-kali untuk menguji dan memperbarui jawaban, namun harus memilih satu buah \textit{submission} sebagai jawaban final.
 \end{itemize}
 
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.4]{Diagram/assignment.png}  
+	\caption{Bagan hubungan \textit{assignment}, \textit{problem}, dan \textit{submission} pada SharIF Judge}
+	\label{fig:3:assignment} 
+\end{figure} 
+
+Gambar \ref{fig:3:assignment} menunjukkan hubungan \textit{assignment}, \textit{problem}, dan \textit{submission} pada SharIF Judge. Sebuah \textit{assignment} dapat terdiri beberapa \textit{problem}. Untuk setiap \textit{problem}, pengguna dapat mengumpulkan \textit{submission} berkali-kali, lalu memilih salah satunya sebagai \textit{final submission}.
+
 \subsection{Fitur-fitur SharIF Judge}
 \label{subs:3:fitur}
 
     \begin{figure}[H]
     	\centering  
-    	\includegraphics[scale=0.5]{Diagram/Use Case.png}  
-    	\caption{\textit{Use Case Diagram} SharIF Judge}
+    	\includegraphics[scale=0.4]{Diagram/Use Case.png}  
+    	\caption{Use Case Diagram SharIF Judge}
     	\label{fig:3:usecased} 
     \end{figure} 
 
-Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \textit{role} akun yang digunakan pengguna tersebut. Pada bagian ini, \textit{role} akun yang digunakan adalah \textit{admin}. Berikut ini adalah halaman yang terdapat pada SharIF Judge dengan fitur dan kegunaannya:
+Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \textit{role} akun yang digunakan pengguna tersebut. Pada gambar \ref{fig:3:usecased}, terdapat Use Case Diagram untuk setiap \textit{role} yang tersedia. Berikut ini adalah setiap halaman dan fitur yang terdapat pada SharIF Judge untuk \textit{role} \textit{admin}:
 
 \subsubsection{Dashboard}
     \begin{figure}[H]
@@ -152,7 +161,7 @@ Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \t
 
 \subsection{Model, View, Controller}
 \label{subs:3:mvc}
-SharIF Judge menggunakan \textit{framework} CodeIgniter 3. Seperti yang dibahas pada bagian \ref{subs:2:cimvc}, \textit{framework} CodeIgniter menerapkan pola arsitektur MVC, dengan komponen-komponen \textit{model}, \textit{view}, dan \textit{controller}. Diagram kelas SharIF Judge dapat dilihat pada gambar \ref{fig:3:classdiagram}.
+SharIF Judge menggunakan \textit{framework} CodeIgniter 3. Seperti yang dibahas pada bagian \ref{subs:2:cimvc}, \textit{framework} CodeIgniter menerapkan pola arsitektur MVC, dengan komponen-komponen \textit{model}, \textit{view}, dan \textit{controller}. Diagram kelas SharIF Judge dapat dilihat pada gambar \ref{fig:3:classdiagram}. Digunakan simbol komentar untuk komponen \textit{view} pada diagram ini, karena \textit{view} tidak berbentuk kelas.
 
     \begin{figure}[H]
     	\centering  
@@ -283,20 +292,20 @@ Berikut ini adalah \textit{model} pada SharIF Judge:
 
 \begin{itemize}
     \begin{figure}[H]
-    	\centering  
+    	\centering
     	\includegraphics[scale=0.4]{View/sidebar}  
-    	\caption{Tampilan \textit{side bar} pada \texttt{side\_bar.twig}}
+    	\caption{Tampilan \textit{top bar} pada \texttt{top\_bar.twig} dan \textit{side bar} pada \texttt{side\_bar.twig}}
     	\label{fig:3:viewsidebar} 
     \end{figure} 
-    \item \verb|templates| \\ Menyimpan komponen dasar halaman. Gambar \ref{fig:3:viewsidebar} adalah salah satu contoh komponen dasar halaman.
+    \item \verb|templates| \\ Menyimpan komponen-komponen dasar halaman. Pada gambar \ref{fig:3:viewsidebar}, area yang ditandai dengan kotak merah adalah komponen dasar \textit{top bar} dan \textit{side bar}.
     
     \begin{figure}[H]
     	\centering  
-    	\includegraphics[scale=0.4]{View/submit}  
-    	\caption{Tampilan halaman Submit pada \texttt{submit.twig}}
+    	\includegraphics[scale=0.4]{View/dashboard}  
+    	\caption{Tampilan Dashboard pada \texttt{dashboard.twig}}
     	\label{fig:3:viewsubmit} 
     \end{figure} 
-    \item \verb|pages| \\ Menyimpan komponen utama halaman. Gambar \ref{fig:3:viewsubmit} adalah salah satu contoh komponen utama halaman.
+    \item \verb|pages| \\ Menyimpan komponen utama halaman. Pada gambar \ref{fig:3:viewsubmit}, area yang ditandai dengan kotak merah adalah komponen utama halaman Dashboard.
     
     \begin{figure}[H]
     	\centering  
@@ -304,7 +313,7 @@ Berikut ini adalah \textit{model} pada SharIF Judge:
     	\caption{Tampilan halaman \textit{error} pada \texttt{error\_404.php}}
     	\label{fig:3:view404} 
     \end{figure} 
-	\item \verb|errors| \\ Menyimpan tampilan halaman error. Gambar \ref{fig:3:view404} adalah salah satu contoh halaman error.
+	\item \verb|errors| \\ Menyimpan tampilan halaman error. Gambar \ref{fig:3:view404} adalah contoh halaman error 404.
 \end{itemize}
 
 \subsubsection{Controller}
@@ -463,12 +472,12 @@ Pada SharIF Judge, seluruh kode yang dikumpulkan pengguna akan dijalankan satu p
 
 \section{Analisis Sistem Usulan}
 \label{sec:3:analisisusulan} 
-Agar SharIF Judge dapat menjadi sebuah IDE, SharIF Judge harus mampu untuk memfasilitasi seluruh proses pembuatan kode. \textit{Use Case Diagram} untuk fitur yang ditambahkan dapat dilihat pada gambar \ref{fig:3:usecase}.
+Agar SharIF Judge dapat menjadi sebuah IDE, SharIF Judge harus mampu untuk memfasilitasi seluruh proses pembuatan kode. Pada gambar \ref{fig:3:usecase}, terdapat Use Case Diagram sebagai tambahan dari diagram pada gambar \ref{fig:3:usecased} untuk fitur yang akan ditambahkan. Seluruh fitur yang akan ditambahkan dapat digunakan oleh setiap \textit{role} pengguna.
    
     \begin{figure}[H]
     	\centering  
     	\includegraphics[scale=0.6]{Diagram/Use Case Usulan.PNG}  
-    	\caption{\textit{Use Case Diagram} Fitur Usulan}
+    	\caption{Use Case Diagram Fitur Usulan}
     	\label{fig:3:usecase} 
     \end{figure} 
 
@@ -519,7 +528,7 @@ Berikut ini merupakan skenario untuk masing-masing fitur yang akan ditambahkan p
             \item Pengecualian: Pengguna belum memilih \textit{assignment} atau \textit{problem}
         \end{itemize}
         
-    \item Menyimpan kode \\ Akan ditambahkan fitur untuk menyimpan kode yang sudah dibuat pada editor kode, sehingga pengguna dapat memuat kembali kode yang sudah disimpan ketika \textit{problem} yang sama dipilih.
+    \item Memuat kode \\ Akan ditambahkan fitur untuk memuat kode yang sudah dibuat pada editor kode, sehingga pengguna dapat melanjutkan kode yang sudah disimpan ketika \textit{problem} yang sama dipilih.
         \begin{itemize}
             \item Aktor: Pengguna
             \item Kondisi Awal: Pengguna sudah menyimpan kode untuk \textit{problem} yang dipilih
