@@ -24,55 +24,54 @@
 \contentsline {subsection}{\numberline {3.1.1}Istilah-istilah Umum}{11}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Fitur-fitur SharIF Judge}{12}{subsection.3.1.2}%
 \contentsline {subsubsection}{Dashboard}{13}{subsubsection*.6}%
-\contentsline {subsubsection}{Settings}{14}{subsubsection*.7}%
+\contentsline {subsubsection}{Settings}{13}{subsubsection*.7}%
 \contentsline {subsubsection}{Users}{14}{subsubsection*.8}%
-\contentsline {subsubsection}{Notifications}{15}{subsubsection*.9}%
-\contentsline {subsubsection}{Assignments}{16}{subsubsection*.10}%
-\contentsline {subsubsection}{Problems}{16}{subsubsection*.11}%
-\contentsline {subsubsection}{Submit}{17}{subsubsection*.12}%
-\contentsline {subsubsection}{Final Submissions}{18}{subsubsection*.13}%
-\contentsline {subsubsection}{All Submissions}{18}{subsubsection*.14}%
-\contentsline {subsubsection}{Scoreboard}{19}{subsubsection*.15}%
-\contentsline {subsubsection}{Hall of Fame}{20}{subsubsection*.16}%
-\contentsline {subsubsection}{24-Hour Log}{20}{subsubsection*.17}%
-\contentsline {subsection}{\numberline {3.1.3}Model, View, Controller}{21}{subsection.3.1.3}%
-\contentsline {subsubsection}{Model}{21}{subsubsection*.18}%
-\contentsline {subsubsection}{View}{25}{subsubsection*.19}%
-\contentsline {subsubsection}{Controller}{27}{subsubsection*.20}%
-\contentsline {subsection}{\numberline {3.1.4}Penyimpanan Kode}{30}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Antrean Penilaian Kode}{31}{subsection.3.1.5}%
-\contentsline {section}{\numberline {3.2}Analisis Sistem Usulan}{31}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Perancangan}{35}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Rancangan Antarmuka}{35}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Rancangan Perubahan Kode}{36}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Menampilkan soal}{36}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Mengedit Kode}{36}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Menyimpan Kode}{37}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Memuat Kode}{37}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Menjalankan Kode dengan Tes Kasus}{37}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Mengumpulkan Kode Melalui IDE}{38}{subsection.4.2.6}%
-\contentsline {chapter}{\numberline {5}Implementasi dan Pengujian}{39}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Lingkungan Implementasi dan Pengujian}{39}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Implementasi}{40}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Tampilan Antarmuka}{40}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Menampilkan Soal}{40}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Editor Kode}{41}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Menyimpan dan Memuat Kode}{41}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Menjalankan Kode dengan Tes Kasus}{41}{subsection.5.2.5}%
-\contentsline {subsubsection}{Penamaan File Java}{42}{subsubsection*.21}%
-\contentsline {subsection}{\numberline {5.2.6}Mengumpulkan Kode Melalui IDE}{44}{subsection.5.2.6}%
-\contentsline {section}{\numberline {5.3}Pengujian Fungsional}{44}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Pengujian Eksperimental}{45}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Perubahan melalui GitHub}{45}{subsection.5.4.1}%
-\contentsline {subsubsection}{Perubahan Tampilan Antarmuka}{45}{subsubsection*.22}%
-\contentsline {subsubsection}{\textit {Submit} Jawaban Soal \textit {Upload Only} Melalui IDE}{47}{subsubsection*.23}%
-\contentsline {subsubsection}{Tidak Dapat \textit {Submit} Melalui Unggah File}{47}{subsubsection*.24}%
-\contentsline {subsubsection}{\textit {Submit} Jawaban txt Melalui IDE}{48}{subsubsection*.25}%
-\contentsline {subsubsection}{Tampilan PDF Viewer jika PDF Soal Tidak Tersedia}{48}{subsubsection*.26}%
-\contentsline {subsubsection}{Survei}{49}{subsubsection*.27}%
-\contentsline {subsection}{\numberline {5.4.2}Survei}{50}{subsection.5.4.2}%
-\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{59}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Kesimpulan}{59}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Saran}{59}{section.6.2}%
-\contentsline {chapter}{Daftar Referensi}{61}{chapter*.28}%
-\contentsline {chapter}{\numberline {A}Kode Program}{63}{appendix.A}%
+\contentsline {subsubsection}{Notifications}{14}{subsubsection*.9}%
+\contentsline {subsubsection}{Assignments}{15}{subsubsection*.10}%
+\contentsline {subsubsection}{Problems}{15}{subsubsection*.11}%
+\contentsline {subsubsection}{Submit}{16}{subsubsection*.12}%
+\contentsline {subsubsection}{Final Submissions}{16}{subsubsection*.13}%
+\contentsline {subsubsection}{All Submissions}{17}{subsubsection*.14}%
+\contentsline {subsubsection}{Scoreboard}{17}{subsubsection*.15}%
+\contentsline {subsubsection}{Hall of Fame}{18}{subsubsection*.16}%
+\contentsline {subsubsection}{24-Hour Log}{18}{subsubsection*.17}%
+\contentsline {subsection}{\numberline {3.1.3}Model, View, Controller}{19}{subsection.3.1.3}%
+\contentsline {subsubsection}{Model}{19}{subsubsection*.18}%
+\contentsline {subsubsection}{View}{23}{subsubsection*.19}%
+\contentsline {subsubsection}{Controller}{25}{subsubsection*.20}%
+\contentsline {subsection}{\numberline {3.1.4}Penyimpanan Kode}{28}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Antrean Penilaian Kode}{28}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}Analisis Sistem Usulan}{29}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Perancangan}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rancangan Antarmuka}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Rancangan Perubahan Kode}{34}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Menampilkan soal}{34}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Mengedit Kode}{34}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Menyimpan Kode}{35}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Memuat Kode}{35}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Menjalankan Kode dengan Tes Kasus}{35}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Mengumpulkan Kode Melalui IDE}{36}{subsection.4.2.6}%
+\contentsline {chapter}{\numberline {5}Implementasi dan Pengujian}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Lingkungan Implementasi dan Pengujian}{37}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Implementasi}{38}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Tampilan Antarmuka}{38}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Menampilkan Soal}{38}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Editor Kode}{39}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Menyimpan dan Memuat Kode}{39}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Menjalankan Kode dengan Tes Kasus}{39}{subsection.5.2.5}%
+\contentsline {subsubsection}{Penamaan File Java}{40}{subsubsection*.21}%
+\contentsline {subsection}{\numberline {5.2.6}Mengumpulkan Kode Melalui IDE}{42}{subsection.5.2.6}%
+\contentsline {section}{\numberline {5.3}Pengujian Fungsional}{42}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Pengujian Eksperimental}{43}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Perubahan melalui GitHub}{43}{subsection.5.4.1}%
+\contentsline {subsubsection}{Perubahan Tampilan Antarmuka}{43}{subsubsection*.22}%
+\contentsline {subsubsection}{\textit {Submit} Jawaban Soal \textit {Upload Only} Melalui IDE}{45}{subsubsection*.23}%
+\contentsline {subsubsection}{Tidak Dapat \textit {Submit} Melalui Unggah File}{45}{subsubsection*.24}%
+\contentsline {subsubsection}{\textit {Submit} Jawaban txt Melalui IDE}{46}{subsubsection*.25}%
+\contentsline {subsubsection}{Tampilan PDF Viewer jika PDF Soal Tidak Tersedia}{46}{subsubsection*.26}%
+\contentsline {subsection}{\numberline {5.4.2}Survei}{47}{subsection.5.4.2}%
+\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{57}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Kesimpulan}{57}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Saran}{57}{section.6.2}%
+\contentsline {chapter}{Daftar Referensi}{59}{chapter*.27}%
+\contentsline {chapter}{\numberline {A}Kode Program}{61}{appendix.A}%

@@ -7,44 +7,44 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Bagan hubungan \textit {assignment}, \textit {problem}, dan \textit {submission} pada SharIF Judge}}{12}{figure.3.1}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Use Case Diagram SharIF Judge}}{12}{figure.3.2}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Halaman Dashboard}}{13}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Halaman Settings}}{14}{figure.3.4}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Halaman Settings}}{13}{figure.3.4}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Halaman Users}}{14}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Halaman Notifications}}{15}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Halaman Assignments}}{16}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Halaman Problems}}{16}{figure.3.8}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Halaman Submit}}{17}{figure.3.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Halaman Final Submissions}}{18}{figure.3.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Halaman All Submissions}}{18}{figure.3.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Halaman Scoreboard}}{19}{figure.3.12}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Halaman Hall of Fame}}{20}{figure.3.13}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Halaman 24-Hour Log}}{20}{figure.3.14}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Diagram kelas SharIF Judge}}{21}{figure.3.15}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Tampilan \textit {top bar} pada \texttt {top\_bar.twig} dan \textit {side bar} pada \texttt {side\_bar.twig}}}{26}{figure.3.16}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Tampilan Dashboard pada \texttt {dashboard.twig}}}{26}{figure.3.17}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Tampilan halaman \textit {error} pada \texttt {error\_404.php}}}{27}{figure.3.18}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Use Case Diagram Fitur Usulan}}{32}{figure.3.19}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Halaman Notifications}}{14}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Halaman Assignments}}{15}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Halaman Problems}}{15}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Halaman Submit}}{16}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Halaman Final Submissions}}{16}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Halaman All Submissions}}{17}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Halaman Scoreboard}}{17}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Halaman Hall of Fame}}{18}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Halaman 24-Hour Log}}{18}{figure.3.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Diagram kelas SharIF Judge}}{19}{figure.3.15}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Tampilan \textit {top bar} pada \texttt {top\_bar.twig} dan \textit {side bar} pada \texttt {side\_bar.twig}}}{23}{figure.3.16}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Tampilan Dashboard pada \texttt {dashboard.twig}}}{24}{figure.3.17}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Tampilan halaman \textit {error} pada \texttt {error\_404.php}}}{24}{figure.3.18}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Use Case Diagram Fitur Usulan}}{29}{figure.3.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Rancangan antarmuka halaman Submit}}{35}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram kelas perubahan pada SharIF Judge}}{36}{figure.4.2}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Rancangan antarmuka halaman Submit}}{33}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram kelas perubahan pada SharIF Judge}}{34}{figure.4.2}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Tampilan antarmuka halaman Submit}}{40}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Tampilan antarmuka setelah perubahan}}{45}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Tampilan antarmuka unggah \textit {file}}}{46}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Tampilan antarmuka IDE}}{46}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Hasil survei bagian 1 pertanyaan 1}}{50}{figure.5.5}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Hasil survei bagian 1 pertanyaan 2}}{51}{figure.5.6}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Hasil survei bagian 1 pertanyaan 4}}{51}{figure.5.7}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Hasil survei bagian 2 pertanyaan 1}}{52}{figure.5.8}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Hasil survei bagian 2 pertanyaan 2}}{52}{figure.5.9}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Hasil survei bagian 2 pertanyaan 4}}{53}{figure.5.10}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Hasil survei bagian 3 pertanyaan 1}}{53}{figure.5.11}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Hasil survei bagian 3 pertanyaan 2}}{54}{figure.5.12}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Hasil survei bagian 3 pertanyaan 4}}{54}{figure.5.13}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Hasil survei bagian 4 pertanyaan 1}}{55}{figure.5.14}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Hasil survei bagian 4 pertanyaan 2}}{55}{figure.5.15}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Hasil survei bagian 4 pertanyaan 4}}{56}{figure.5.16}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Hasil survei bagian 5 pertanyaan 1}}{56}{figure.5.17}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Hasil survei bagian 5 pertanyaan 2}}{57}{figure.5.18}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Hasil survei bagian 5 pertanyaan 4}}{57}{figure.5.19}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Tampilan antarmuka halaman Submit}}{38}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Tampilan antarmuka setelah perubahan}}{43}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Tampilan antarmuka unggah \textit {file}}}{44}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Tampilan antarmuka IDE}}{44}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Hasil survei bagian 1 pertanyaan 1}}{48}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Hasil survei bagian 1 pertanyaan 2}}{49}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Hasil survei bagian 1 pertanyaan 4}}{49}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Hasil survei bagian 2 pertanyaan 1}}{50}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Hasil survei bagian 2 pertanyaan 2}}{50}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Hasil survei bagian 2 pertanyaan 4}}{51}{figure.5.10}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Hasil survei bagian 3 pertanyaan 1}}{51}{figure.5.11}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Hasil survei bagian 3 pertanyaan 2}}{52}{figure.5.12}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Hasil survei bagian 3 pertanyaan 4}}{52}{figure.5.13}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Hasil survei bagian 4 pertanyaan 1}}{53}{figure.5.14}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Hasil survei bagian 4 pertanyaan 2}}{53}{figure.5.15}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Hasil survei bagian 4 pertanyaan 4}}{54}{figure.5.16}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Hasil survei bagian 5 pertanyaan 1}}{54}{figure.5.17}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Hasil survei bagian 5 pertanyaan 2}}{55}{figure.5.18}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Hasil survei bagian 5 pertanyaan 4}}{55}{figure.5.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -73,7 +73,7 @@ Gambar \ref{fig:5:antarmuka} merupakan tampilan antarmuka pada halaman Submit ya
 
 Soal PDF ditampilkan pada \verb|iframe| yang berisi \verb|viewer.html| milik PDF.js. URL dari \textit{file} PDF yang akan ditampilkan adalah URL yang mengarah ke fungsi \verb|pdf| pada controller \verb|Assignments|. URL ini dikirim ke \verb|viewer.html| milik PDF.js sebagai parameter GET bernama \verb|site_url|.
 
-Fungsi \verb|pdf| pada controller \verb|Assignments| menggunakan fungsi \verb|force_download| yang menyebabkan munculnya dialog unduh pada \textit{browser}. Agar \textit{file} PDF dapat dibaca oleh \textit{browser} dan tidak memunculkan dialog unduh, \textit{file} PDF akan dikembalikan dengan fungsi \verb|die| dengan header \verb|Content-Type: application/pdf|. Ditambahkan parameter \verb|$no_download| pada fungsi \verb|pdf| untuk menentukan apakah \textit{file} PDF soal akan diunduh atau ditampilkan oleh PDF.js. Jika \verb|$no_download| bernilai \verb|FALSE|, maka PDF akan diunduh melalui fungsi \verb|force_download| seperti semula. Jika \verb|$no_download| bernilai \verb|TRUE|, maka isi PDF akan dikembalikan melalui fungsi \verb|die| dengan \textit{header} \verb|Content-Type: application/pdf|. Kode untuk perubahan ini terdapat pada lampiran \ref{lampA:Assignments.php}
+Fungsi \verb|pdf| pada controller \verb|Assignments| menggunakan fungsi \verb|force_download| yang menyebabkan munculnya dialog unduh pada \textit{browser}. Agar \textit{file} PDF dapat dibaca oleh \textit{browser} dan tidak memunculkan dialog unduh, \textit{file} PDF akan dikembalikan dengan fungsi \verb|echo| dengan header \verb|Content-Type: application/pdf|. Ditambahkan parameter \verb|$no_download| pada fungsi \verb|pdf| untuk menentukan apakah \textit{file} PDF soal akan diunduh atau ditampilkan oleh PDF.js. Jika \verb|$no_download| bernilai \verb|FALSE|, maka PDF akan diunduh melalui fungsi \verb|force_download| seperti semula. Jika \verb|$no_download| bernilai \verb|TRUE|, maka isi PDF akan dikembalikan melalui fungsi \verb|echo| dengan \textit{header} \verb|Content-Type: application/pdf|. Kode untuk perubahan ini terdapat pada lampiran \ref{lampA:Assignments.php}
 
 \subsection{Editor Kode}
 \label{subsec:5:editor}
@@ -395,7 +395,9 @@ Pada \textit{controller} Assignments ditambahkan fungsi \verb|pdfCheck| yang men
 	<script type='text/javascript' src="{{ base_url("assets/js/shj_submit.js") }}"></script>
 \end{lstlisting}
 
-\subsubsection{Survei}
+\subsection{Survei}
+\label{subsec:survei}
+
 Untuk mendapatkan lebih banyak masukan dari pengguna, dibuat sebuah survei untuk diisi oleh mahasiswa peserta kuliah Dasar-dasar Pemrograman. Survei ini terbagi menjadi 5 bagian untuk masing-masing fitur yang diimplementasikan pada SharIF Judge. Fitur-fitur yang terdapat pada survei adalah sebagai berikut:
 
 \begin{enumerate}
@@ -415,9 +417,6 @@ Untuk setiap fitur pada survei, terdapat 5 pertanyaan. Pertanyaan yang diberikan
     \item Apakah fitur ini sudah cukup nyaman untuk digunakan? (Partisipan menjawab dengan skala 1 (sangat tidak nyaman) hingga 5 (sangat nyaman))
     \item Apakah ada pendapat/saran/masukan untuk fitur ini? (Partisipan menjawab dengan kalimat sendiri)
 \end{enumerate}
-
-\subsection{Survei}
-\label{subsec:survei}
 
 Pada survei ini, didapatkan respon dari 12 orang mahasiswa Dasar-dasar Pemrograman. Berikut ini adalah hasil dari survei untuk setiap fitur:
 
