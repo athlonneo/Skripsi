@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {3.1.3}Model, View, Controller}{19}{subsection.3.1.3}%
 \contentsline {subsubsection}{Model}{19}{subsubsection*.18}%
 \contentsline {subsubsection}{View}{23}{subsubsection*.19}%
-\contentsline {subsubsection}{Controller}{25}{subsubsection*.20}%
+\contentsline {subsubsection}{Controller}{24}{subsubsection*.20}%
 \contentsline {subsection}{\numberline {3.1.4}Penyimpanan Kode}{28}{subsection.3.1.4}%
 \contentsline {subsection}{\numberline {3.1.5}Antrean Penilaian Kode}{28}{subsection.3.1.5}%
 \contentsline {section}{\numberline {3.2}Analisis Sistem Usulan}{29}{section.3.2}%

@@ -21,7 +21,7 @@
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Diagram kelas SharIF Judge}}{19}{figure.3.15}%
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Tampilan \textit {top bar} pada \texttt {top\_bar.twig} dan \textit {side bar} pada \texttt {side\_bar.twig}}}{23}{figure.3.16}%
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Tampilan Dashboard pada \texttt {dashboard.twig}}}{24}{figure.3.17}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Tampilan halaman \textit {error} pada \texttt {error\_404.php}}}{24}{figure.3.18}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Tampilan halaman \textit {error} 404 pada \texttt {error\_404.php}}}{24}{figure.3.18}%
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Use Case Diagram Fitur Usulan}}{29}{figure.3.19}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Rancangan antarmuka halaman Submit}}{33}{figure.4.1}%

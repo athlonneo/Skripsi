@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.15)  17 MAY 2022 07:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.15)  31 MAY 2022 06:37
 entering extended mode
 **./skripsi.tex
 (skripsi.tex
@@ -1474,33 +1474,30 @@ Package pdftex.def Info: ./Gambar//Diagram/Class Diagram.PNG  used on input lin
 e 168.
 (pdftex.def)             Requested size: 422.07584pt x 316.68236pt.
  [19 <./Gambar//Diagram/Class Diagram.PNG>] [20] [21] [22]
-<./Gambar//View/sidebar.png, id=729, 1046.40938pt x 609.77812pt>
+<./Gambar//View/sidebar.png, id=730, 1046.40938pt x 609.77812pt>
 File: ./Gambar//View/sidebar.png Graphic file (type png)
 <use ./Gambar//View/sidebar.png>
-Package pdftex.def Info: ./Gambar//View/sidebar.png  used on input line 296.
-(pdftex.def)             Requested size: 366.24876pt x 213.42554pt.
-
-[23 <./Gambar//View/sidebar.png>]
-<./Gambar//View/dashboard.png, id=737, 1046.40938pt x 609.77812pt>
+Package pdftex.def Info: ./Gambar//View/sidebar.png  used on input line 297.
+(pdftex.def)             Requested size: 313.92523pt x 182.93484pt.
+<./Gambar//View/dashboard.png, id=732, 1046.40938pt x 609.77812pt>
 File: ./Gambar//View/dashboard.png Graphic file (type png)
 <use ./Gambar//View/dashboard.png>
-Package pdftex.def Info: ./Gambar//View/dashboard.png  used on input line 304.
-(pdftex.def)             Requested size: 366.24876pt x 213.42554pt.
-<./Gambar//View/404.png, id=739, 1046.40938pt x 609.77812pt>
+Package pdftex.def Info: ./Gambar//View/dashboard.png  used on input line 305.
+(pdftex.def)             Requested size: 313.92523pt x 182.93484pt.
+
+[23 <./Gambar//View/sidebar.png>]
+<./Gambar//View/404.png, id=740, 1046.40938pt x 609.77812pt>
 File: ./Gambar//View/404.png Graphic file (type png)
 <use ./Gambar//View/404.png>
-Package pdftex.def Info: ./Gambar//View/404.png  used on input line 312.
-(pdftex.def)             Requested size: 366.24876pt x 213.42554pt.
- [24 <./Gambar//View/dashboard.png> <./Gambar//View/404.png>] [25] [26] [27]
-LaTeX Info: Symbol \textminus not provided by
-            font family fvm in TS1 encoding.
-            Default family used instead on input line 447.
- [28]
-<./Gambar//Diagram/Use Case Usulan.PNG, id=768, 475.7775pt x 643.40375pt>
+Package pdftex.def Info: ./Gambar//View/404.png  used on input line 313.
+(pdftex.def)             Requested size: 313.92523pt x 182.93484pt.
+ [24 <./Gambar//View/dashboard.png> <./Gambar//View/404.png>] [25] [26] [27] [2
+8]
+<./Gambar//Diagram/Use Case Usulan.PNG, id=771, 475.7775pt x 643.40375pt>
 File: ./Gambar//Diagram/Use Case Usulan.PNG Graphic file (type png)
 <use ./Gambar//Diagram/Use Case Usulan.PNG>
 Package pdftex.def Info: ./Gambar//Diagram/Use Case Usulan.PNG  used on input l
-ine 479.
+ine 483.
 (pdftex.def)             Requested size: 237.88815pt x 321.70108pt.
  [29 <./Gambar//Diagram/Use Case Usulan.PNG>] [30]) [31]
 \openout2 = `Bab/bab4.aux'.
@@ -1536,11 +1533,11 @@ Bab 5.
 
 
 ]
-<./Gambar//submit.png, id=841, 1445.4pt x 813.0375pt>
+<./Gambar//submit.png, id=841, 1046.40938pt x 761.84625pt>
 File: ./Gambar//submit.png Graphic file (type png)
 <use ./Gambar//submit.png>
 Package pdftex.def Info: ./Gambar//submit.png  used on input line 64.
-(pdftex.def)             Requested size: 433.62335pt x 243.91313pt.
+(pdftex.def)             Requested size: 418.55634pt x 304.7331pt.
  [38 <./Gambar//submit.png>] [39] [40] [41]
 Overfull \hbox (2.16818pt too wide) in paragraph at lines 198--198
 []|\T1/lmr/m/n/10.95 (-20) No.| 
@@ -5853,10 +5850,10 @@ Package rerunfilecheck Info: File `skripsi.out' has not changed.
 (rerunfilecheck)             Checksum: 46F028E4BE338C361E2027D79606E612;7396.
  ) 
 Here is how much of TeX's memory you used:
- 42670 strings out of 479321
- 903172 string characters out of 2864581
- 2892307 words of memory out of 3000000
- 56992 multiletter control sequences out of 15000+600000
+ 42664 strings out of 479321
+ 903069 string characters out of 2864581
+ 2892313 words of memory out of 3000000
+ 56986 multiletter control sequences out of 15000+600000
  497250 words of font info for 224 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  113i,12n,116p,1015b,3277s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -5895,7 +5892,7 @@ ic/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmtt10.pfb>
-Output written on skripsi.pdf (88 pages, 2779416 bytes).
+Output written on skripsi.pdf (88 pages, 2816202 bytes).
 PDF statistics:
  3197 PDF objects out of 3580 (max. 8388607)
  1974 named destinations out of 2073 (max. 500000)
