@@ -316,17 +316,23 @@
 % - langsung mulai setelah '{' awal, jangan mulai menulis di baris bawahnya
 %=============================================================================
 \abstrakINA{
-SharIF Judge adalah sebuah \textit{online judge} (sebuah sistem \textit{online} yang berfungsi untuk mengevaluasi kode program) untuk bahasa pemrograman C, C++, Java dan Python yang dibangun menggunakan CodeIgniter dan Bash. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program.
-Situasi pandemi Covid-19 menyebabkan seluruh kegiatan kuliah dilaksanakan secara \textit{online}. Pada umumnya, kegiatan praktikum dan ujian Pada umumnya, kegiatan praktikum dan ujian pada mata kuliah pemrograman Teknik Informatika Unpar dapat diawasi secara langsung oleh dosen dan asisten dosen di lab komputer.  Namun, pengawasan menjadi lebih sulit untuk dilakukan saat kuliah dilaksanakan secara \textit{online}.
-{\it Integrated Development Environment} (IDE) akan diimplementasikan pada SharIF Judge, dengan kemampuan untuk memfasilitasi proses penulisan kode, lalu mengompilasi, menjalankan, dan mengujinya. Sebagai sebuah IDE, selanjutnya dapat ditambahkan fitur yang dapat membantu pengawasan terhadap mahasiswa selama kegiatan kuliah, seperti merekam ketikan dan mendeteksi ketika mahasiswa membuka \textit{tab} atau aplikasi lain.
-Fitur melihat soal, mengetik, menyimpan, menjalankan, dan mengumpulkan kode melalui IDE diimplementasikan dan diuji pada mata kuliah Dasar-dasar Pemrograman semester ganjil 2021/2022 Teknik Informatika Unpar. Berdasarkan hasil pengujian, seluruh masalah yang ditemukan berhasil diperbaiki, dan seluruh fitur yang diimplementasikan sudah berfungsi dengan baik.
-}
-\abstrakENG{
-SharIF Judge is an online judge (an online system that serves to evaluate program code) for C, C++, Java and Python built using CodeIgniter and Bash. SharIF Judge is used on several programming courses in Unpar Informatics Engineering Study Program to help with code submission and scoring.
-The Covid-19 Pandemic caused every learning activities to be done online. Usually, practical lectures and exams in Unpar Informatics Engineering can be supervised directly by lecturers and assistants in the computer lab. However, supervision becomes more difficult to do when lectures are carried out online.
-Integrated Development Environment (IDE) will be implemented on SharIF Judge with the ability to facilitate the process of code writing, then compile, run, and test it. As an IDE, further features can be added to help supervise students during learning activities, such as recording typing activities and detecting application inactivity.
-Features to show problems, type, save, run, and submit code from IDE is implemented and tested on odd semester 2021/2022 \textit{Dasar-dasar Pemrograman} (Basic Programming) course in Unpar Informatics Engineering. Based on the results, every problem encountered has been fixed successfully and all implemented features have performed adequately.
+Situasi pandemi Covid-19 menyebabkan seluruh kegiatan kuliah dilaksanakan secara \textit{online}. Pada umumnya, kegiatan praktikum dan ujian pada mata kuliah pemrograman Teknik Informatika Unpar dapat diawasi secara langsung oleh dosen dan asisten dosen di lab komputer.  Namun, pengawasan menjadi lebih sulit untuk dilakukan saat kuliah dilaksanakan secara \textit{online}.
 
+Pada mata kuliah pemrograman Teknik Informatika Unpar, dimanfaatkan SharIF Judge,sebuah \textit{online judge} (sebuah sistem \textit{online} yang berfungsi untuk mengevaluasi kode program) untuk mempermudah proses pengumpulan dan penilaian kode program. Pada SharIF judge, pengumpulan kode dilakukan dengan mengunggah kode program, yang biasanya dibuat oleh mahasiswa dengan menggunakan aplikasi eksternal. Karena proses pembuatan kode program tidak terintegrasi, SharIF Judge tidak memiliki kemampuan untuk mengawasi proses pembuatan kode program.
+
+Pada skripsi ini, diimplementasikan {\it Integrated Development Environment} (IDE), sebuah aplikasi dengan kemampuan untuk mengedit, mengompilasi, dan menjalankan kode program \cite{ide} pada SharIF Judge, sehingga seluruh proses pembuatan kode program dapat dilakukan langsung di dalam SharIF Judge. Dengan implementasi IDE, seluruh proses pembuatan kode program terintegrasi pada SharIF Judge, dan selanjutnya dapat dimanfaatkan untuk pengawasan. 
+
+SharIF Judge dengan implementasi IDE diuji selama mata kuliah Dasar-dasar Pemrograman semester ganjil 2021/2022 Teknik Informatika Unpar. Berdasarkan hasil pengujian, seluruh masalah yang ditemukan berhasil diperbaiki, dan seluruh fitur yang diimplementasikan berfungsi dengan baik.
+}
+
+\abstrakENG{
+The Covid-19 Pandemic caused every learning activities to be done online. Usually, practical lectures and exams in Unpar Informatics Engineering can be supervised directly by lecturers and assistants in the computer lab. However, supervision becomes more difficult to do when lectures are carried out online.
+
+SharIF Judge is an online judge (an online system that serves to evaluate program code) utilized on several programming courses in Unpar Informatics Engineering Study Program to help with code submission and scoring. Code submission in SharIF Judge was done by file upload, which are made by students using external applications. SharIF Judge was unable to supervise code development process they are not integrated within SharIF Judge.
+
+By implementing Integrated Development Environment (IDE), an application with the ability to write, compile, and run code on SharIF Judge, all code development process is now integrated, and further features can be added to help supervise students during learning activities.
+
+SharIF Judge with IDE implemented is tested on odd semester 2021/2022 \textit{Dasar-dasar Pemrograman} (Basic Programming) course in Unpar Informatics Engineering. Based on the results, every problem encountered has been fixed successfully and all implemented features have performed adequately.
 } 
 %=============================================================================
 
@@ -417,6 +423,7 @@ Features to show problems, type, save, run, and submit code from IDE is implemen
 \hyphenation{fi-si-ka}
 \hyphenation{tek-nik}
 \hyphenation{in-for-ma-ti-ka}
+\hyphenation{judge}
 %=============================================================================
 
 %_____________________________________________________________________________

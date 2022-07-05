@@ -36,7 +36,7 @@ Untuk menampilkan soal PDF, dilakukan perubahan sebagai berikut:
 \begin{itemize}
 	\item \textit{Controller} \verb|Assignments|:
     \begin{itemize}
-		\item Fungsi \verb|pdf|: \\ Penambahan kondisi untuk mencegah dialog unduh PDF soal, karena soal akan ditampilkan.
+		\item Fungsi \verb|pdf()|: \\ Penambahan kondisi untuk mencegah dialog unduh PDF soal, karena soal akan ditampilkan.
     \end{itemize}
     \item \textit{View} \verb|submit|:
     \begin{itemize}
@@ -68,12 +68,12 @@ Untuk menyimpan kode, perlu dilakukan perubahan sebagai berikut:
 \begin{itemize}
 	\item \textit{Controller} \verb|Submit|:
     \begin{itemize}
-		\item Fungsi \verb|save|: \\ Fungsi baru untuk menyimpan kode pada \textit{file} teks.
+		\item Fungsi \verb|save()|: \\ Fungsi baru untuk menyimpan kode pada \textit{file} teks.
     \end{itemize}
     \item \textit{View} \verb|submit|:
     \begin{itemize}
         \item Penambahan elemen \verb|button| untuk menyimpan kode.
-        \item Penambahan \textit{script} untuk memanggil fungsi \verb|save| pada \textit{controller} \verb|Submit|. 
+        \item Penambahan \textit{script} untuk memanggil fungsi \verb|save()| pada \textit{controller} \verb|Submit| melalui AJAX. 
     \end{itemize}
 \end{itemize}
 
@@ -86,11 +86,11 @@ Untuk memuat kode, perlu dilakukan perubahan sebagai berikut:
 \begin{itemize}
 	\item \textit{Controller} \verb|Submit|:
     \begin{itemize}
-		\item Fungsi \verb|load|: \\ Fungsi baru untuk memuat kode dari \textit{file} teks.
+		\item Fungsi \verb|load()|: \\ Fungsi baru untuk memuat kode dari \textit{file} teks.
     \end{itemize}
     \item \textit{View} \verb|submit|:
     \begin{itemize}
-        \item Penambahan \textit{script} untuk memanggil fungsi \verb|load| pada \textit{controller} \verb|Submit|. 
+        \item Penambahan \textit{script} untuk memanggil fungsi \verb|load()| pada \textit{controller} \verb|Submit| melalui AJAX. 
     \end{itemize}
 \end{itemize}
 
@@ -104,16 +104,17 @@ Untuk menjalankan kode dengan tes kasus, dilakukan perubahan sebagai berikut:
 \begin{itemize}
 	\item \verb|tester.sh|:
     \begin{itemize}
-        \item Penambahan kondisi untuk menjalankan kode tanpa penilaian dan mencatat hasilnya pada \textit{file} teks dengan ekstensi txt.
+        \item Penambahan variabel \verb|EXEC_ONLY| sebagai kondisi untuk menjalankan kode tanpa penilaian.
+        \item Penambahan fungsi \verb|shj_log_exec| untuk mencatat hasil \textit{output} dan pesan \textit{error}.
     \end{itemize}
 	\item \textit{Controller} \verb|Submit|:
     \begin{itemize}
-        \item Fungsi \verb|_execute|: \\ Fungsi baru untuk memasukkan kode dari editor ke antrean. Fungsi ini dipanggil oleh fungsi \verb|save("execute")|.
-        \item Fungsi \verb|get_output|: \\ Fungsi baru untuk memuat hasil eksekusi kode dari \textit{file} teks.
+        \item Fungsi \verb|_execute()|: \\ Fungsi baru untuk memasukkan kode dari editor ke antrean. Fungsi ini dipanggil oleh fungsi \verb|save("execute")|.
+        \item Fungsi \verb|get_output()|: \\ Fungsi baru untuk memuat hasil eksekusi kode dari \textit{file} teks.
     \end{itemize}
 	\item \textit{Controller} \verb|Queueprocess|:
     \begin{itemize}
-        \item Fungsi \verb|run|: \\ Penambahan kondisi untuk menjalankan \verb|tester.sh| tanpa penilaian.
+        \item Fungsi \verb|run()|: \\ Penambahan kondisi untuk menjalankan \verb|tester.sh| tanpa penilaian.
     \end{itemize}
     \item \textit{View} \verb|submit|:
     \begin{itemize}
@@ -134,7 +135,7 @@ Untuk mengumpulkan kode dari editor, perlu dilakukan perubahan sebagai berikut:
 \begin{itemize}
 	\item \textit{Controller} \verb|Submit|:
     \begin{itemize}
-		\item Fungsi \verb|_submit|: \\ Fungsi baru untuk mengumpulkan kode. Fungsi ini dipanggil oleh fungsi \verb|save("submit")|.
+		\item Fungsi \verb|_submit()|: \\ Fungsi baru untuk mengumpulkan kode. Fungsi ini dipanggil oleh fungsi \verb|save("submit")|.
     \end{itemize}
     \item \textit{View} \verb|submit|:
     \begin{itemize}

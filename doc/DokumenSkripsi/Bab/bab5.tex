@@ -17,7 +17,7 @@ Implementasi perangkat lunak dilakukan pada beberapa lingkungan yang berbeda:
             \item \textit{Random Access Memory}: 16GB DDR4
             \item \textit{Storage}: 500GB
         \end{itemize}
-            \item Perangkat Lunak:
+        \item Perangkat Lunak:
         \begin{itemize}
             \item \textit{Operating System}: Windows 10 Home 64-bit
             \item \textit{Windows Subsystem for Linux}: Ubuntu 20.04.2 LTS
@@ -71,7 +71,7 @@ Gambar \ref{fig:5:antarmuka} merupakan tampilan antarmuka pada halaman Submit ya
 \subsection{Menampilkan Soal}
 \label{subsec:5:soal}
 
-Soal PDF ditampilkan pada \verb|iframe| yang berisi \verb|viewer.html| milik PDF.js. URL dari \textit{file} PDF yang akan ditampilkan adalah URL yang mengarah ke fungsi \verb|pdf| pada controller \verb|Assignments|. URL ini dikirim ke \verb|viewer.html| milik PDF.js sebagai parameter GET bernama \verb|site_url|.
+Soal PDF ditampilkan pada \verb|iframe| dengan id \verb|pdf_viewer| yang menampilkan \verb|viewer.html| milik PDF.js. URL dari \textit{file} PDF yang akan ditampilkan adalah URL yang mengarah ke fungsi \verb|pdf| pada controller \verb|Assignments|. URL ini dikirim ke \verb|viewer.html| milik PDF.js sebagai \textit{query string} \verb|site_url|.
 
 Fungsi \verb|pdf| pada controller \verb|Assignments| menggunakan fungsi \verb|force_download| yang menyebabkan munculnya dialog unduh pada \textit{browser}. Agar \textit{file} PDF dapat dibaca oleh \textit{browser} dan tidak memunculkan dialog unduh, \textit{file} PDF akan dikembalikan dengan fungsi \verb|echo| dengan header \verb|Content-Type: application/pdf|. Ditambahkan parameter \verb|$no_download| pada fungsi \verb|pdf| untuk menentukan apakah \textit{file} PDF soal akan diunduh atau ditampilkan oleh PDF.js. Jika \verb|$no_download| bernilai \verb|FALSE|, maka PDF akan diunduh melalui fungsi \verb|force_download| seperti semula. Jika \verb|$no_download| bernilai \verb|TRUE|, maka isi PDF akan dikembalikan melalui fungsi \verb|echo| dengan \textit{header} \verb|Content-Type: application/pdf|. Kode untuk perubahan ini terdapat pada lampiran \ref{lampA:Assignments.php}
 
@@ -83,7 +83,7 @@ Ace menggunakan sebuah elemen \verb|div| sebagai tempat untuk menampilkan editor
 \subsection{Menyimpan dan Memuat Kode}
 \label{subsec:5:simpan}
 
-Kode akan disimpan pada \textit{file} txt bernama \verb|editor.txt|. Nama dan tipe file ini disimpan sebagai konstanta pada \verb|constants.php|. Perubahan kode \verb|constants.php| terdapat pada lampiran \ref{lampA:constants.php}.
+Kode akan disimpan pada \textit{file} txt bernama \verb|editor.txt| dengan alamat folder yang dibahas pada bagian \ref{subsec:3:simpan}. Nama dan tipe file ini disimpan sebagai konstanta pada \verb|constants.php|. Perubahan kode \verb|constants.php| terdapat pada lampiran \ref{lampA:constants.php}.
 
 Untuk menyimpan kode, fungsi \verb|save| ditambahkan pada \textit{controller} \verb|Submit|. Fungsi ini mengambil isi dari editor kode melalui POST lalu menyimpannya pada \verb|editor.txt|. Kode untuk fungsi \verb|save| terdapat pada lampiran \ref{lampA:Submit.php} baris 72--135.
 
@@ -98,11 +98,11 @@ Pada sistem antrean kode yang dibahas pada bagian \ref{subsec:3:antrean}, tabel 
 
 Agar kode dari editor dapat dijalankan melalui antrean yang sama, perlu dilakukan langkah-langkah berikut ini:
 \begin{enumerate}
-    \item Kode yang sudah disimpan sebagai \textit{file} txt disimpan kembali dengan ekstensi yang tepat.
-    \item \textit{Input} tes kasus disimpan sebagai \textit{file} txt.
+    \item Kode yang sudah disimpan sebagai \textit{file} txt disimpan kembali dengan ekstensi yang tepat dengan alamat folder yang dibahas pada bagian \ref{subsec:3:simpan}.
+    \item \textit{Input} tes kasus disimpan sebagai \textit{file} txt dengan alamat folder yang sama.
     \item Membuat baris baru pada tabel \verb|shj_submission| yang bersifat sementara untuk menyimpan alamat dan ekstensi \textit{file} kode. Dikarenakan \verb|submit_id| untuk setiap \textit{submission} selalu dimulai dari 1, dapat digunakan \verb|submit_id| = 0.
     \item Membuat baris baru pada tabel \verb|shj_queue| dengan \verb|submit_id| = 0 dan \verb|type = "exec"| untuk menandakan bahwa kode ini bukan \textit{submission} yang akan dinilai.
-    \item Ditambahkan parameter dan fungsi pada \verb|tester.sh| yang menjalankan kode dengan tes kasus yang sudah disimpan tanpa melakukan penilaian, lalu menyimpan hasil \textit{output} kode sebagai \textit{file} txt.
+    \item Ditambahkan parameter dan fungsi pada \verb|tester.sh| yang menjalankan kode dengan tes kasus yang sudah disimpan tanpa melakukan penilaian, lalu menyimpan hasil \textit{output} kode sebagai \textit{file} txt dengan alamat folder yang sama.
     \item \textit{File} txt \textit{output} dimuat dan ditampilkan pada halaman submit.
 \end{enumerate}
 
@@ -211,10 +211,15 @@ Pengujian fungsional dilakukan secara lokal pada perangkat penulis. Berikut ini 
 \section{Pengujian Eksperimental}
 \label{sec:5:eksperimental}
 
-Pengujian eksperimental dilakukan pada mata kuliah Dasar-dasar Pemrograman semester 51 Teknik Informatika Unpar. Perangkat lunak diuji pada \textit{judge} dengan alamat \verb|http://daspro.labftis.net|. Seluruh persoalan dan masukan yang diterima selama mata kuliah Dasar-dasar Pemrograman dicatat pada \verb|https://github.com/athlonneo/SharIF-Judge/issues|.
+Pengujian eksperimental dilakukan pada mata kuliah Dasar-dasar Pemrograman semester ganjil 2021/2022 Teknik Informatika Unpar. Pada kuliah ini digunakan 2 \textit{judge} terpisah untuk latihan dan kuis. Berdasarkan keputusan dosen koordinator, perangkat lunak skripsi ini hanya akan diuji pada \textit{judge} latihan. Perangkat lunak diuji pada \textit{judge} latihan dengan alamat \verb|http://daspro.labftis.net|. 
+Perangkat lunak digunakan oleh seluruh mahasiswa Dasar-dasar Pemrograman selama 1 semester di luar kegiatan kuis. Selama durasi kelas, mahasiswa dan dosen melaporkan persoalan yang ditemukan dan memberi saran pada perangkat lunak. Seluruh persoalan dan masukan yang diterima dicatat pada GitHub penulis, dengan alamat \verb|https://github.com/athlonneo/SharIF-Judge/issues|.
+
+Menjelang akhir semester, dibagikan survei pada mahasiswa Dasar-dasar Pemrograman untuk menilai perangkat lunak sekaligus mendapatkan masukan yang lebih banyak.
 
 \subsection{Perubahan melalui GitHub}
 \label{subsec:github}
+
+Bagian-bagian berikut ini merupakan persoalan dan masukan yang diterima dan dicatat pada GitHub penulis sebagai \textit{issues}.
 
 \subsubsection{Perubahan Tampilan Antarmuka}
 Tercatat pada \textit{issue} \#2 \footnote{https://github.com/athlonneo/SharIF-Judge/issues/2}, masukan dari salah satu dosen Dasar-dasar pemrograman adalah perubahan tampilan antarmuka untuk memperjelas fungsi dan meningkatkan kenyamanan pengguna. Perubahan yang disarankan adalah sebagai berikut:

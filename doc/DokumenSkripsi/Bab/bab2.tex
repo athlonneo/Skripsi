@@ -1,6 +1,56 @@
 \chapter{Landasan Teori}
 \label{chap:teori}
 
+\section{SharIF Judge}
+\label{sec:2:sharif}
+
+SharIF Judge (dengan IF kapital) adalah modifikasi cabang dari Sharif Judge (dengan if kecil), sebuah \textit{online judge} gratis untuk bahasa pemrograman C, C++, Java dan Python yang diciptakan oleh Mohammad Javad Naderi dengan \textit{framework} CodeIgniter dan Bash\cite{sharif}. Modifikasi ini dilakukan oleh Stillmen Vallian untuk menyesesuaikan Sharif Judge terhadap kebutuhan-kebutuhan spesifik Teknik Informatika Unpar. SharIF Judge digunakan pada beberapa mata kuliah pemrograman Teknik Informatika Unpar untuk mempermudah proses pengumpulan dan penilaian kode program. \cite{stillmen:sharif}
+
+\subsection{Instalasi}
+\label{subs:2:instalasi}
+Untuk menjalankan SharIF Judge, diperlukan sebuah \textit{server} Linux yang memenuhi prasyarat berikut ini:
+\begin{itemize}
+    \item \textit{Webserver} dengan PHP versi 5.3 atau lebih
+    \item PHP Command Line Interface (CLI)
+    \item \textit{Database} MySql atau PostgreSql
+    \item PHP memiliki akses untuk menjalankan \textit{shell commands} dengan fungsi \verb|shell_exec|
+    \item Kemampuan untuk mengompilasi dan menjalankan kode yang dikumpulkan (\texttt{gcc}, \texttt{g++}, \texttt{javac}, \texttt{java}, \texttt{python2} dan \texttt{python3})
+    \item Perl
+\end{itemize}
+
+Pada perangkat yang sudah memenuhi prasyarat, instalasi SharIF Judge dapat dilakukan dengan cara berikut ini:
+\begin{enumerate}
+    \item Unduh versi terakhir dari Sharif Judge dan menempatkannya pada direktori publik.
+    \item Pindahkan folder \texttt{system} dan \texttt{application} ke luar direktori publik. Kemudian simpan alamatnya pada \texttt{index.php}.
+    \item Buat sebuah \textit{Database} MySql atau PostgreSql.
+    \item Atur pengaturan koneksi \textit{database} pada \texttt{application/config/database.php}.
+    \item Atur agar direktori \texttt{application/cache/Twig} dapat ditulis oleh php.
+    \item Buka halaman utama SharIF Judge pada \textit{browser} dan ikuti proses instalasi.
+    \item Log in dengan akun admin
+    \item Pindahkan folder \texttt{tester} dan \texttt{assignments} ke luar direktori publik. Kemudian simpan alamatnya pada halaman pengaturan.
+\end{enumerate}
+
+
+\subsection{Fitur-fitur}
+\label{subs:2:fitur}
+
+Pada SharIF Judge, pengguna terbagi menjadi beberapa \textit{role}. \textit{Role} yang tersedia pada SharIF Judge adalah sebagai berikut:
+\begin{enumerate}
+    \item \textit{admin}
+    \item \textit{head instructor}
+    \item \textit{instructor}
+    \item \textit{student}
+\end{enumerate}
+
+Halaman dan tampilan yang tersedia pada pengguna SharIF Judge bergantung pada \textit{role} akun yang digunakan pengguna tersebut. Pada gambar \ref{fig:2:usecased}, terdapat Use Case Diagram untuk setiap \textit{role} yang tersedia. 
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.4]{Diagram/Use Case.png}  
+	\caption{Use Case Diagram SharIF Judge}
+	\label{fig:2:usecased} 
+\end{figure} 
+
 \section{CodeIgniter 3}
 \label{sec:2:codeigniter} 
 
