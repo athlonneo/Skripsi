@@ -215,11 +215,63 @@ Bourne Again SHell (Bash) program yang disempurnakan dari \textit{shell} Unix pe
 
 \textit{Shell script} adalah sebuah \textit{file} yang menyimpan rangkaian perintah. \textit{Shell} akan membaca \textit{file} tersebut dan menjalankan rangkaian perintah seperti jika perintah tersebut dimasukkan secara langsung pada \textit{command line}. Keunikan dari \textit{shell} adalah kemampuannya sebagai \textit{command line interface} dan sebagai  \textit{scripting language interpreter}. Artinya, hal yang dapat dilakukan melalui \textit{command line} dapat dilakukan sebagai \textit{script}, dan hal yang dapat dilakukan sebagai \textit{script} dapat dilakukan melalui \textit{command line}.
 
-Berikut ini merupakan beberapa \textit{command} yang tersedia pada Bash:
+Bagian-bagian berikut ini merupakan beberapa \textit{command} yang tersedia pada Bash:
 
+\subsection{\texttt{grep}}
+\verb|grep| adalah sebuah \textit{command line} yang berfungsi untuk mencari baris teks yang sesuai dengan sebuah pola \textit{regex} pada \textit{file} atau teks \textit{input}. Format penggunaan \verb|grep| adalah sebagai berikut:
+\begin{verbatim}
+    grep [OPTIONS] PATTERN [FILE]
+\end{verbatim}
+Dengan penjelasan:
 \begin{itemize}
-    \item \verb|grep regexp| \\ Mencari pola yang sesuai dengan \verb|regexp|, kemudian mencetak seluruh baris yang sesuai dengan pola tersebut.
-    \item \verb|sed s/regexp/replacement/| \\ Mencari pola yang sesuai dengan \verb|regexp| dan menggantinya dengan \verb|replacement|.
+    \item \verb|[OPTIONS]| \\ Pengaturan yang digunakan.
+    \item \verb|PATTERN| \\ Pola \textit{regular expression} yang ingin dicari.
+    \item \verb|[FILE]| \\ \textit{File} atau \textit{string} di mana pencarian dilakukan.
+\end{itemize}
+
+\subsubsection{\textit{Options}}
+Berikut ini beberapa opsi yang tersedia dalam penggunaan \verb|grep|:
+\begin{itemize}
+    \item \textit{Matcher Selection} 
+    \begin{itemize}
+        \item \verb|-E| \\ membaca pola sebagai \textit{extended regular expression}.
+        \item \verb|-F| \\ membaca pola sebagai \textit{list of strings}.
+        \item \verb|-G| \\ membaca pola sebagai \textit{basic regular expression}.
+        \item \verb|-P| \\ membaca pola sebagai \textit{perl regular expression}.
+    \end{itemize}
+    \item \textit{Context Line Control} 
+    \begin{itemize}
+        \item \verb|-A NUM| \\ mengambil \verb|NUM| baris setelah baris yang sesuai.
+        \item \verb|-B NUM| \\ mengambil \verb|NUM| baris sebelum baris yang sesuai.
+        \item \verb|-C NUM| \\ mengambil \verb|NUM| bars dari seluruh baris yang sesuai.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Karakter \textit{Backslash} dan \textit{Special Expressions}}
+Simbol \verb|\<| dan \verb|\>| masing-masing mencocokkan dengan \textit{string} kosong pada awal dan akhir sebuah kata. Simbol \verb|\b| mencocokkan dengan \textit{string} kosong pada tepian sebuah kata, dan simbol \verb|\B| mencocokkan dengan \textit{string} kosong tidak pada tepian sebuah kata.
+
+\subsection{\texttt{sed}}
+\verb|sed| adalah sebuah \textit{command line} yang digunakan untuk melakukan perubahan dasar pada sebuah \textit{file} atau teks \textit{input}. Salah satu format penggunaan \verb|sed| adalah sebagai berikut:
+\begin{verbatim}
+    sed [OPTIONS] COMMANDS [FILE...]
+\end{verbatim}
+\begin{itemize}
+    \item \verb|[OPTIONS]| \\ Pengaturan yang digunakan.
+    \item \verb|COMMANDS| \\ \textit{Command} yang digunakan, salah satu \textit{command} adalah:
+    \begin{itemize}
+        \item \verb|s/regexp/replacement/| \\ Mencari pola yang sesuai dengan \verb|regexp| dan menggantinya dengan \verb|replacement|.
+    \end{itemize}
+    \item \verb|[FILE]| \\ \textit{File} atau \textit{string} di mana pencarian dilakukan.
+\end{itemize}
+
+\section{Integrated Development Environment}
+\label{sec:2:ide}
+
+Integrated Development Environment (IDE) adalah sebuah aplikasi yang menggabungkan peralatan-peralatan yang diperlukan dalam pengembangan program \cite{ide}. Beberapa kemampuan yang diperlukan untuk pengembangan program, yang pada umumnya terdapat dalam sebuah IDE adalah sebagai berikut:
+\begin{itemize}
+    \item \textit{Editor} \\ Editor teks sebagai tempat untuk mengetik kode, dapat dilengkapi dengan beberapa fitur seperti \textit{syntax highlighting} (teks ditampilkan dengan warna yang berbeda untuk meningkatkan keterbacaan kode) dan \textit{word completion} (memprediksi kata yang sedang diketik pengguna).
+    \item \textit{Compiler} \\ Menerjemahkan kode program yang dibuat oleh manusia menjadi kode yang dapat dijalankan oleh komputer. Kesalahan dalam penulisan kode seperti \textit{syntax error} juga dapat ditemukan dalam proses ini.
+     \item \textit{Execution} \\ Menjalankan kode program yang sudah dikompilasi, dengan \textit{input} jika dibutuhkan, dan mengembalikan hasilnya. 
 \end{itemize}
 
 \section{PDF.js}

@@ -8,12 +8,12 @@ Bab ini membahas perancangan untuk seluruh fitur yang diimplementasi pada  peran
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.45]{submit_mockup}  
+	\includegraphics[scale=0.2]{submit_mockup}  
 	\caption{Rancangan antarmuka halaman Submit} 
 	\label{fig:4:antarmuka} 
 \end{figure} 
 
-Seluruh fitur akan diimplementasikan pada halaman Submit. Gambar \ref{fig:4:antarmuka} menunjukkan rancangan antarmuka halaman Submit. Pada halaman Submit sudah terdapat \textit{dropdown} untuk memilih \textit{problem} yang akan dikerjakan, dan bahasa pemrograman yang akan digunakan. Kedua \textit{dropdown} tersebut juga akan digunakan pada fitur yang akan diimplementasikan. \textit{Dropdown} \textit{problem} digunakan untuk menentukan kode yang akan disimpan dan dimuat. Sementara \textit{dropdown} \textit{language} digunakan untuk memilih \textit{mode} \textit{syntax highlighting} pada editor kode.
+Seluruh fitur akan diimplementasikan pada halaman Submit. Gambar \ref{fig:4:antarmuka} menunjukkan rancangan antarmuka halaman Submit, dengan tambahan yang diimplementasikan ditandai dengan kotak merah. Pada halaman Submit sudah terdapat \textit{dropdown} untuk memilih \textit{problem} yang akan dikerjakan, dan bahasa pemrograman yang akan digunakan. Kedua \textit{dropdown} tersebut juga akan digunakan pada fitur yang akan diimplementasikan. \textit{Dropdown} \textit{problem} digunakan untuk menentukan kode yang akan disimpan dan dimuat. Sementara \textit{dropdown} \textit{language} digunakan untuk memilih \textit{mode} \textit{syntax highlighting} pada editor kode.
 
 \section{Rancangan Perubahan Kode}
 \label{sec:4:kode}
@@ -21,11 +21,12 @@ Seluruh fitur akan diimplementasikan pada halaman Submit. Gambar \ref{fig:4:anta
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.5]{Diagram/Class Diagram Usulan.png}  
-	\caption{Diagram kelas perubahan pada SharIF Judge} 
+	\caption{Diagram kelas perubahan pada SharIF Judge \protect\footnotemark} 
 	\label{fig:4:classdiagram} 
 \end{figure} 
+\footnotetext{Fungsi yang sudah ada tidak ditampilkan, karena sudah terdapat pada gambar \ref{fig:3:classdiagram}}.
 
-Untuk mengimplementasikan fitur-fitur, diperlukan perubahan kode berikut ini pada SharIF Judge. Diagram kelas pada gambar \ref{fig:4:classdiagram} menunjukkan kelas-kelas yang mengalami perubahan.
+Untuk mengimplementasikan fitur-fitur, diperlukan perubahan kode berikut ini pada SharIF Judge. Diagram kelas pada gambar \ref{fig:4:classdiagram} menunjukkan kelas-kelas yang mengalami perubahan 
 
 \subsection{Menampilkan soal}
 \label{subsec:4:soal}
